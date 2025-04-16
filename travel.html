@@ -17,6 +17,132 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .info-section {
+        margin-bottom: 80px;
+      }
+      .info-section h3 {
+        font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      .info-section h3:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: #d7242b;
+      }
+      .info-box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        height: 100%;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s ease;
+        border-top: 3px solid transparent;
+      }
+      .info-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-top: 3px solid #d7242b;
+      }
+      .green-box {
+        background-color: #006837;
+        color: white;
+        padding: 50px 40px;
+        border-radius: 10px;
+        margin: 60px 0;
+        box-shadow: 0 10px 30px rgba(0, 104, 55, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      .green-box:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        transform: translate(50%, -50%);
+      }
+      .travel-tip-icon {
+        font-size: 36px;
+        color: #d7242b;
+        margin-right: 15px;
+        display: block;
+        margin-bottom: 15px;
+      }
+      .section-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0)
+        );
+        margin: 30px 0;
+      }
+      .section-subtitle {
+        color: #d7242b;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .section-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+        font-weight: 700;
+      }
+      .img-hover {
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+      .img-hover img {
+        transition: all 0.5s ease;
+      }
+      .img-hover:hover img {
+        transform: scale(1.05);
+      }
+      .list-styled li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+      }
+      .list-styled li i {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        color: #d7242b;
+      }
+      .btn-outline {
+        border: 2px solid #d7242b;
+        background: transparent;
+        color: #d7242b;
+        transition: all 0.3s ease;
+      }
+      .btn-outline:hover {
+        background: #d7242b;
+        color: #fff;
+      }
+      .custom-card {
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+      .custom-card-body {
+        padding: 30px;
+        background: #f8f9fa;
+      }
+    </style>
   </head>
 
   <body>
@@ -87,13 +213,13 @@
     <!-- Breadcrumb Area Start -->
     <section
       class="breadcrumb-area bg-img bg-gradient-overlay jarallax"
-      style="background-image: url(img/bg-img/27.jpg)"
+      style="background-image: url(img/bg-img/48.jpg)"
     >
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12">
             <div class="breadcrumb-content">
-              <h2 class="page-title">Travel Information</h2>
+              <h2 class="page-title">TRAVEL INFORMATION</h2>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
@@ -111,10 +237,495 @@
     </section>
     <!-- Breadcrumb Area End -->
 
-    <!-- Main Content Area -->
+    <!-- Practical Information Area Start -->
     <section class="our-blog-area section-padding-100">
       <div class="container">
-        <!-- Content will go here in future -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div
+              class="section-heading-2 text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <p class="section-subtitle">Info for Attendees</p>
+              <h4 class="section-title">PRACTICAL INFORMATION</h4>
+              <p class="mt-4">
+                Everything you need to know to plan your trip to Kigali for the
+                ASEA Conference 2025
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flight to Rwanda Section -->
+        <div
+          class="row align-items-center info-section wow fadeInUp"
+          data-wow-delay="300ms"
+        >
+          <div class="col-12 col-md-7">
+            <div class="about-content-text">
+              <p
+                class="section-subtitle"
+                style="color: #e74c3c; font-size: 16px; margin-bottom: 8px"
+              >
+                FLIGHTS
+              </p>
+              <h3
+                style="
+                  color: #111b4a;
+                  font-size: 36px;
+                  font-weight: 800;
+                  margin-bottom: 25px;
+                  text-transform: uppercase;
+                  position: relative;
+                  padding-bottom: 15px;
+                "
+              >
+                FLIGHT TO RWANDA
+              </h3>
+
+              <p style="font-size: 16px; line-height: 1.8">
+                Kigali International Airport (KGL) offers connections from major
+                airports in the USA, Europe, Middle East and within Africa.
+                RwandAir offers connections from major cities like London,
+                Brussels, Dubai, Johannesburg, Lagos, Nairobi, Dar es Salaam,
+                Entebbe and many others.
+              </p>
+              <p style="font-size: 16px; margin-top: 15px">
+                Other airlines operating in Kigali include:
+              </p>
+              <div class="row" style="margin-top: 10px">
+                <div class="col-md-6">
+                  <ul style="list-style: none; padding-left: 0">
+                    <li style="margin-bottom: 10px; font-size: 16px">
+                      Ethiopian Airlines
+                    </li>
+                    <li style="margin-bottom: 10px; font-size: 16px">
+                      Kenya Airways
+                    </li>
+                    <li style="margin-bottom: 10px; font-size: 16px">
+                      Turkish Airlines
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul style="list-style: none; padding-left: 0">
+                    <li style="margin-bottom: 10px; font-size: 16px">
+                      Qatar Airways
+                    </li>
+                    <li style="margin-bottom: 10px; font-size: 16px">
+                      Brussels Airlines
+                    </li>
+                    <li style="margin-bottom: 10px; font-size: 16px">KLM</li>
+                  </ul>
+                </div>
+              </div>
+              <a
+                href="https://www.rwandaair.com"
+                target="_blank"
+                class="btn confer-btn-white mt-4"
+                >Check Flight Options <i class="zmdi zmdi-long-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue Section -->
+        <div class="green-box wow fadeInUp" data-wow-delay="300ms">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <h6 class="section-subtitle" style="color: white">VENUE</h6>
+              <h3 style="color: white; margin-bottom: 20px">
+                KIGALI SERENA HOTEL
+              </h3>
+              <p class="mb-4 text-white" style="color: white">
+                Kigali Serena Hotel is a luxurious hotel located in the heart of
+                Kigali, Rwanda. It is known for its stunning architecture,
+                beautiful gardens, and exceptional service. The hotel offers a
+                range of accommodations, including spacious rooms and suites
+                with modern amenities. Guests can enjoy a variety of dining
+                options, including local and international cuisine, as well as a
+                spa, fitness center, and outdoor pool. The hotel is also
+                conveniently located near popular attractions such as the
+                carefully curated gardens, the Kigali Genocide Memorial, and the
+                vibrant local markets.
+              </p>
+
+              <a
+                href="https://www.kcc.rw"
+                target="_blank"
+                class="btn confer-btn"
+                style="color: white"
+                >VISIT WEBSITE <i class="zmdi zmdi-long-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- KCC Images -->
+
+        <div class="section-divider"></div>
+
+        <!-- Visa Information Section -->
+        <div class="row align-items-center info-section">
+          <div class="col-12">
+            <h6 class="section-subtitle">VISA INFORMATION</h6>
+            <h3>VISA REQUIREMENTS</h3>
+          </div>
+
+          <div class="col-12 col-md-8">
+            <div class="custom-card">
+              <div class="custom-card-body">
+                <h5 class="mb-3">Visa on Arrival ($30 USD)</h5>
+                <p>
+                  All visitors to Rwanda who do not have visas as well as East
+                  African Community Member States that have been granted visa
+                  exemption may obtain visas on arrival at Kigali International
+                  Airport for a fee of 30 USD.
+                </p>
+                <p>
+                  Citizens of East African Community Member States shall be
+                  issued a special pass free of charge.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="custom-card">
+              <div class="custom-card-body">
+                <h5 class="mb-3">Online Application</h5>
+                <p>
+                  For a smoother entry process, visitors can apply online in
+                  advance at:
+                </p>
+                <a
+                  href="https://www.migration.gov.rw"
+                  target="_blank"
+                  class="btn confer-btn mt-3 btn-block"
+                  >www.migration.gov.rw
+                  <i class="zmdi zmdi-long-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-12 mt-4">
+            <p>
+              Citizens of the following countries are eligible for visa on
+              arrival:
+            </p>
+            <div class="row">
+              <div class="col-md-4">
+                <ul class="list-styled">
+                  <li><i class="zmdi zmdi-check-circle"></i> Angola</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Australia</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Canada</li>
+                  <li>
+                    <i class="zmdi zmdi-check-circle"></i> Central African
+                    Republic
+                  </li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Chad</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> China</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul class="list-styled">
+                  <li><i class="zmdi zmdi-check-circle"></i> Comoros</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> DR Congo</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Denmark</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Ghana</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Indonesia</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Israel</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul class="list-styled">
+                  <li><i class="zmdi zmdi-check-circle"></i> Malaysia</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Singapore</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> South Africa</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Tanzania</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> Uganda</li>
+                  <li><i class="zmdi zmdi-check-circle"></i> United States</li>
+                </ul>
+              </div>
+            </div>
+            <p class="mt-4">
+              <a
+                href="https://www.migration.gov.rw"
+                target="_blank"
+                class="btn confer-btn-white mt-3"
+                >For more visa information
+                <i class="zmdi zmdi-long-arrow-right"></i
+              ></a>
+            </p>
+          </div> -->
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Health Information Section -->
+        <div class="row info-section">
+          <div class="col-12 mb-5">
+            <h6 class="section-subtitle">HEALTH</h6>
+            <h3>HEALTH INFORMATION</h3>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-shield-security travel-tip-icon"></i>
+              <h5 class="mb-3">VACCINATIONS</h5>
+              <p>
+                The following vaccinations are officially recommended for
+                travelers to Rwanda:
+              </p>
+              <ul class="list-styled">
+                <li>
+                  <i class="zmdi zmdi-check-circle"></i>
+                  <strong>Yellow Fever</strong> - legal requirement
+                </li>
+                <li>
+                  <i class="zmdi zmdi-check-circle"></i>
+                  <strong>Malaria prophylaxis</strong> - recommended
+                </li>
+                <li>
+                  <i class="zmdi zmdi-check-circle"></i>
+                  <strong>Insect repellent</strong> - highly recommended
+                </li>
+              </ul>
+              <p class="mt-3">
+                You may need to present your immunization records when entering
+                Rwanda.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-hospital travel-tip-icon"></i>
+              <h5 class="mb-3">HEALTH SERVICES</h5>
+              <p>
+                First aid and emergency services will be available at the Kigali
+                Convention Center. For more serious conditions, there are
+                several good quality hospitals in Kigali:
+              </p>
+              <ul class="list-styled">
+                <li>
+                  <i class="zmdi zmdi-check-circle"></i> King Faisal Hospital
+                  <br /><small>+250 788307561</small>
+                </li>
+                <li>
+                  <i class="zmdi zmdi-check-circle"></i> CHUK <br /><small
+                    >0250 788868240</small
+                  >
+                </li>
+                <li>
+                  <i class="zmdi zmdi-check-circle"></i> Genocide Survivors
+                  Hospital <br /><small>+250 788303039</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-car travel-tip-icon"></i>
+              <h5 class="mb-3">MEDICAL INSURANCE</h5>
+              <p>
+                The ASEA Organizing team has put in place insurance for all
+                participants, but we recommend that attendees also obtain travel
+                insurance in advance. This will supplement the insurance
+                provided for the duration of your stay.
+              </p>
+              <p class="mt-3">
+                Be sure your insurance covers medical evacuation if needed.
+              </p>
+              <a href="#" class="btn btn-outline mt-3">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-12 mt-4">
+            <div
+              class="alert alert-info"
+              role="alert"
+              style="border-radius: 10px; padding: 20px"
+            >
+              <h5><i class="zmdi zmdi-info-outline mr-2"></i> Health Tips</h5>
+              <p>
+                Rwanda is a malaria endemic country. Visitors are encouraged to
+                take adequate malaria prevention measures, including sleeping
+                under a mosquito net. In addition, bringing basic medicines is
+                encouraged, such as headache and cold medication, antiseptic
+                cream, anti-diarrhea medicine, and band-aids. Tap water should
+                not be drunk, but bottled water is available in all hotels and
+                shops.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Travel Tips Section -->
+        <div class="row">
+          <div class="col-12 mb-5">
+            <h6 class="section-subtitle">USEFUL INFO</h6>
+            <h3>TRAVEL TIPS</h3>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <!-- Travel Tips - Row 1 -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-money travel-tip-icon"></i>
+              <h5 class="mb-3">CURRENCY</h5>
+              <p>
+                Rwanda's currency is the Rwandan Franc (RWF). Exchange rates are
+                subject to fluctuation. Current rates are approximately 1 USD =
+                1,250 RWF. Currency can be exchanged at the airport, banks,
+                hotels, and official exchange bureaus.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-balance travel-tip-icon"></i>
+              <h5 class="mb-3">BANKING SERVICES</h5>
+              <p>
+                ATM services are widely available in Rwanda, and most
+                international credit cards are accepted for payments. Major
+                banks have branches in Kigali with ATMs that accept Visa and
+                MasterCard. Most hotels and larger restaurants also accept
+                credit cards.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-cloud travel-tip-icon"></i>
+              <h5 class="mb-3">CLIMATE</h5>
+              <p>
+                Rwanda enjoys a temperate tropical highland climate. The average
+                temperature in Kigali is around 21°C (70°F). Temperature varies
+                significantly during the day, ranging from 12-27°C. Lightweight
+                clothing is generally appropriate, but a light jacket may be
+                needed for the evenings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Travel Tips - Row 2 -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-time travel-tip-icon"></i>
+              <h5 class="mb-3">LOCAL TIME</h5>
+              <p>
+                Rwanda operates on Central Africa Time (CAT). The time zone is 2
+                hours ahead of Greenwich Mean Time (GMT+2).
+              </p>
+              <p>When it's 12:00 PM in London, it's 2:00 PM in Kigali.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-assignment-return travel-tip-icon"></i>
+              <h5 class="mb-3">PLASTIC BAGS</h5>
+              <p>
+                Rwanda has implemented a ban on single-use plastic items.
+                Non-biodegradable plastic bags are prohibited in Rwanda.
+                Travelers are advised to leave plastic bags at home and use
+                reusable cloth bags instead.
+              </p>
+              <p>This is strictly enforced at all entry points.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-flash travel-tip-icon"></i>
+              <h5 class="mb-3">ELECTRIC SUPPLY</h5>
+              <p>
+                The electric supply in Rwanda is 220/240 volts. Outlets
+                generally accept the two-round-pin European style plugs. It is
+                advised to bring your own travel adapter if needed or purchase
+                one at local stores.
+              </p>
+              <img
+                src="img/bg-img/plug.jpg"
+                alt="Electrical Plug"
+                class="img-fluid mt-3"
+                style="max-width: 100px"
+              />
+            </div>
+          </div>
+
+          <!-- Travel Tips - Row 3 -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-phone travel-tip-icon"></i>
+              <h5 class="mb-3">TELECOMMUNICATIONS</h5>
+              <p>
+                Mobile network coverage is excellent in Rwanda, and
+                international roaming is available with many major mobile
+                networks. SIM cards from local providers (MTN, Airtel) can be
+                purchased at the airport or in cellular shops throughout the
+                city for affordable local calls and data.
+              </p>
+              <p>Most hotels and venues offer free Wi-Fi.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-local-hospital travel-tip-icon"></i>
+              <h5 class="mb-3">EMERGENCY SERVICES</h5>
+              <p>Emergency services are available via these numbers:</p>
+              <ul class="list-unstyled">
+                <li><strong>Police Emergency:</strong> 112</li>
+                <li><strong>Ambulance (SAMU):</strong> 912</li>
+                <li><strong>Fire Brigade:</strong> 111 / 0788 311 224</li>
+                <li><strong>Tourism Police:</strong> 0788 311 230</li>
+              </ul>
+              <p class="mt-3">
+                Save these numbers in your phone when you arrive.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="info-box">
+              <i class="zmdi zmdi-shopping-cart travel-tip-icon"></i>
+              <h5 class="mb-3">BUSINESS HOURS</h5>
+              <p>
+                Most offices operate Monday-Friday from 8 AM to 5 PM. Banks are
+                generally open from 8 AM to 8 PM. Shops and restaurants are
+                typically open until 10 PM, including on weekends.
+              </p>
+              <p>
+                <strong>Tip:</strong> Visit Kimironko Market for local crafts
+                and souvenirs.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 mt-4">
+            <div class="green-box mt-4" style="padding: 30px; margin: 0">
+              <div class="row align-items-center">
+                <div class="col-lg-8">
+                  <h4 style="color: white">Need more information?</h4>
+                  <p style="color: white; margin-bottom: 0">
+                    Our team is available to assist you with any questions
+                    regarding your travel to Rwanda.
+                  </p>
+                </div>
+                <div class="col-lg-4 text-right">
+                  <a
+                    href="contact.html"
+                    class="btn confer-btn"
+                    style="color: white"
+                    >CONTACT US <i class="zmdi zmdi-long-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Main Content Area End -->
