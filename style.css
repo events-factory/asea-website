@@ -1503,7 +1503,7 @@ input:required {
 .about-us-countdown-area {
   position: relative;
   z-index: 1;
-  background-color: #343A40;
+  background-color: #343a40;
 }
 .about-us-countdown-area .about-content-text h6 {
   font-size: 14px;
@@ -2946,7 +2946,7 @@ input:required {
 .our-schedule-area {
   position: relative;
   z-index: 1;
-  background-color: #343A40;
+  background-color: #343a40;
 }
 .our-schedule-area .schedule-tab {
   position: relative;
@@ -3025,7 +3025,7 @@ input:required {
 }
 
 .single-schedule-area {
-  border: 0.5px solid #E84444;
+  border: 0.5px solid #e84444;
   border-radius: 10px;
   padding: 25px;
   -webkit-transition-duration: 500ms;
@@ -3096,7 +3096,7 @@ input:required {
   }
 }
 .single-schedule-area .single-schedule-tumb-info .single-schedule-info p {
-  color: #E84444;
+  color: #e84444;
   margin-bottom: 0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3351,7 +3351,7 @@ input:required {
 .our-sponsor-client-area {
   position: relative;
   z-index: 1;
-  background-color: #343A40;
+  background-color: #343a40;
 }
 
 .our-sponsor-area {
@@ -3360,64 +3360,94 @@ input:required {
   width: 100%;
 }
 .our-sponsor-area .single-sponsor {
-  border: 1px solid #494E54;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
-  width: 25%;
-  height: 240px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  margin-left: -1px;
-  margin-top: -1px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .our-sponsor-area .single-sponsor {
-    height: 200px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .our-sponsor-area .single-sponsor {
-    height: 150px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .our-sponsor-area .single-sponsor {
-    height: 80px;
-  }
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin: 15px;
+  min-height: 180px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .our-sponsor-area .single-sponsor a img {
-  -webkit-transition-duration: 300ms;
-  -o-transition-duration: 300ms;
-  transition-duration: 300ms;
-  max-height: 110px;
-  opacity: 0.5;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .our-sponsor-area .single-sponsor a img {
-    max-height: 90px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .our-sponsor-area .single-sponsor a img {
-    max-height: 50px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .our-sponsor-area .single-sponsor a img {
-    max-height: 30px;
-  }
+  max-height: 150px;
+  width: auto;
+  max-width: 100%;
+  transition: all 0.4s;
+  opacity: 0.9;
 }
 .our-sponsor-area .single-sponsor:hover a img,
 .our-sponsor-area .single-sponsor:focus a img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Sponsor Slider additional styles */
+.sponsor-slider .owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.sponsor-slider .owl-nav .owl-prev,
+.sponsor-slider .owl-nav .owl-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(95, 96, 142, 0.8);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 16px;
+  margin: 0 10px;
+  transition: all 0.4s;
+  opacity: 0.7;
+}
+
+.sponsor-slider .owl-nav .owl-prev:hover,
+.sponsor-slider .owl-nav .owl-next:hover {
+  background: #5f608e;
+  opacity: 1;
+}
+
+.sponsor-slider .owl-item {
+  padding: 10px;
+}
+
+.sponsor-slider {
+  padding: 20px 0;
+}
+
+.single-sponsor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin: 15px;
+  min-height: 180px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.single-sponsor img {
+  max-height: 150px;
+  width: auto;
+  max-width: 100%;
+  transition: all 0.4s;
+  opacity: 0.9;
+}
+
+.single-sponsor:hover img {
+  transform: scale(1.05);
   opacity: 1;
 }
 
@@ -3425,7 +3455,7 @@ input:required {
 .contact-our-area {
   position: relative;
   z-index: 1;
-  background-color: #343A40;
+  background-color: #343a40;
 }
 .contact-our-area .contact-information .single-contact-info {
   margin-bottom: 25px;
