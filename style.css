@@ -1047,7 +1047,7 @@ input:required {
   -webkit-transition-duration: 500ms;
   -o-transition-duration: 500ms;
   transition-duration: 500ms;
-  background-color: white /* ASEA dark gray with transparency */
+  background-color: white; /* ASEA dark gray with transparency */
 }
 .header-area.sticky {
   background-color: white;
@@ -1291,6 +1291,13 @@ input:required {
 .single-welcome-slide .welcome-text .hero-mail-contact:focus {
   color: var(--primary-color);
 }
+
+.welcome-text-two {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 0;
+  border-radius: 25px;
+}
+
 .single-welcome-slide .welcome-text-two {
   position: relative;
   z-index: 1;
