@@ -1,506 +1,1122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from preview.colorlib.com/theme/confer/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Apr 2025 07:27:54 GMT -->
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Title -->
-    <title>ASEA - Conference Event HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - ASEA Conference 2025</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/ASEA-LOGO.png" />
 
-    <!-- Stylesheet -->
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/default-assets/classy-nav.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      :root {
+        --primary-color: #006837; /* ASEA Green */
+        --secondary-color: #dc4405; /* ASEA Orange */
+        --accent-color: #223b73; /* ASEA Blue */
+        --text-color: #333;
+        --light-color: #f8f9fa;
+        --dark-color: #1a2a40;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        overflow-x: hidden;
+        background-color: #ffffff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header */
+      .header-area {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s;
+      }
+
+      .header-shrink {
+        padding: 5px 0;
+      }
+
+      .logo img {
+        max-height: 60px;
+        transition: all 0.3s;
+      }
+
+      .fa-solid fa-bars-staggered {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(34, 59, 115, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler {
+        border: 1px solid var(--primary-color);
+        padding: 0.25rem 0.5rem;
+      }
+
+      .main-menu {
+        margin-right: 15px;
+      }
+
+      .main-menu ul li {
+        margin: 0 2px;
+      }
+
+      .main-menu ul li a {
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        padding: 30px 15px;
+        transition: all 0.3s;
+        letter-spacing: 0.5px;
+      }
+
+      .main-menu ul li a:hover {
+        color: var(--secondary-color);
+      }
+
+      .main-menu ul li.active a {
+        color: var(--secondary-color);
+        position: relative;
+        font-weight: 800;
+      }
+
+      .main-menu ul li.active a::after {
+        content: '';
+        position: absolute;
+        bottom: 25px;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: 2px;
+        background: var(--secondary-color);
+      }
+
+      /* Page Hero */
+      .page-hero {
+        position: relative;
+        height: 50vh;
+        background: url('img/bg-img/bg-1.jpeg') no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .page-hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 104, 55, 0.9) 0%,
+          rgba(34, 59, 115, 0.8) 100%
+        );
+        z-index: 1;
+      }
+
+      .page-hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+      }
+
+      .page-hero-content h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        animation: fadeInDown 1s;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .page-hero-content p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        animation: fadeInUp 1s;
+      }
+
+      /* Breadcrumb */
+      .breadcrumb {
+        background: transparent;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+      }
+
+      .breadcrumb-item {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .breadcrumb-item a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Section */
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        color: #006837; /* Brightened ASEA Green color for better visibility */
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Adding subtle text shadow for better readability */
+        font-weight: 800;
+      }
+
+      .section-header p {
+        color: #777;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* About Content */
+      .about-image {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-image img {
+        width: 100%;
+        transition: transform 0.5s;
+      }
+
+      .about-image:hover img {
+        transform: scale(1.05);
+      }
+
+      .about-content h3 {
+        font-size: 2rem;
+        color: #006837; /* Brightened ASEA Green */
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        position: relative;
+        font-weight: 800;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Adding subtle text shadow */
+      }
+
+      .about-content p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+      }
+
+      /* Mission Values */
+      .mission-values {
+        background-color: #f9f9f9;
+      }
+
+      .value-card {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        text-align: center;
+        height: 100%;
+      }
+
+      .value-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .value-icon {
+        font-size: 3rem;
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+      }
+
+      .value-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+      }
+
+      /* History */
+      .timeline {
+        position: relative;
+      }
+
+      .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        background: var(--secondary-color);
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
+      .timeline-content {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        width: 45%;
+        position: relative;
+      }
+
+      .timeline-content:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--secondary-color);
+        box-shadow: 0 0 0 4px rgba(220, 68, 5, 0.2);
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: auto;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content:before {
+        right: -30px;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content:before {
+        left: -30px;
+      }
+
+      .timeline-year {
+        background: var(--primary-color);
+        color: white;
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+
+      .timeline-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 104, 55, 0.95) 0%,
+          rgba(34, 59, 115, 0.95) 100%
+        );
+        padding: 100px 0;
+        text-align: center;
+        color: white;
+      }
+
+      .cta-section h2 {
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+        color: white;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .cta-section p {
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .btn-light {
+        background-color: #fff;
+        color: var(--primary-color);
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-light:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer */
+      .footer-area {
+        background: #1a2a40;
+        color: #ffffff;
+        padding: 70px 0 0;
+      }
+
+      .footer-widget {
+        margin-bottom: 40px;
+      }
+
+      .footer-widget h4 {
+        color: white;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+
+      .footer-widget h4:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--secondary-color);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links li a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: all 0.3s;
+        text-decoration: none;
+        position: relative;
+        padding-left: 15px;
+        display: block;
+      }
+
+      .footer-links li a:before {
+        content: '\f105';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--secondary-color);
+      }
+
+      .footer-links li a:hover {
+        color: white;
+        padding-left: 20px;
+      }
+
+      .footer-info p {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 25px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .footer-info p i {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        color: var(--secondary-color);
+      }
+
+      .footer-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+
+      .footer-social a:hover {
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+      }
+
+      .footer-newsletter {
+        display: flex;
+        position: relative;
+      }
+
+      .footer-newsletter input {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        width: 100%;
+        color: white;
+      }
+
+      .footer-newsletter input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .footer-newsletter button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .footer-newsletter button:hover {
+        background: var(--accent-color);
+        transform: scale(1.1);
+      }
+
+      .copyright {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 15px 0;
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Responsive Fixes */
+      @media (max-width: 991px) {
+        .navbar-collapse {
+          background: white;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          margin-top: 15px;
+        }
+
+        .main-menu ul li a {
+          padding: 10px 15px;
+        }
+
+        .main-menu ul li.active a::after {
+          bottom: 5px;
+        }
+
+        .timeline:before {
+          left: 30px;
+        }
+
+        .timeline-content {
+          width: calc(100% - 60px);
+          margin-left: 60px !important;
+        }
+
+        .timeline-content:before {
+          left: -30px !important;
+        }
+
+        .page-hero-content h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          padding: 70px 0;
+        }
+
+        .page-hero {
+          height: 40vh;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 50px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translate3d(0, -50px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s;
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 1s;
+      }
+
+      .fade-in-down {
+        animation: fadeInDown 1s;
+      }
+    </style>
   </head>
-
   <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="loader"></div>
-    </div>
-    <!-- /Preloader -->
-
     <!-- Header Area Start -->
     <header class="header-area">
-      <div class="classy-nav-container breakpoint-off">
-        <div class="container">
-          <!-- Classy Menu -->
-          <nav class="classy-navbar justify-content-between" id="conferNav">
-            <!-- Logo -->
-            <a class="nav-brand" href="index.html"
-              ><img src="img/core-img/ASEA-LOGO.png" width="90" alt=""
-            /></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg">
+              <!-- Logo -->
+              <a class="navbar-brand logo" href="index.html">
+                <img src="img/core-img/ASEA-LOGO.png" alt="ASEA Logo" />
+              </a>
 
-            <!-- Navbar Toggler -->
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"
-                ><span></span><span></span><span></span
-              ></span>
-            </div>
+              <!-- Navbar Toggler -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#conferNavbar"
+                aria-controls="conferNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="fa-solid fa-bars-staggered"></span>
+              </button>
 
-            <!-- Menu -->
-            <div class="classy-menu">
-              <!-- Menu Close Button -->
-              <div class="classycloseIcon">
-                <div class="cross-wrap">
-                  <span class="top"></span><span class="bottom"></span>
-                </div>
-              </div>
-              <!-- Nav Start -->
-              <div class="classynav">
-                <ul id="nav">
-                  <li><a href="index.html">Home</a></li>
-                  <li class="active">
-                    <a href="#">About</a>
-                    <ul class="dropdown">
-                      <li><a href="about.html"> Event Overview</a></li>
-                      <li><a href="speakers.html"> Speakers</a></li>
-                      <li><a href="schedule.html">Schedule</a></li>
-                    </ul>
+              <!-- Navbar -->
+              <div class="collapse navbar-collapse" id="conferNavbar">
+                <ul class="navbar-nav ml-auto main-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
                   </li>
-
-                  <li><a href="schedule.html"> Program</a></li>
-                  <li><a href="accommodation.html">Accommodation</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="travel.html">Travel</a></li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="speakers.html">Speakers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="schedule.html">Schedule</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="accommodation.html">Venue</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
                 </ul>
 
-                <!-- Get Tickets Button -->
-                <a
-                  href="registration.html"
-                  class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5"
-                  >Register Now <i class="zmdi zmdi-long-arrow-right"></i
-                ></a>
+                <!-- Register Button -->
+                <a href="registration.html" class="btn btn-primary ml-lg-3"
+                  >Register Now</a
+                >
               </div>
-              <!-- Nav End -->
-            </div>
-          </nav>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
     <!-- Header Area End -->
 
-    <!-- Breadcrumb Area Start -->
-    <section
-      class="breadcrumb-area bg-img bg-gradient-overlay jarallax"
-      style="background-image: url(img/bg-img/bg-1.jpeg)"
-    >
-      <div class="container h-100">
-        <div class="row h-100 align-items-center">
-          <div class="col-12">
-            <div class="breadcrumb-content">
-              <h2 class="page-title">Event Overview</h2>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <a href="index.html">Home</a>
-                  </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    About us
-                  </li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Breadcrumb Area End -->
-
-    <!-- What We offer Area Start -->
-
-    <!-- What We offer Area End -->
-
-    <!-- About Us And Countdown Area Start -->
-    <section class="about-us-countdown-area section-padding-100-0" id="about">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- About Content -->
-          <div class="col-12 col-md-12">
-            <div class="about-content-text mb-80">
-              <h6
-                class="wow fadeInUp text-center"
-                data-wow-delay="300ms"
-                style="
-                  visibility: visible;
-                  animation-delay: 300ms;
-                  animation-name: fadeInUp;
-                "
-              >
-                About The Conference
-              </h6>
-              <h3
-                class="wow fadeInUp text-center"
-                data-wow-delay="300ms"
-                style="
-                  visibility: visible;
-                  animation-delay: 300ms;
-                  animation-name: fadeInUp;
-                "
-              >
-                Welcome to the 28<sup>th</sup> ASEA Annual Conference
-              </h3>
-              <p
-                class="wow fadeInUp"
-                data-wow-delay="300ms"
-                style="
-                  visibility: visible;
-                  animation-delay: 300ms;
-                  animation-name: fadeInUp;
-                "
-              >
-                This year’s proposed theme is as follows: Adapting to global
-                market shifts and events: Strategies for resilience and growth
-                for African Capital Markets for the future. The ASEA Conference
-                is an annual event organized by the African Securities Exchanges
-                Association (ASEA) in collaboration with Member Exchanges. It is
-                a premier event that attracts participants from all over the
-                world.
-              </p>
-              <p
-                class="wow fadeInUp"
-                data-wow-delay="300ms"
-                style="
-                  visibility: visible;
-                  animation-delay: 300ms;
-                  animation-name: fadeInUp;
-                "
-              ></p>
-              <p
-                class="wow fadeInUp"
-                data-wow-delay="300ms"
-                style="
-                  visibility: visible;
-                  animation-delay: 300ms;
-                  animation-name: fadeInUp;
-                "
-              >
-                Rwanda is making the necessary preparations to host the 28th
-                African Securities Exchanges Association Annual Conference which
-                will be held at Kigali Serena Hotel from 26th -28th Nov 2025 in
-                Rwanda.
-              </p>
-              <div class="text-center">
-                <a
-                  href="#"
-                  class="btn confer-btn mt-50 wow fadeInUp"
-                  data-wow-delay="300ms"
-                  style="
-                    visibility: visible;
-                    animation-delay: 300ms;
-                    animation-name: fadeInUp;
-                  "
-                  >Register <i class="zmdi zmdi-long-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Counter Up Area -->
-    </section>
-    <!-- About Us And Countdown Area End -->
-
-    <!-- Our Speakings Area Start -->
-    <section class="our-speaker-area section-padding-100-60">
-      <div class="container">
-        <div class="row">
-          <!-- Heading -->
-          <div class="col-12">
-            <div
-              class="section-heading-3 text-center wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <p>Organizing Committee</p>
-              <h4>Who's Organizing This Event</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-              style="
-                visibility: visible;
-                animation-delay: 300ms;
-                animation-name: fadeInUp;
-              "
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/speakers/Rwabukumba.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Pierre Celestin Rwabukumba</h5>
-                <p>CEO - RSE</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-              style="
-                visibility: visible;
-                animation-delay: 300ms;
-                animation-name: fadeInUp;
-              "
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/speakers/CEO-Thapelo123456.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Thapelo Tsheole</h5>
-                <p>CEO-Rwanda CMA</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Speaker Area -->
-
-          <!-- Single Speaker Area -->
-
-          <!-- Single Speaker Area -->
-
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-              style="
-                visibility: visible;
-                animation-delay: 300ms;
-                animation-name: fadeInUp;
-              "
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/speakers/Otengo.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Andrew OWINY OTENGO</h5>
-                <p>
-                  Director &amp; Head of Corporate Finance &amp; Research-MBEA
-                  Rwanda
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Our Speakings Area End -->
-
-    <!-- Our Gallery Area Start -->
-
-    <!-- Our Gallery Area End -->
-
-    <!-- Our Client Area -->
-
-    <!-- Our Client Area -->
-
-    <!-- Footer Area Start -->
-    <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
-      <!-- Main Footer Area -->
-      <div class="main-footer-area">
+    <!-- Page Hero Start -->
+    <section class="page-hero">
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
         <div class="container">
-          <div class="row">
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Footer Logo -->
-                <a href="#" class="footer-logo"
-                  ><img src="img/core-img/ASEA-LOGO.png" alt="" width="150"
-                /></a>
-                <p>
-                  The African Securities Exchanges Association is the Premier
-                  Association of Securities Exchanges in Africa.
-                </p>
+          <h1>About The Conference</h1>
+          <p>Learn more about ASEA and the 2025 Annual Conference</p>
 
-                <!-- Social Info -->
-                <div class="social-info">
-                  <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                  <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                  <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                  <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                </div>
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">About</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- Page Hero End -->
+
+    <!-- About Section Start -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>About ASEA</h2>
+              <p>The Premier Association of Securities Exchanges in Africa</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-image fade-in-up">
+              <img src="img/bg-img/26.jpg" alt="About ASEA" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content fade-in-up" style="animation-delay: 0.3s">
+              <h3>Empowering African Capital Markets</h3>
+              <p>
+                The African Securities Exchanges Association (ASEA) is the
+                premier association of securities exchanges in Africa.
+                Established in 1993, ASEA works to develop member exchanges and
+                provide a platform for networking and cooperation.
+              </p>
+              <p>
+                ASEA's membership represents more than 30 securities exchanges
+                across Africa, representing both the largest and the smallest
+                economies in Africa. Our mission is to enhance the global
+                competitiveness of member exchanges and provide a platform for
+                networking and cooperation on areas of mutual importance.
+              </p>
+              <p>
+                ASEA is recognized as the association of reference with respect
+                to African capital markets by African and global stakeholders.
+                We work toward creating fair, efficient, and transparent markets
+                that provide diverse investment opportunities for local and
+                international investors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Conference Section Start -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>The Conference</h2>
+              <p>What to Expect at the 28th ASEA Annual Conference</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="about-image fade-in-up">
+              <img src="img/bg-img/bg-2.jpg" alt="Conference Image" />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="about-content fade-in-up" style="animation-delay: 0.3s">
+              <h3>28th ASEA Annual Conference</h3>
+              <p>
+                The ASEA Annual Conference is the flagship event of the African
+                Securities Exchanges Association, bringing together securities
+                exchanges, market regulators, brokers, investors, and other
+                stakeholders to discuss critical issues affecting African
+                capital markets.
+              </p>
+              <p>
+                The 28th edition of this prestigious event will be held in
+                Kigali, Rwanda from November 26-28, 2025, under the theme
+                "Adapting to Global Market Shifts: Strategies for Resilience and
+                Growth." The conference will explore how African exchanges can
+                navigate global economic challenges and leverage opportunities
+                for sustainable growth.
+              </p>
+              <p>
+                Join us for three days of insightful discussions, networking
+                opportunities, and knowledge sharing that will shape the future
+                of African capital markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Conference Section End -->
+
+    <!-- Mission Values Section Start -->
+    <section class="section mission-values">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>Our Mission & Values</h2>
+              <p>Guiding principles that drive our association</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="value-card fade-in-up">
+              <div class="value-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h4 class="value-title">Collaboration</h4>
+              <p>
+                We foster partnerships and cooperation among members and
+                stakeholders to achieve common goals and advance African capital
+                markets.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="value-card fade-in-up" style="animation-delay: 0.2s">
+              <div class="value-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4 class="value-title">Innovation</h4>
+              <p>
+                We embrace innovation and technological advancements to enhance
+                the efficiency and competitiveness of African securities
+                exchanges.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="value-card fade-in-up" style="animation-delay: 0.4s">
+              <div class="value-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4 class="value-title">Integrity</h4>
+              <p>
+                We uphold the highest standards of ethics, transparency, and
+                accountability in all our activities and relationships.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="value-card fade-in-up" style="animation-delay: 0.6s">
+              <div class="value-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4 class="value-title">Inclusivity</h4>
+              <p>
+                We promote inclusive growth and development, ensuring that all
+                member exchanges benefit from our collective efforts regardless
+                of size or market maturity.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="value-card fade-in-up" style="animation-delay: 0.8s">
+              <div class="value-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h4 class="value-title">Knowledge Sharing</h4>
+              <p>
+                We facilitate the exchange of ideas, best practices, and
+                expertise to enhance the capacity and capabilities of member
+                exchanges.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="value-card fade-in-up" style="animation-delay: 1s">
+              <div class="value-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h4 class="value-title">Global Perspective</h4>
+              <p>
+                We maintain a global outlook while addressing the unique
+                challenges and opportunities of African capital markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mission Values Section End -->
+
+    <!-- History Section Start -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>Our History</h2>
+              <p>The journey of ASEA through the years</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content fade-in">
+              <span class="timeline-year">1993</span>
+              <h4 class="timeline-title">Foundation of ASEA</h4>
+              <p>
+                The African Securities Exchanges Association (ASEA) was
+                established in Kenya with the aim of developing member exchanges
+                and providing a platform for networking.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content fade-in">
+              <span class="timeline-year">1997</span>
+              <h4 class="timeline-title">First Annual Conference</h4>
+              <p>
+                ASEA held its first annual conference, bringing together
+                representatives from member exchanges to discuss challenges and
+                opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content fade-in">
+              <span class="timeline-year">2005</span>
+              <h4 class="timeline-title">Strategic Expansion</h4>
+              <p>
+                ASEA expanded its membership to include more exchanges from
+                across the continent, strengthening its position as the voice of
+                African capital markets.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content fade-in">
+              <span class="timeline-year">2014</span>
+              <h4 class="timeline-title">Introduction of ASEA Index</h4>
+              <p>
+                Launch of the ASEA All Share Index, tracking the performance of
+                leading African companies listed on member exchanges.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content fade-in">
+              <span class="timeline-year">2020</span>
+              <h4 class="timeline-title">Digital Transformation</h4>
+              <p>
+                ASEA embraced digital transformation, hosting virtual
+                conferences and workshops in response to global challenges.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content fade-in">
+              <span class="timeline-year">2025</span>
+              <h4 class="timeline-title">28th Annual Conference</h4>
+              <p>
+                ASEA celebrates its continued growth and impact with the 28th
+                Annual Conference in Kigali, Rwanda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- History Section End -->
+
+    <!-- CTA Section Start -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Join Us in Kigali</h2>
+        <p>
+          Be part of this landmark event and contribute to the growth and
+          development of African capital markets.
+        </p>
+        <a
+          href="registration.html"
+          class="btn btn-light btn-lg"
+          style="
+            font-weight: 700;
+            padding: 14px 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+          "
+          >REGISTER NOW</a
+        >
+      </div>
+    </section>
+    <!-- CTA Section End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget footer-info">
+              <img
+                src="img/members/logo_asea_white.png"
+                alt="ASEA Logo"
+                class="mb-4"
+                style="max-height: 60px"
+              />
+              <p>
+                The African Securities Exchanges Association (ASEA) is the
+                premier association of securities exchanges in Africa.
+              </p>
+              <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
+          </div>
 
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Widget Title -->
-                <h5 class="widget-title">Contact</h5>
-
-                <!-- Contact Area -->
-                <div class="footer-contact-info">
-                  <p>
-                    <i class="zmdi zmdi-map"></i> Kigali City Tower, KCT 1st
-                    Floor
-                  </p>
-                  <p><i class="zmdi zmdi-phone"></i> +250 788 516 021</p>
-                  <p>
-                    <i class="zmdi zmdi-email"></i>
-                    <a
-                      href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
-                      class="__cf_email__"
-                      data-cfemail="61020e0f07041321060c00080d4f020e0c"
-                      style="color: white"
-                      >[email&#160;protected]</a
-                    >
-                  </p>
-                  <p><i class="zmdi zmdi-globe"></i>www.rse.rw</p>
-                </div>
-              </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
             </div>
+          </div>
 
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Widget Title -->
-                <h5 class="widget-title">Quick Links</h5>
-
-                <!-- Footer Nav -->
-                <ul class="footer-nav">
-                  <li><a href="#">Registration</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Accommodation</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
-              </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Contact Info</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</p>
+              <p><i class="fas fa-phone-alt"></i> +250 788 123 456</p>
+              <p><i class="fas fa-envelope"></i> info@asea-conference.org</p>
             </div>
+          </div>
 
-            <!-- Single Footer Widget Area -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Subscribe</h4>
+              <p>Stay updated with the latest news and announcements</p>
+              <form class="footer-newsletter">
+                <input type="email" placeholder="Your Email" />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Copywrite Area -->
-      <div class="container">
-        <div class="copywrite-content">
-          <div class="row">
-            <!-- Copywrite Text -->
-            <div class="col-12 col-md-6">
-              <div class="copywrite-text">
-                <p>
-                  &copy;
-                  <script
-                    data-cfasync="false"
-                    src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-                  ></script>
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  African Securities Exchange Association. All Rights Reserved
-                </p>
-              </div>
-            </div>
-            <!-- Footer Menu -->
-            <div class="col-12 col-md-6">
-              <div class="footer-menu">
-                <ul class="nav">
-                  <li>
-                    <a href="#"
-                      ><i class="zmdi zmdi-circle"></i> Terms of Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="zmdi zmdi-circle"></i> Privacy Policy</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="copyright">
+        <div class="container">
+          <p>&copy; 2025 ASEA Conference. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
-    <!-- Footer Area End -->
+    <!-- Footer End -->
 
-    <!-- **** All JS Files ***** -->
-    <!-- jQuery 2.2.4 -->
+    <!-- JS Libraries -->
     <script src="js/jquery.min.js"></script>
-    <!-- Popper -->
     <script src="js/popper.min.js"></script>
-    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- All Plugins -->
     <script src="js/confer.bundle.js"></script>
-    <!-- Active -->
-    <script src="js/default-assets/active.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-23581568-13');
+      // Sticky Header
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header-area');
+        if (window.scrollY > 100) {
+          header.classList.add('header-shrink');
+        } else {
+          header.classList.remove('header-shrink');
+        }
+      });
     </script>
-
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
-      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
-      data-cf-beacon='{"rayId":"93017a77cf538a46","version":"2025.3.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}'
-      crossorigin="anonymous"
-    ></script>
   </body>
-
-  <!-- Mirrored from preview.colorlib.com/theme/confer/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Apr 2025 07:28:05 GMT -->
 </html>
