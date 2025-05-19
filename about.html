@@ -70,14 +70,12 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
 
-      /* Header */
-      .header-area {
+      /* Header */      .header-area {
         position: fixed;
-        width: 100%;
         z-index: 999;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.5s;
+        width: 100%;
+        transition-duration: 500ms;
+        background-color: white;
       }
 
       .header-shrink {
@@ -654,8 +652,6 @@
               <a class="navbar-brand logo" href="index.html">
                 <img src="img/core-img/ASEA-LOGO.png" alt="ASEA Logo" />
               </a>
-
-              <!-- Navbar Toggler -->
               <button
                 class="navbar-toggler"
                 type="button"
@@ -665,40 +661,37 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class="fa-solid fa-bars-staggered"></span>
+                <span class="navbar-toggler-icon"></span>
               </button>
 
               <!-- Navbar -->
               <div class="collapse navbar-collapse" id="conferNavbar">
                 <ul class="navbar-nav ml-auto main-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="index.html">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="speakers.html">Speakers</a>
+                    <a class="nav-link" href="about.html">ABOUT</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="schedule.html">Schedule</a>
+                    <a class="nav-link" href="schedule.html">PROGRAM</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="accommodation.html">Venue</a>
+                    <a class="nav-link" href="speakers.html">SPEAKERS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="registration.html">Register</a>
+                    <a class="nav-link" href="accommodation.html">Accommodation</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="travel.html">DESTINATION GUIDE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">MEDIA</a>
                   </li>
                 </ul>
-
-                <!-- Register Button -->
-                <a href="registration.html" class="btn btn-primary ml-lg-3"
-                  >Register Now</a
-                >
               </div>
+              <!-- Register Button -->
+              <a href="registration.html" class="register-btn">REGISTER</a>
             </nav>
           </div>
         </div>
@@ -828,7 +821,7 @@
         <div class="row">
           <div class="col-12">
             <div class="section-header">
-              <h2>Our Mission & Values</h2>
+              <h2>Our Mission &amp; Values</h2>
               <p>Guiding principles that drive our association</p>
             </div>
           </div>
