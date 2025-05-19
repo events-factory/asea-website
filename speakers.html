@@ -1,390 +1,1386 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from preview.colorlib.com/theme/confer/speakers.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Apr 2025 07:28:05 GMT -->
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Title -->
-    <title>ASEA - Conference Event HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speakers - ASEA Conference 2025</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/ASEA-LOGO.png" />
 
-    <!-- Stylesheet -->
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/default-assets/classy-nav.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      :root {
+        --primary-color: #223b73; /* ASEA Blue */
+        --secondary-color: #dc4405; /* ASEA Orange */
+        --accent-color: #23a3dd; /* ASEA Light Blue */
+        --text-color: #333;
+        --light-color: #f8f9fa;
+        --dark-color: #1a2a40;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        overflow-x: hidden;
+        background-color: #ffffff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header */
+      .header-area {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s;
+      }
+
+      .header-shrink {
+        padding: 5px 0;
+      }
+
+      .logo img {
+        max-height: 60px;
+        transition: all 0.3s;
+      }
+
+      .fa-solid fa-bars-staggered {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(34, 59, 115, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler {
+        border: 1px solid var(--primary-color);
+        padding: 0.25rem 0.5rem;
+      }
+
+      .main-menu {
+        margin-right: 15px;
+      }
+
+      .main-menu ul li {
+        margin: 0 2px;
+      }
+
+      .main-menu ul li a {
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        padding: 30px 15px;
+        transition: all 0.3s;
+      }
+
+      .main-menu ul li a:hover {
+        color: var(--secondary-color);
+      }
+
+      .main-menu ul li.active a {
+        color: var(--secondary-color);
+        position: relative;
+      }
+
+      .main-menu ul li.active a::after {
+        content: '';
+        position: absolute;
+        bottom: 25px;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: 2px;
+        background: var(--secondary-color);
+      }
+
+      /* Page Hero */
+      .page-hero {
+        position: relative;
+        height: 50vh;
+        background: url('img/bg-img/bg-1.jpeg') no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .page-hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(34, 59, 115, 0.9) 0%,
+          rgba(220, 68, 5, 0.8) 100%
+        );
+        z-index: 1;
+      }
+
+      .page-hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+      }
+
+      .page-hero-content h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        animation: fadeInDown 1s;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .page-hero-content p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        animation: fadeInUp 1s;
+      }
+
+      /* Breadcrumb */
+      .breadcrumb {
+        background: transparent;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+      }
+
+      .breadcrumb-item {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .breadcrumb-item a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Section */
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-header h2:after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 4px;
+        background-color: var(--secondary-color);
+      }
+
+      .section-header p {
+        color: #777;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Speakers */
+      .speaker-card {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+      }
+
+      .speaker-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .speaker-image {
+        position: relative;
+        overflow: hidden;
+        padding-top: 100%; /* 1:1 Aspect Ratio */
+      }
+
+      .speaker-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .speaker-card:hover .speaker-image img {
+        transform: scale(1.1);
+      }
+
+      .speaker-info {
+        background-color: white;
+        padding: 25px;
+        text-align: center;
+      }
+
+      .speaker-name {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        color: var(--primary-color);
+      }
+
+      .speaker-position {
+        color: var(--secondary-color);
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+
+      .speaker-bio {
+        margin-top: 15px;
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .speaker-social {
+        margin-top: 15px;
+      }
+
+      .speaker-social a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background: #f5f5f5;
+        color: var(--primary-color);
+        line-height: 35px;
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: all 0.3s;
+      }
+
+      .speaker-social a:hover {
+        background: var(--secondary-color);
+        color: white;
+      }
+
+      /* Featured Speaker */
+      .featured-speaker {
+        padding: 60px 0;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--dark-color) 100%
+        );
+        color: white;
+        margin-bottom: 100px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .featured-speaker:before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .featured-speaker:after {
+        content: '';
+        position: absolute;
+        bottom: -150px;
+        left: -150px;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .featured-speaker-image {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      .featured-speaker-image img {
+        width: 100%;
+      }
+
+      .featured-speaker-content h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      .featured-speaker-content h3 {
+        color: var(--secondary-color);
+        margin-bottom: 30px;
+      }
+
+      .featured-speaker-content p {
+        margin-bottom: 30px;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      /* Categories */
+      .speaker-categories {
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      .category-button {
+        background: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin: 5px;
+        font-weight: 600;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+
+      .category-button:hover,
+      .category-button.active {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      /* Speaker Modal */
+      .speaker-modal .modal-content {
+        border-radius: 15px;
+        border: none;
+        overflow: hidden;
+      }
+
+      .speaker-modal .modal-header {
+        border: none;
+        padding: 20px 30px;
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .speaker-modal .modal-title {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+
+      .speaker-modal .close {
+        color: white;
+        opacity: 1;
+        text-shadow: none;
+      }
+
+      .speaker-modal .modal-body {
+        padding: 30px;
+      }
+
+      .speaker-modal-image {
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .speaker-modal-image img {
+        width: 100%;
+      }
+
+      .speaker-modal-info h3 {
+        color: var(--primary-color);
+        margin-bottom: 5px;
+      }
+
+      .speaker-modal-info h4 {
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      .speaker-modal-bio {
+        line-height: 1.8;
+      }
+
+      .speaker-modal-social {
+        margin-top: 20px;
+      }
+
+      .speaker-modal-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: #f5f5f5;
+        color: var(--primary-color);
+        line-height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        text-align: center;
+        transition: all 0.3s;
+      }
+
+      .speaker-modal-social a:hover {
+        background: var(--secondary-color);
+        color: white;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--accent-color) 100%
+        );
+        padding: 100px 0;
+        text-align: center;
+        color: white;
+      }
+
+      .cta-section h2 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .cta-section p {
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.1rem;
+      }
+
+      .btn-light {
+        background-color: #fff;
+        color: var(--primary-color);
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-light:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer */
+      .footer-area {
+        background: var(--dark-color);
+        color: #aaa;
+        padding: 70px 0 0;
+      }
+
+      .footer-widget {
+        margin-bottom: 40px;
+      }
+
+      .footer-widget h4 {
+        color: white;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+        font-size: 1.4rem;
+      }
+
+      .footer-widget h4:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--secondary-color);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links li a {
+        color: #aaa;
+        transition: all 0.3s;
+        text-decoration: none;
+        position: relative;
+        padding-left: 15px;
+        display: block;
+      }
+
+      .footer-links li a:before {
+        content: '\f105';
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--secondary-color);
+      }
+
+      .footer-links li a:hover {
+        color: white;
+        padding-left: 20px;
+      }
+
+      .footer-info p {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .footer-info p i {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        color: var(--secondary-color);
+      }
+
+      .footer-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+
+      .footer-social a:hover {
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+      }
+
+      .footer-newsletter {
+        display: flex;
+        position: relative;
+      }
+
+      .footer-newsletter input {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        width: 100%;
+        color: white;
+      }
+
+      .footer-newsletter input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .footer-newsletter button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .footer-newsletter button:hover {
+        background: var(--accent-color);
+        transform: scale(1.1);
+      }
+
+      .copyright {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 15px 0;
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Responsive Fixes */
+      @media (max-width: 991px) {
+        .navbar-collapse {
+          background: white;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          margin-top: 15px;
+        }
+
+        .main-menu ul li a {
+          padding: 10px 15px;
+        }
+
+        .main-menu ul li.active a::after {
+          bottom: 5px;
+        }
+
+        .page-hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .featured-speaker-content {
+          margin-top: 40px;
+          text-align: center;
+        }
+
+        .featured-speaker-image {
+          margin-bottom: 30px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          padding: 70px 0;
+        }
+
+        .page-hero {
+          height: 40vh;
+        }
+
+        .speaker-card {
+          max-width: 320px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 50px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translate3d(0, -50px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s;
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 1s;
+      }
+
+      .fade-in-down {
+        animation: fadeInDown 1s;
+      }
+    </style>
   </head>
-
   <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="loader"></div>
-    </div>
-    <!-- /Preloader -->
-
     <!-- Header Area Start -->
     <header class="header-area">
-      <div class="classy-nav-container breakpoint-off">
-        <div class="container">
-          <!-- Classy Menu -->
-          <nav class="classy-navbar justify-content-between" id="conferNav">
-            <!-- Logo -->
-            <a class="nav-brand" href="index.html"
-              ><img src="img/core-img/ASEA-LOGO.png" width="90" alt=""
-            /></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg">
+              <!-- Logo -->
+              <a class="navbar-brand logo" href="index.html">
+                <img src="img/core-img/ASEA-LOGO.png" alt="ASEA Logo" />
+              </a>
 
-            <!-- Navbar Toggler -->
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"
-                ><span></span><span></span><span></span
-              ></span>
-            </div>
+              <!-- Navbar Toggler -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#conferNavbar"
+                aria-controls="conferNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="fa-solid fa-bars-staggered"></span>
+              </button>
 
-            <!-- Menu -->
-            <div class="classy-menu">
-              <!-- Menu Close Button -->
-              <div class="classycloseIcon">
-                <div class="cross-wrap">
-                  <span class="top"></span><span class="bottom"></span>
-                </div>
-              </div>
-              <!-- Nav Start -->
-              <div class="classynav">
-                <ul id="nav">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html"> About Us</a></li>
-                  <li class="active"><a href="speakers.html">Speakers</a></li>
-                  <li><a href="schedule.html"> Program</a></li>
-                  <li><a href="contact.html">Accommodation</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+              <!-- Navbar -->
+              <div class="collapse navbar-collapse" id="conferNavbar">
+                <ul class="navbar-nav ml-auto main-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="speakers.html">Speakers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="schedule.html">Schedule</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="accommodation.html">Venue</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
                 </ul>
 
-                <!-- Get Tickets Button -->
-                <a
-                  href="registration.html"
-                  class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5"
-                  >Register Now <i class="zmdi zmdi-long-arrow-right"></i
-                ></a>
+                <!-- Register Button -->
+                <a href="registration.html" class="btn btn-primary ml-lg-3"
+                  >Register Now</a
+                >
               </div>
-              <!-- Nav End -->
-            </div>
-          </nav>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
     <!-- Header Area End -->
 
-    <!-- Breadcrumb Area Start -->
-    <section
-      class="breadcrumb-area bg-img bg-gradient-overlay jarallax"
-      style="background-image: url(img/bg-img/bg-1.jpeg)"
-    >
-      <div class="container h-100">
-        <div class="row h-100 align-items-center">
-          <div class="col-12">
-            <div class="breadcrumb-content">
-              <h2 class="page-title">speakers</h2>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    Speakers
-                  </li>
-                </ol>
-              </nav>
+    <!-- Page Hero Start -->
+    <section class="page-hero">
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <div class="container">
+          <h1>Our Speakers</h1>
+          <p>
+            Meet the experts and thought leaders at the ASEA Conference 2025
+          </p>
+
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Speakers
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- Page Hero End -->
+
+    <!-- Featured Speaker Start -->
+    <section class="featured-speaker">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="featured-speaker-image fade-in-up">
+              <img
+                src="img/speakers/CEO-Thapelo123456.jpg"
+                alt="Thapelo Tsheole"
+              />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div
+              class="featured-speaker-content fade-in-up"
+              style="animation-delay: 0.3s"
+            >
+              <h2>Thapelo Tsheole</h2>
+              <h3>ASEA President & CEO, Botswana Stock Exchange</h3>
+              <p>
+                As the keynote speaker for the ASEA Conference 2025, Thapelo
+                Tsheole brings invaluable insights from his extensive experience
+                in capital markets and leadership positions. With a career
+                spanning over two decades, he has implemented transformative
+                strategies that have positioned the Botswana Stock Exchange as
+                one of Africa's top performing exchanges.
+              </p>
+              <p>
+                Mr. Tsheole's vision for African capital markets focuses on
+                harnessing technological innovation and regional integration to
+                drive sustainable growth and development across the continent.
+              </p>
+              <a href="#" class="btn btn-light">Read Full Profile</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Breadcrumb Area End -->
+    <!-- Featured Speaker End -->
 
-    <!-- Our Speakings Area Start -->
-    <section class="our-speaker-area section-padding-100">
+    <!-- Speakers Section Start -->
+    <section class="section">
       <div class="container">
         <div class="row">
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-              style="
-                visibility: visible;
-                animation-delay: 300ms;
-                animation-name: fadeInUp;
-              "
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/speakers/Rwabukumba.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Pierre Celestin Rwabukumba</h5>
-                <p>CEO - RSE & Chairman - ASEA</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-              style="
-                visibility: visible;
-                animation-delay: 300ms;
-                animation-name: fadeInUp;
-              "
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/speakers/CEO-Thapelo123456.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Thapelo Tsheole</h5>
-                <p>CEO-Rwanda CMA</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-              style="
-                visibility: visible;
-                animation-delay: 300ms;
-                animation-name: fadeInUp;
-              "
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/speakers/Otengo.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Andrew OWINY OTENGO</h5>
-                <p>
-                  Director &amp; Head of Corporate Finance &amp; Research-MBEA
-                  Rwanda
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div class="col-12">
-            <div
-              class="more-speaker-btn text-center mt-20 mb-40 wow fadeInUp"
-              data-wow-delay="300ms"
-              style="
-                visibility: hidden;
-                animation-delay: 300ms;
-                animation-name: none;
-              "
-            >
-              <a class="btn confer-btn-white" href="#"
-                >view all Speakers <i class="zmdi zmdi-long-arrow-right"></i
-              ></a>
+            <div class="section-header">
+              <h2>Conference Speakers</h2>
+              <p>
+                Leading experts and industry pioneers from across Africa and
+                beyond
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker Categories -->
+        <div class="speaker-categories">
+          <button class="category-button active" data-category="all">
+            All
+          </button>
+          <button class="category-button" data-category="keynote">
+            Keynotes
+          </button>
+          <button class="category-button" data-category="ceo">CEOs</button>
+          <button class="category-button" data-category="expert">
+            Industry Experts
+          </button>
+          <button class="category-button" data-category="regulator">
+            Regulators
+          </button>
+        </div>
+
+        <div class="row">
+          <!-- Speaker 1 -->
+          <div class="col-lg-3 col-md-6" data-category="keynote ceo">
+            <div class="speaker-card fade-in-up">
+              <div class="speaker-image">
+                <img src="img/speakers/Idi.jpg" alt="Idrissa Diop" />
+              </div>
+              <div class="speaker-info">
+                <h4 class="speaker-name">Idrissa Diop</h4>
+                <p class="speaker-position">CEO, Abidjan Stock Exchange</p>
+                <div class="speaker-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <button
+                  class="btn btn-sm btn-primary mt-3"
+                  data-toggle="modal"
+                  data-target="#speakerModal1"
+                >
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 2 -->
+          <div class="col-lg-3 col-md-6" data-category="expert">
+            <div class="speaker-card fade-in-up" style="animation-delay: 0.2s">
+              <div class="speaker-image">
+                <img src="img/speakers/Iza.jpg" alt="Izabella Kaminska" />
+              </div>
+              <div class="speaker-info">
+                <h4 class="speaker-name">Izabella Kaminska</h4>
+                <p class="speaker-position">Financial Journalist</p>
+                <div class="speaker-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <button
+                  class="btn btn-sm btn-primary mt-3"
+                  data-toggle="modal"
+                  data-target="#speakerModal2"
+                >
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 3 -->
+          <div class="col-lg-3 col-md-6" data-category="regulator">
+            <div class="speaker-card fade-in-up" style="animation-delay: 0.4s">
+              <div class="speaker-image">
+                <img src="img/bg-img/44.jpg" alt="Emmanuel Nyirinkindi" />
+              </div>
+              <div class="speaker-info">
+                <h4 class="speaker-name">Emmanuel Nyirinkindi</h4>
+                <p class="speaker-position">Director, IFC</p>
+                <div class="speaker-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <button
+                  class="btn btn-sm btn-primary mt-3"
+                  data-toggle="modal"
+                  data-target="#speakerModal3"
+                >
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 4 -->
+          <div class="col-lg-3 col-md-6" data-category="ceo">
+            <div class="speaker-card fade-in-up" style="animation-delay: 0.6s">
+              <div class="speaker-image">
+                <img src="img/bg-img/45.jpg" alt="Celestin Rwabukumba" />
+              </div>
+              <div class="speaker-info">
+                <h4 class="speaker-name">Celestin Rwabukumba</h4>
+                <p class="speaker-position">CEO, Rwanda Stock Exchange</p>
+                <div class="speaker-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <button
+                  class="btn btn-sm btn-primary mt-3"
+                  data-toggle="modal"
+                  data-target="#speakerModal4"
+                >
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 5 -->
+          <div class="col-lg-3 col-md-6" data-category="expert">
+            <div class="speaker-card fade-in-up" style="animation-delay: 0.8s">
+              <div class="speaker-image">
+                <img src="img/bg-img/46.jpg" alt="Sarah Kariuki" />
+              </div>
+              <div class="speaker-info">
+                <h4 class="speaker-name">Sarah Kariuki</h4>
+                <p class="speaker-position">Financial Analyst</p>
+                <div class="speaker-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <button
+                  class="btn btn-sm btn-primary mt-3"
+                  data-toggle="modal"
+                  data-target="#speakerModal5"
+                >
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 6 -->
+          <div class="col-lg-3 col-md-6" data-category="regulator">
+            <div class="speaker-card fade-in-up" style="animation-delay: 1s">
+              <div class="speaker-image">
+                <img src="img/bg-img/47.jpg" alt="Mohamed El Amine" />
+              </div>
+              <div class="speaker-info">
+                <h4 class="speaker-name">Mohamed El Amine</h4>
+                <p class="speaker-position">Regulatory Expert</p>
+                <div class="speaker-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <button
+                  class="btn btn-sm btn-primary mt-3"
+                  data-toggle="modal"
+                  data-target="#speakerModal6"
+                >
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 7 -->
+          <div class="col-lg-3 col-md-6" data-category="ceo">
+            <div class="speaker-card fade-in-up" style="animation-delay: 1.2s">
+              <div class="speaker-image">
+                <img src="img/bg-img/48.jpg" alt="David Trezeguet" />
+              </div>
+              <div class="speaker-info">
+                <h4 class="speaker-name">David Mugenyi</h4>
+                <p class="speaker-position">CEO, Uganda Securities Exchange</p>
+                <div class="speaker-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <button
+                  class="btn btn-sm btn-primary mt-3"
+                  data-toggle="modal"
+                  data-target="#speakerModal7"
+                >
+                  View Profile
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 8 -->
+          <div class="col-lg-3 col-md-6" data-category="keynote">
+            <div class="speaker-card fade-in-up" style="animation-delay: 1.4s">
+              <div class="speaker-image">
+                <img src="img/bg-img/49.jpg" alt="Clara Mwangi" />
+              </div>
+              <div class="speaker-info">
+                <h4 class="speaker-name">Clara Mwangi</h4>
+                <p class="speaker-position">Digital Transformation Expert</p>
+                <div class="speaker-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <button
+                  class="btn btn-sm btn-primary mt-3"
+                  data-toggle="modal"
+                  data-target="#speakerModal8"
+                >
+                  View Profile
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Our Speakings Area End -->
+    <!-- Speakers Section End -->
 
-    <!-- Footer Area Start -->
-    <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
-      <!-- Main Footer Area -->
-      <div class="main-footer-area">
-        <div class="container">
-          <div class="row">
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Footer Logo -->
-                <a href="#" class="footer-logo"
-                  ><img src="img/core-img/ASEA-LOGO.png" alt="" width="150"
-                /></a>
-                <p>
-                  The African Securities Exchanges Association is the Premier
-                  Association of Securities Exchanges in Africa.
-                </p>
+    <!-- CTA Section Start -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Become a Speaker</h2>
+        <p>
+          Share your expertise and insights with capital market leaders from
+          across Africa
+        </p>
+        <a href="contact.html" class="btn btn-light btn-lg">Apply Now</a>
+      </div>
+    </section>
+    <!-- CTA Section End -->
 
-                <!-- Social Info -->
-                <div class="social-info">
-                  <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                  <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                  <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                  <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+    <!-- Speaker Modal 1 -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModal1"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img src="img/speakers/Idi.jpg" alt="Idrissa Diop" />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>Idrissa Diop</h3>
+                  <h4>CEO, Abidjan Stock Exchange</h4>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      Idrissa Diop has been the Chief Executive Officer of the
+                      Abidjan Stock Exchange since 2018. With over 20 years of
+                      experience in capital markets, he has led significant
+                      reforms that have positioned the exchange as a key player
+                      in the West African Economic and Monetary Union (WAEMU)
+                      region.
+                    </p>
+                    <p>
+                      Prior to his current role, Mr. Diop held senior positions
+                      at various financial institutions across Africa and
+                      Europe. He holds an MBA from Harvard Business School and a
+                      Bachelor's degree in Economics from the University of
+                      Dakar.
+                    </p>
+                    <p>
+                      At the ASEA Conference 2025, Mr. Diop will be speaking
+                      about regional integration of African capital markets and
+                      how exchanges can collaborate to enhance liquidity and
+                      market depth.
+                    </p>
+                    <h5>
+                      Session: "Regional Integration: Building Stronger African
+                      Capital Markets"
+                    </h5>
+                    <p>
+                      Date: November 26, 2025 | Time: 11:00 AM - 12:30 PM |
+                      Venue: Main Hall
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Widget Title -->
-                <h5 class="widget-title">Contact</h5>
-
-                <!-- Contact Area -->
-                <div class="footer-contact-info">
-                  <p>
-                    <i class="zmdi zmdi-map"></i> Kigali City Tower, KCT 1st
-                    Floor
-                  </p>
-                  <p><i class="zmdi zmdi-phone"></i> +250 788 516 021</p>
-                  <p>
-                    <i class="zmdi zmdi-email"></i>
-                    <a
-                      href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
-                      class="__cf_email__"
-                      data-cfemail="61020e0f07041321060c00080d4f020e0c"
-                      style="color: white"
-                      >[email&#160;protected]</a
-                    >
-                  </p>
-                  <p><i class="zmdi zmdi-globe"></i>www.rse.rw</p>
+    <!-- Speaker Modal 2 -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModal2"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img src="img/speakers/Iza.jpg" alt="Izabella Kaminska" />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>Izabella Kaminska</h3>
+                  <h4>Financial Journalist</h4>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      Izabella Kaminska is a renowned financial journalist with
+                      expertise in global markets, financial innovation, and
+                      emerging economies. She has written extensively about
+                      capital markets in Africa and their potential for growth.
+                    </p>
+                    <p>
+                      Ms. Kaminska previously worked for the Financial Times
+                      where she was the editor of the Alphaville section,
+                      covering market developments and financial innovation. She
+                      has also contributed to various international publications
+                      and is a regular speaker at global financial conferences.
+                    </p>
+                    <p>
+                      At the ASEA Conference 2025, Ms. Kaminska will moderate a
+                      panel discussion on media representation of African
+                      capital markets and how improved communication strategies
+                      can attract global investors.
+                    </p>
+                    <h5>
+                      Session: "Changing the Narrative: Media and African
+                      Capital Markets"
+                    </h5>
+                    <p>
+                      Date: November 27, 2025 | Time: 2:00 PM - 3:30 PM | Venue:
+                      Conference Room B
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Widget Title -->
-                <h5 class="widget-title">Quick Links</h5>
+    <!-- More speaker modals would be added here -->
 
-                <!-- Footer Nav -->
-                <ul class="footer-nav">
-                  <li><a href="#">Registration</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Accommodation</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
+    <!-- Footer Start -->
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget footer-info">
+              <img
+                src="img/core-img/ASEA-LOGO.png"
+                alt="ASEA Logo"
+                class="mb-4"
+                style="max-height: 60px"
+              />
+              <p>
+                The African Securities Exchanges Association (ASEA) is the
+                premier association of securities exchanges in Africa.
+              </p>
+              <div class="footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
               </div>
             </div>
+          </div>
 
-            <!-- Single Footer Widget Area -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Contact Info</h4>
+              <p><i class="fa fa-map-marker"></i> Kigali, Rwanda</p>
+              <p><i class="fa fa-phone"></i> +250 788 123 456</p>
+              <p><i class="fa fa-envelope"></i> info@asea-conference.org</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Subscribe</h4>
+              <p>Stay updated with the latest news and announcements</p>
+              <form class="footer-newsletter">
+                <input type="email" placeholder="Your Email" />
+                <button type="submit"><i class="fa fa-paper-plane"></i></button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Copywrite Area -->
-      <div class="container">
-        <div class="copywrite-content">
-          <div class="row">
-            <!-- Copywrite Text -->
-            <div class="col-12 col-md-6">
-              <div class="copywrite-text">
-                <p>
-                  &copy;
-                  <script
-                    data-cfasync="false"
-                    src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-                  ></script>
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  African Securities Exchange Association. All Rights Reserved
-                </p>
-              </div>
-            </div>
-            <!-- Footer Menu -->
-            <div class="col-12 col-md-6">
-              <div class="footer-menu">
-                <ul class="nav">
-                  <li>
-                    <a href="#"
-                      ><i class="zmdi zmdi-circle"></i> Terms of Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="zmdi zmdi-circle"></i> Privacy Policy</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="copyright">
+        <div class="container">
+          <p>&copy; 2025 ASEA Conference. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
-    <!-- Footer Area End -->
+    <!-- Footer End -->
 
-    <!-- **** All JS Files ***** -->
-    <!-- jQuery 2.2.4 -->
+    <!-- JS Libraries -->
     <script src="js/jquery.min.js"></script>
-    <!-- Popper -->
     <script src="js/popper.min.js"></script>
-    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- All Plugins -->
     <script src="js/confer.bundle.js"></script>
-    <!-- Active -->
-    <script src="js/default-assets/active.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
+      // Sticky Header
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header-area');
+        if (window.scrollY > 100) {
+          header.classList.add('header-shrink');
+        } else {
+          header.classList.remove('header-shrink');
+        }
+      });
 
-      gtag('config', 'UA-23581568-13');
+      // Speaker Category Filtering
+      $(document).ready(function () {
+        $('.category-button').click(function () {
+          const category = $(this).data('category');
+
+          // Update active button
+          $('.category-button').removeClass('active');
+          $(this).addClass('active');
+
+          // Filter speakers
+          if (category === 'all') {
+            $('[data-category]').parent().fadeIn();
+          } else {
+            $('[data-category]').parent().hide();
+            $('[data-category*="' + category + '"]')
+              .parent()
+              .fadeIn();
+          }
+        });
+      });
     </script>
-
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
-      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
-      data-cf-beacon='{"rayId":"93017a7dab0f8a44","version":"2025.3.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}'
-      crossorigin="anonymous"
-    ></script>
   </body>
-
-  <!-- Mirrored from preview.colorlib.com/theme/confer/speakers.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Apr 2025 07:28:05 GMT -->
 </html>

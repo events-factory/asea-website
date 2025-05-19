@@ -1,159 +1,1242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from preview.colorlib.com/theme/confer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Apr 2025 07:27:54 GMT -->
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Title -->
-    <title>ASEA - Conference Event HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ASEA Conference 2025 - African Securities Exchanges Association
+    </title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/ASEA-LOGO.png" />
 
-    <!-- Stylesheet -->
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/default-assets/classy-nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      :root {
+        --primary-color: #006837; /* ASEA Green */
+        --secondary-color: #dc4405; /* ASEA Orange */
+        --accent-color: #223b73; /* ASEA Blue */
+        --text-color: #333;
+        --light-color: #f8f9fa;
+        --dark-color: #1a2a40;
+      }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text-color);
+        overflow-x: hidden;
+        background-color: #ffffff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-register {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px 15px;
+        min-width: 180px;
+        text-align: center;
+      }
+
+      .btn-register:hover {
+        background-color: #c43c00;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-learn {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px 15px;
+        min-width: 180px;
+        text-align: center;
+      }
+
+      .btn-learn:hover {
+        background-color: white;
+        color: var(--primary-color);
+        text-decoration: none;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header */
+      .header-area {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 5px 0;
+      }
+
+      .logo img {
+        max-height: 120px;
+      }
+
+      .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .navbar-collapse {
+        justify-content: flex-end;
+      }
+
+      /* Force horizontal layout for menu on large screens */
+      @media (min-width: 992px) {
+        .navbar-expand-lg .navbar-collapse {
+          display: flex !important;
+        }
+
+        .navbar-expand-lg .navbar-toggler {
+          display: none;
+        }
+
+        .navbar-expand-lg .navbar-nav {
+          flex-direction: row;
+          margin: 0 !important;
+        }
+
+        .nav-item {
+          margin: 0 10px;
+        }
+
+        .nav-link {
+          padding: 25px 10px !important;
+          display: inline-block;
+          font-weight: 600;
+          font-size: 12px;
+          color: var(--primary-color);
+          text-transform: uppercase;
+        }
+
+        .btn-primary {
+          background-color: #dc4405;
+          border-color: #dc4405;
+          margin-left: 15px;
+          padding: 12px 25px;
+          border-radius: 50px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+
+      /* Hamburger menu styling for mobile */
+      @media (max-width: 991.98px) {
+        .navbar-toggler {
+          padding: 10px;
+          background-color: white;
+        }
+
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 104, 55, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+      }
+
+      /* Register button styling */
+      .register-btn {
+        background-color: #dc4405;
+        color: white;
+        padding: 12px 30px;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      .register-btn:hover {
+        background-color: #c43c00;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 991px) {
+        .register-btn {
+          margin-top: 15px;
+          margin-left: 0;
+        }
+      }
+
+      /* Hero Section Updated */
+      .hero-section {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .video-background-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+        background-image: url('img/bg-img/bg-2.jpg'); /* Fallback image */
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hero-video-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+        transition: 1s opacity;
+      }
+
+      /* For better mobile experience */
+      @media (max-width: 768px) {
+        .video-background-wrapper {
+          background-image: url('img/bg-img/bg-3.jpeg'); /* Different mobile fallback */
+        }
+
+        .hero-content h1.display-3 {
+          font-size: 2.5rem;
+          margin-top: 50px;
+        }
+
+        .hero-content p.lead {
+          font-size: 1.1rem;
+          color: white;
+        }
+
+        .hero-meta {
+          margin: 20px 0 30px;
+        }
+
+        .hero-meta .meta-item {
+          margin: 10px 15px;
+        }
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 104, 55, 0.5) 0%,
+          rgba(0, 68, 172, 0.5) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: white;
+      }
+
+      .hero-content h1 {
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 25px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-content p.lead {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+        max-width: 800px;
+        font-weight: 400;
+        color: white !important;
+      }
+
+      .hero-meta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 50px;
+        flex-wrap: wrap;
+      }
+
+      .hero-meta .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        margin: 0 30px;
+        font-size: 1.1rem;
+      }
+
+      .hero-meta .meta-item i {
+        font-size: 1.8rem;
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      .hero-cta {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-cta .btn {
+        margin: 10px;
+        min-width: 180px;
+        border-radius: 30px;
+      }
+
+      .btn-view-program {
+        background-color: var(--secondary-color);
+        border: none;
+        color: white;
+        padding: 12px 25px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-view-program:hover {
+        background-color: #c43c00;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        color: white;
+        text-decoration: none;
+      }
+
+      .btn-partnership {
+        border: 2px solid white;
+        background-color: transparent;
+        color: white;
+        padding: 12px 25px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-partnership:hover {
+        background-color: white;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+
+      /* About Section */
+      .section {
+        padding: 50px 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-header h2:after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 4px;
+        background-color: var(--secondary-color);
+      }
+
+      .section-header p {
+        color: #777;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Countdown */
+      .countdown-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+
+      .countdown-box {
+        background: white;
+        padding: 15px;
+        min-width: 100px;
+        margin: 0 15px;
+        text-align: center;
+        border-bottom: 3px solid var(--secondary-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .countdown-amount {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 0;
+      }
+
+      .countdown-period {
+        font-size: 0.9rem;
+        color: #777;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      /* Features Section */
+      .feature-card {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        height: 100%;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .feature-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(34, 59, 115, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .feature-icon i {
+        font-size: 2rem;
+        color: var(--secondary-color);
+      }
+
+      .feature-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+      }
+
+      .about-content h3 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        position: relative;
+      }
+
+      .about-content h3:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--secondary-color);
+      }
+
+      .about-content p {
+        margin-bottom: 20px;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      /* Speakers Section */
+      .speakers-section {
+        background-color: #f9f9f9;
+      }
+
+      .speaker-card {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        height: 100%;
+      }
+
+      .speaker-image {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+      }
+
+      .speaker-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s;
+      }
+
+      .speaker-card:hover .speaker-image img {
+        transform: scale(1.1);
+      }
+
+      .speaker-info {
+        padding: 25px 20px;
+        background: white;
+        text-align: center;
+      }
+
+      .speaker-name {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: var(--primary-color);
+      }
+
+      .speaker-title {
+        color: var(--secondary-color);
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+
+      .speaker-social {
+        display: flex;
+        justify-content: center;
+      }
+
+      .speaker-social a {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: all 0.3s;
+      }
+
+      .speaker-social a:hover {
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+      }
+
+      /* Schedule */
+      .schedule-tab {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .schedule-tab button {
+        padding: 15px 30px;
+        margin: 5px;
+        background: white;
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        color: var(--primary-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        outline: none;
+      }
+
+      .schedule-tab button.active,
+      .schedule-tab button:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .schedule-item {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: flex-start;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .schedule-time {
+        min-width: 120px;
+        color: var(--primary-color);
+        font-weight: 700;
+        padding-right: 20px;
+        border-right: 2px solid var(--secondary-color);
+        margin-right: 20px;
+      }
+
+      .schedule-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .schedule-content .speaker {
+        color: var(--secondary-color);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .schedule-content .speaker img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+        border: 2px solid var(--primary-color);
+      }
+
+      /* Call to Action */
+      .cta-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--accent-color) 100%
+        );
+        padding: 100px 0;
+        text-align: center;
+        color: white;
+      }
+
+      .cta-section h2 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .cta-section p {
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.1rem;
+      }
+
+      /* Footer */
+      .footer-area {
+        background: var(--dark-color);
+        color: #aaa;
+        padding: 70px 0 0;
+      }
+
+      .footer-widget {
+        margin-bottom: 40px;
+      }
+
+      .footer-widget h4 {
+        color: white;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+        font-size: 1.4rem;
+      }
+
+      .footer-widget h4:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--secondary-color);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links li a {
+        color: #aaa;
+        transition: all 0.3s;
+        text-decoration: none;
+        position: relative;
+        padding-left: 15px;
+        display: block;
+      }
+
+      .footer-links li a:before {
+        content: '\f105';
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--secondary-color);
+      }
+
+      .footer-links li a:hover {
+        color: white;
+        padding-left: 20px;
+      }
+
+      .footer-info p {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .footer-info p i {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        color: var(--secondary-color);
+      }
+
+      .footer-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+
+      .footer-social a:hover {
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+      }
+
+      .footer-newsletter {
+        display: flex;
+        position: relative;
+      }
+
+      .footer-newsletter input {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        width: 100%;
+        color: white;
+      }
+
+      .footer-newsletter input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .footer-newsletter button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .footer-newsletter button:hover {
+        background: var(--accent-color);
+        transform: scale(1.1);
+      }
+
+      .footer-newsletter button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .footer-newsletter button:hover {
+        background: var(--accent-color);
+        transform: scale(1.1);
+      }
+
+      .copyright {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 15px 0;
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 50px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translate3d(0, -50px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s;
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 1s;
+      }
+
+      .fade-in-down {
+        animation: fadeInDown 1s;
+      }
+
+      /* Responsive Fixes */
+      @media (max-width: 991px) {
+        .hero-content h1 {
+          font-size: 3.5rem;
+        }
+
+        .navbar-collapse {
+          background: white;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          margin-top: 15px;
+        }
+
+        .main-menu ul li a {
+          padding: 10px 15px;
+        }
+
+        .main-menu ul li.active a::after {
+          bottom: 5px;
+        }
+
+        .btn-primary {
+          margin-top: 10px;
+          display: inline-block;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.8rem;
+        }
+
+        .hero-content p {
+          font-size: 1.2rem;
+        }
+
+        .section {
+          padding: 80px 0;
+        }
+
+        .schedule-item {
+          flex-direction: column;
+        }
+
+        .schedule-time {
+          border-right: none;
+          border-bottom: 2px solid var(--secondary-color);
+          padding-right: 0;
+          padding-bottom: 10px;
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="loader"></div>
-    </div>
-    <!-- /Preloader -->
-
     <!-- Header Area Start -->
     <header class="header-area">
-      <div class="classy-nav-container breakpoint-off">
-        <div class="container">
-          <!-- Classy Menu -->
-          <nav class="classy-navbar justify-content-between" id="conferNav">
-            <!-- Logo -->
-            <a class="nav-brand" href="index.html"
-              ><img src="img/core-img/ASEA-LOGO.png" width="150" alt=""
-            /></a>
-
-            <!-- Navbar Toggler -->
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"
-                ><span></span><span></span><span></span
-              ></span>
-            </div>
-
-            <!-- Menu -->
-            <div class="classy-menu">
-              <!-- Menu Close Button -->
-              <div class="classycloseIcon">
-                <div class="cross-wrap">
-                  <span class="top"></span><span class="bottom"></span>
-                </div>
-              </div>
-              <!-- Nav Start -->
-              <div class="classynav">
-                <ul id="nav">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="about.html"> About Us</a></li>
-                  <li><a href="speakers.html">Speakers</a></li>
-                  <li><a href="schedule.html"> Program</a></li>
-                  <li><a href="contact.html">Accommodation</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg">
+              <!-- Logo -->
+              <a class="navbar-brand logo" href="index.html">
+                <img src="img/core-img/ASEA-LOGO.png" alt="ASEA Logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#conferNavbar"
+                aria-controls="conferNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Navbar -->
+              <div class="collapse navbar-collapse" id="conferNavbar">
+                <ul class="navbar-nav ml-auto main-menu">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="schedule.html">PROGRAM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="speakers.html">SPEAKERS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="accommodation.html"
+                      >Accommodation</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="travel.html">DESTINATION GUIDE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">contact</a>
+                  </li>
                 </ul>
-
-                <!-- Get Tickets Button -->
-                <a
-                  href="registration.html"
-                  class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5"
-                  >Register Now <i class="zmdi zmdi-long-arrow-right"></i
-                ></a>
               </div>
-              <!-- Nav End -->
-            </div>
-          </nav>
+
+              <!-- Register Button -->
+              <a href="registration.html" class="register-btn">REGISTER</a>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
     <!-- Header Area End -->
 
-    <!-- Welcome Area Start -->
-    <section class="welcome-area">
-      <div class="welcome-slides owl-carousel">
-        <!-- Single Slide -->
-        <div
-          class="single-welcome-slide bg-img bg-overlay jarallax"
-          style="background-image: url(img/bg-img/1.jpg)"
-        >
-          <div class="container h-100">
-            <div class="row h-100 align-items-center">
-              <!-- Welcome Text -->
-              <div class="col-12">
-                <div class="welcome-text text-right">
-                  <h2 data-animation="fadeInUp" data-delay="300ms">
-                    Science <br />Conference
-                  </h2>
-                  <h6 data-animation="fadeInUp" data-delay="500ms">
-                    Shangri-La Hotel, Bangkok, Bangkok, Thailand
-                  </h6>
-                  <div
-                    class="hero-btn-group"
-                    data-animation="fadeInUp"
-                    data-delay="700ms"
-                  >
-                    <a href="#" class="btn confer-btn"
-                      >More Information
-                      <i class="zmdi zmdi-long-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
+    <!-- Hosts & Partners Section -->
+
+    <!-- Hosts & Partners Section End -->
+
+    <!-- Hero Video Section Start -->
+    <section class="hero-section">
+      <!-- Video Background -->
+      <div class="video-background-wrapper">
+        <iframe
+          class="hero-video-background"
+          src="https://www.youtube.com/embed/QeA4KOMbJq4?autoplay=1&mute=1&loop=1&playlist=QeA4KOMbJq4&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1&iv_load_policy=3"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="hero-content">
+          <h1>ASEA Conference 2025</h1>
+          <p class="lead">
+            Adapting to Global Market Shifts: Strategies for Resilience and
+            Growth
+          </p>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span>November 26-28, 2025</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kigali, Rwanda</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-building"></i>
+              <span>Kigali Convention Centre</span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="registration.html" class="btn-register">REGISTER NOW</a>
+            <a href="about.html" class="btn-learn">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Video Section End -->
+    <!-- hosts section, hosted by rse in collaboration with asea -->
+    <div
+      class="hosts-section py-3"
+      style="
+        background-color: #ffffff;
+        border-bottom: 1px solid #eaeaea !important;
+        margin-top: 50px;
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-5 d-flex align-items-center justify-content-end">
+            <span
+              style="
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #333;
+                font-size: 14px;
+                margin-right: 15px;
+              "
+              >HOSTED BY</span
+            >
+            <img
+              src="img/members/13_rwanda_stock-1-150x150.png"
+              alt="Rwanda Stock Exchange"
+              style="max-height: 70px"
+            />
+          </div>
+          <div class="col-md-2 text-center d-none d-md-block">
+            <div style="margin: 0 auto; margin-left: 10px"></div>
+          </div>
+          <div class="col-md-5 d-flex align-items-center justify-content-start">
+            <span
+              style="
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #333;
+                font-size: 14px;
+                margin-right: 15px;
+              "
+              >IN ASSOCIATION WITH</span
+            >
+            <img
+              src="img/core-img/logo_asea.png"
+              alt="ASEA"
+              style="max-height: 70px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Countdown Section Start -->
+    <section class="section" style="padding-top: 30px; padding-bottom: 30px">
+      <div class="container">
+        <div class="countdown-container">
+          <div class="countdown-box">
+            <div class="countdown-amount" id="days">197</div>
+            <div class="countdown-period">Days</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-amount" id="hours">15</div>
+            <div class="countdown-period">Hours</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-amount" id="minutes">4</div>
+            <div class="countdown-period">Minutes</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-amount" id="seconds">14</div>
+            <div class="countdown-period">Seconds</div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h3
+            style="
+              color: var(--primary-color);
+              font-weight: 600;
+              font-size: 1.3rem;
+              margin-top: 10px;
+            "
+          >
+            Until The Conference
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- Countdown Section End -->
+
+    <!-- About Section Start -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>About The Conference</h2>
+              <p>
+                Join us for the premier event for African Securities Exchanges
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Single Slide -->
-        <div
-          class="single-welcome-slide bg-img bg-overlay jarallax"
-          style="background-image: url(img/bg-img/45.jpg)"
-        >
-          <div class="container h-100">
-            <div class="row h-100 align-items-center">
-              <!-- Welcome Text -->
-              <div class="col-12">
-                <div class="welcome-text-two text-center">
-                  <h5 data-animation="fadeInUp" data-delay="100ms">
-                    The event consistently
-                  </h5>
-                  <h2 data-animation="fadeInUp" data-delay="300ms">
-                    OSHA Compliance
-                  </h2>
-                  <!-- Event Meta -->
-                  <div
-                    class="event-meta"
-                    data-animation="fadeInUp"
-                    data-delay="500ms"
-                  >
-                    <a class="event-date" href="#"
-                      ><i class="zmdi zmdi-account"></i> January 14, 2019</a
-                    >
-                    <a class="event-author" href="#"
-                      ><i class="zmdi zmdi-alarm-check"></i> Laura Green</a
-                    >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="about-content fade-in-up">
+              <h3>28th ASEA Annual Conference</h3>
+              <p>
+                The ASEA Annual Conference brings together leaders from
+                securities exchanges, market regulators, brokers, investors, and
+                other stakeholders to discuss critical issues affecting African
+                capital markets.
+              </p>
+              <p>
+                This year's theme, "Adapting to Global Market Shifts: Strategies
+                for Resilience and Growth," explores how African exchanges can
+                navigate global economic challenges and leverage opportunities
+                for sustainable growth.
+              </p>
+              <a href="about.html" class="btn btn-primary mt-4">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-cards fade-in-up">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="feature-title">1,500+ Attendees</h4>
+                    <p>
+                      Connect with industry leaders from across Africa and
+                      beyond
+                    </p>
                   </div>
-                  <div
-                    class="hero-btn-group"
-                    data-animation="fadeInUp"
-                    data-delay="700ms"
-                  >
-                    <a href="#" class="btn confer-btn m-2"
-                      >View more <i class="zmdi zmdi-long-arrow-right"></i
-                    ></a>
-                    <a href="#" class="btn confer-btn m-2"
-                      >Get Tickets <i class="zmdi zmdi-long-arrow-right"></i
-                    ></a>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-microphone"></i>
+                    </div>
+                    <h4 class="feature-title">50+ Speakers</h4>
+                    <p>Learn from experts and thought leaders in the field</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4 class="feature-title">3 Days</h4>
+                    <p>
+                      Packed with valuable sessions and networking opportunities
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-globe"></i>
+                    </div>
+                    <h4 class="feature-title">30+ Countries</h4>
+                    <p>
+                      A truly global gathering of capital market professionals
+                    </p>
                   </div>
                 </div>
               </div>
@@ -161,1427 +1244,432 @@
           </div>
         </div>
       </div>
-
-      <!-- Scroll Icon -->
-      <div class="icon-scroll" id="scrollDown"></div>
     </section>
-    <!-- Welcome Area End -->
+    <!-- About Section End -->
 
-    <!-- About Us And Countdown Area Start -->
-    <section class="about-us-countdown-area section-padding-100-0" id="about">
+    <!-- Schedule Section Start -->
+    <section class="section">
       <div class="container">
-        <div class="row align-items-center">
-          <!-- About Content -->
-          <div class="col-12 col-md-6">
-            <div class="about-content-text mb-80">
-              <h6 class="wow fadeInUp" data-wow-delay="300ms">
-                About Conference
-              </h6>
-              <h3 class="wow fadeInUp" data-wow-delay="300ms">
-                Welcome to the Project Management
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>Event Program</h2>
+              <p>Plan your conference experience</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-tab">
+          <button class="active" data-day="day-1">Day 1</button>
+          <button data-day="day-2">Day 2</button>
+          <button data-day="day-3">Day 3</button>
+        </div>
+
+        <div class="schedule-content" id="day-1">
+          <div class="schedule-item">
+            <div class="schedule-time">
+              <span>09:00 AM</span>
+            </div>
+            <div class="schedule-content">
+              <h3>Opening Ceremony</h3>
+              <p>
+                Welcome address and official opening of the 28th ASEA Annual
+                Conference
+              </p>
+              <div class="speaker">
+                <img src="img/speakers/CEO-Thapelo123456.jpg" alt="Speaker" />
+                <span>Thapelo Tsheole, President, ASEA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time">
+              <span>10:30 AM</span>
+            </div>
+            <div class="schedule-content">
+              <h3>Keynote: The Future of African Capital Markets</h3>
+              <p>
+                An in-depth look at the trends shaping the future of securities
+                exchanges in Africa
+              </p>
+              <div class="speaker">
+                <img src="img/speakers/Iza.jpg" alt="Speaker" />
+                <span>Iza Kamaludin, CEO, Securities Exchange</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time">
+              <span>12:00 PM</span>
+            </div>
+            <div class="schedule-content">
+              <h3>Lunch Break & Networking</h3>
+              <p>Connect with fellow attendees and speakers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="schedule.html" class="btn btn-primary">View Full Program</a>
+        </div>
+      </div>
+    </section>
+    <!-- Schedule Section End -->
+
+    <!-- Host Country Section Start -->
+    <section class="section" style="background-color: #f9f9f9">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>Discover Rwanda: The Land of a Thousand Hills</h2>
+              <p>
+                Experience the beauty, culture and innovation of our host
+                country
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="about-content fade-in-up mb-5">
+              <h3>Rwanda: Africa's Hub of Innovation</h3>
+              <p>
+                Known for its remarkable transformation, Rwanda has emerged as
+                one of Africa's most dynamic economies and a leader in
+                sustainable development. Nicknamed "The Land of a Thousand
+                Hills," Rwanda offers breathtaking landscapes, rich cultural
+                experiences, and a business environment that fosters innovation
+                and growth.
+              </p>
+              <p>
+                As the host for the 28th ASEA Annual Conference, Rwanda
+                exemplifies the resilience and forward-thinking approach that
+                characterizes modern African capital markets. Kigali, the
+                capital city, combines traditional Rwandan hospitality with
+                world-class infrastructure, making it the perfect destination
+                for this landmark event.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Host Country Section End -->
+
+    <!-- Rwanda Tourist Attractions Section Start -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>Explore Rwanda</h2>
+              <p>
+                Must-visit attractions while you're attending the conference
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- First Attraction - Volcanoes National Park -->
+        <div class="row align-items-center mb-5 attraction-row">
+          <div class="col-md-6">
+            <div
+              class="attraction-image"
+              style="
+                background-image: url('img/core-img/volcanoes.jpeg');
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+              "
+            ></div>
+          </div>
+          <div class="col-md-6">
+            <div class="attraction-content p-4">
+              <h3 class="mb-3" style="color: var(--primary-color)">
+                Volcanoes National Park
               </h3>
-              <p class="wow fadeInUp" data-wow-delay="300ms">
-                The Project Management is a platform to learn expert techniques
-                for building successful project teams, creating efficient plans
-                and implementing effective tracking measures to ensure your
-                projects come in on deadline and on budget. In one fast-paced,
-                well-designed day, we’ll cover all the essential elements of
-                project management.
+              <p class="mb-3">
+                Home to the endangered mountain gorillas and golden monkeys.
+                Experience the once-in-a-lifetime opportunity to trek and
+                observe these magnificent creatures in their natural habitat.
+              </p>
+              <p>
+                The park is also known for its stunning volcanic landscapes,
+                offering breathtaking views and hiking opportunities through
+                bamboo forests and open meadows.
               </p>
               <a
-                href="#"
-                class="btn confer-btn mt-50 wow fadeInUp"
-                data-wow-delay="300ms"
-                >Interested <i class="zmdi zmdi-long-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-
-          <!-- About Thumb -->
-          <div class="col-12 col-md-6">
-            <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
-              <img src="img/bg-img/2.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Counter Up Area -->
-      <div class="countdown-up-area">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-3">
-              <!-- Countdown Text -->
-              <div
-                class="countdown-content-text mb-100 wow fadeInUp"
-                data-wow-delay="300ms"
+                href="travel.html#volcanoes"
+                class="btn btn-sm btn-primary mt-3"
+                >Learn More</a
               >
-                <h6>Conference Date</h6>
-                <h4>Count Every Second Until the Event</h4>
-              </div>
             </div>
+          </div>
+        </div>
 
-            <div class="col-12 col-md-9">
-              <div
-                class="countdown-timer mb-100 wow fadeInUp"
-                data-wow-delay="300ms"
+        <!-- Second Attraction - Lake Kivu -->
+        <div class="row align-items-center mb-5 attraction-row">
+          <div class="col-md-6 order-md-1 my-5">
+            <div class="attraction-content p-4">
+              <h3 class="mb-3" style="color: var(--primary-color)">
+                Lake Kivu
+              </h3>
+              <p class="mb-3">
+                One of Africa's Great Lakes offering beautiful beaches, water
+                sports, and boat tours. Enjoy stunning sunsets and the peaceful
+                atmosphere of this magnificent lake.
+              </p>
+              <p>
+                The shores of Lake Kivu are dotted with charming towns and
+                beaches where you can relax, swim, or enjoy water activities in
+                a safe, bilharzia-free environment.
+              </p>
+              <a
+                href="travel.html#lake-kivu"
+                class="btn btn-sm btn-primary mt-3"
+                >Learn More</a
               >
-                <div id="clock"></div>
-              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- About Us And Countdown Area End -->
-
-    <!-- Our Speakings Area Start -->
-    <section
-      class="our-speaker-area bg-img bg-gradient-overlay section-padding-100-60"
-      style="background-image: url(img/bg-img/3.jpg)"
-    >
-      <div class="container">
-        <div class="row">
-          <!-- Heading -->
-          <div class="col-12">
+          <div class="col-md-6 order-md-2">
             <div
-              class="section-heading text-center wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <p>Our Speakings</p>
-              <h4>Who’s speaking</h4>
-            </div>
+              class="attraction-image"
+              style="
+                background-image: url('img/core-img/kivu.jpeg');
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+              "
+            ></div>
           </div>
         </div>
 
-        <div class="row">
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
+        <!-- Third Attraction - Kigali Genocide Memorial -->
+        <div class="row align-items-center my-5 attraction-row">
+          <div class="col-md-6">
             <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/bg-img/4.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Albert Barnes</h5>
-                <p>Founder</p>
-              </div>
+              class="attraction-image"
+              style="
+                background-image: url('img/core-img/memorial.png');
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+              "
+            ></div>
+          </div>
+          <div class="col-md-6">
+            <div class="attraction-content p-4">
+              <h3 class="mb-3" style="color: var(--primary-color)">
+                Kigali Genocide Memorial
+              </h3>
+              <p class="mb-3">
+                A powerful and moving tribute to the victims of the 1994
+                genocide. The memorial offers important historical context and
+                honors the resilience of the Rwandan people.
+              </p>
+              <p>
+                This important historical site provides visitors with a profound
+                understanding of Rwanda's past and its remarkable journey toward
+                reconciliation and rebuilding.
+              </p>
+              <a
+                href="travel.html#genocide-memorial"
+                class="btn btn-sm btn-primary mt-3"
+                >Learn More</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/bg-img/5.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Patricia Stanley</h5>
-                <p>Product Lead</p>
-              </div>
+        <!-- Fourth Attraction - Nyungwe Forest -->
+        <div class="row align-items-center my-5 attraction-row">
+          <div class="col-md-6 order-md-1">
+            <div class="attraction-content p-4">
+              <h3 class="mb-3" style="color: var(--primary-color)">
+                Nyungwe Forest National Park
+              </h3>
+              <p class="mb-3">
+                One of Africa's oldest rainforests with over 13 primate species,
+                including chimpanzees. Experience the thrilling canopy walkway
+                suspended high above the forest floor.
+              </p>
+              <p>
+                The park is a biodiversity hotspot with hundreds of bird
+                species, butterflies, and orchids, offering incredible
+                opportunities for nature lovers and photographers.
+              </p>
+              <a href="travel.html#nyungwe" class="btn btn-sm btn-primary mt-3"
+                >Learn More</a
+              >
             </div>
           </div>
+          <div class="col-md-6 order-md-2">
+            <div
+              class="attraction-image"
+              style="
+                background-image: url('img/core-img/nyungwe.jpeg');
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+              "
+            ></div>
+          </div>
+        </div>
 
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/bg-img/6.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Evelyn Stone</h5>
-                <p>Photographer</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/bg-img/7.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Evelyn Stone</h5>
-                <p>Photographer</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/bg-img/8.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Susan Hopkins</h5>
-                <p>UX Manager</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Speaker Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <!-- Thumb -->
-              <div class="speaker-single-thumb">
-                <img src="img/bg-img/9.jpg" alt="" />
-              </div>
-              <!-- Social Info -->
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-              <!-- Info -->
-              <div class="speaker-info">
-                <h5>Michael Fowler</h5>
-                <p>Product Design</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <div
-              class="more-speaker-btn text-center mt-20 mb-40 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <a class="btn confer-btn-white" href="#"
-                >view all Speaker <i class="zmdi zmdi-long-arrow-right"></i
-              ></a>
-            </div>
-          </div>
+        <div class="text-center mt-4">
+          <a href="travel.html" class="btn btn-primary"
+            >Explore More of Rwanda</a
+          >
         </div>
       </div>
     </section>
-    <!-- Our Speakings Area End -->
+    <!-- Rwanda Tourist Attractions Section End -->
 
-    <!-- Our Schedule Area Start -->
-    <section class="our-schedule-area section-padding-100">
+    <!-- CTA Section Start -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Register Today</h2>
+        <p class="text-white" style="color: #f8f9fa">
+          Secure your spot at the leading conference for African Securities
+          Exchanges. Early bird registration ends July 31, 2025.
+        </p>
+        <a href="registration.html" class="btn btn-partnership">Register Now</a>
+      </div>
+    </section>
+    <!-- CTA Section End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-area">
       <div class="container">
         <div class="row">
-          <!-- Heading -->
-          <div class="col-12">
-            <div
-              class="section-heading-2 text-center wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <p>Our Timetable</p>
-              <h4>Schedule Plan</h4>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget footer-info">
+              <img
+                src="img/members/logo_asea_white.png"
+                alt="ASEA Logo"
+                class="mb-4"
+                style="max-height: 60px"
+              />
+              <p>
+                The African Securities Exchanges Association (ASEA) is the
+                premier association of securities exchanges in Africa.
+              </p>
+              <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-12">
-            <div class="schedule-tab">
-              <!-- Nav Tabs -->
-              <ul
-                class="nav nav-tabs wow fadeInUp"
-                data-wow-delay="300ms"
-                id="conferScheduleTab"
-                role="tablist"
-              >
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    id="monday-tab"
-                    data-toggle="tab"
-                    href="#step-one"
-                    role="tab"
-                    aria-controls="step-one"
-                    aria-expanded="true"
-                    >Monday <br />
-                    <span>January 14, 2019</span></a
-                  >
-                </li>
-                <!-- Nav Item -->
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    id="tuesday-tab"
-                    data-toggle="tab"
-                    href="#step-two"
-                    role="tab"
-                    aria-controls="step-two"
-                    aria-expanded="true"
-                    >Tuesday <br />
-                    <span>January 15, 2019</span></a
-                  >
-                </li>
-                <!-- Nav Item -->
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    id="wednesday-tab"
-                    data-toggle="tab"
-                    href="#step-three"
-                    role="tab"
-                    aria-controls="step-three"
-                    aria-expanded="true"
-                    >Wednesday <br />
-                    <span>January 16, 2019</span></a
-                  >
-                </li>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
               </ul>
             </div>
+          </div>
 
-            <!-- Tab Content -->
-            <div class="tab-content" id="conferScheduleTabContent">
-              <div
-                class="tab-pane fade show active"
-                id="step-one"
-                role="tabpanel"
-                aria-labelledby="monday-tab"
-              >
-                <!-- Single Tab Content -->
-                <div class="single-tab-content">
-                  <div class="row">
-                    <div class="col-12">
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/10.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Dealing with Difficult People</h6>
-                            <p>
-                              by <span>Gary Armstrong</span> / Ceo of Confer
-                            </p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Contact Info</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</p>
+              <p><i class="fas fa-phone-alt"></i> +250 788 123 456</p>
+              <p><i class="fas fa-envelope"></i> info@asea-conference.org</p>
+            </div>
+          </div>
 
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/11.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Crop Insurance Conference</h6>
-                            <p>by <span>Amanda Hudson</span> / Ceo of Confer</p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
-
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/12.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Capdm Executive Conference</h6>
-                            <p>by <span>Martha Burke</span> / Ceo of Confer</p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
-
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/13.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Street Food Convention</h6>
-                            <p>
-                              by <span>Jeffrey Morales</span> / Ceo of Confer
-                            </p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-
-                    <!-- More Schedule Btn -->
-                    <div class="col-12">
-                      <div
-                        class="more-schedule-btn text-center mt-50 wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <a href="#" class="btn confer-gb-btn"
-                          >Dowload schedule (Pdf)</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="tab-pane fade"
-                id="step-two"
-                role="tabpanel"
-                aria-labelledby="tuesday-tab"
-              >
-                <!-- Single Tab Content -->
-                <div class="single-tab-content">
-                  <div class="row">
-                    <div class="col-12">
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/11.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Crop Insurance Conference</h6>
-                            <p>by <span>Amanda Hudson</span> / Ceo of Confer</p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
-
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/12.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Capdm Executive Conference</h6>
-                            <p>by <span>Martha Burke</span> / Ceo of Confer</p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
-
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/13.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Street Food Convention</h6>
-                            <p>
-                              by <span>Jeffrey Morales</span> / Ceo of Confer
-                            </p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-
-                    <!-- More Schedule Btn -->
-                    <div class="col-12">
-                      <div
-                        class="more-schedule-btn text-center mt-50 wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <a href="#" class="btn confer-gb-btn"
-                          >Dowload schedule (Pdf)</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="tab-pane fade"
-                id="step-three"
-                role="tabpanel"
-                aria-labelledby="wednesday-tab"
-              >
-                <!-- Single Tab Content -->
-                <div class="single-tab-content">
-                  <div class="row">
-                    <div class="col-12">
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/10.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Dealing with Difficult People</h6>
-                            <p>
-                              by <span>Gary Armstrong</span> / Ceo of Confer
-                            </p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
-
-                      <!-- Single Schedule Area -->
-                      <div
-                        class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <!-- Single Schedule Thumb and Info -->
-                        <div
-                          class="single-schedule-tumb-info d-flex align-items-center"
-                        >
-                          <!-- Single Schedule Thumb -->
-                          <div class="single-schedule-tumb">
-                            <img src="img/bg-img/13.jpg" alt="" />
-                          </div>
-                          <!-- Single Schedule Info -->
-                          <div class="single-schedule-info">
-                            <h6>Street Food Convention</h6>
-                            <p>
-                              by <span>Jeffrey Morales</span> / Ceo of Confer
-                            </p>
-                          </div>
-                        </div>
-                        <!-- Single Schedule Info -->
-                        <div class="schedule-time-place">
-                          <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
-                          <p>
-                            <i class="zmdi zmdi-map"></i> Mountain Resort,
-                            Phoenix, USA
-                          </p>
-                        </div>
-                        <!-- Schedule Btn -->
-                        <a href="#" class="btn confer-btn"
-                          >View More <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-
-                    <!-- More Schedule Btn -->
-                    <div class="col-12">
-                      <div
-                        class="more-schedule-btn text-center mt-50 wow fadeInUp"
-                        data-wow-delay="300ms"
-                      >
-                        <a href="#" class="btn confer-gb-btn"
-                          >Dowload schedule (Pdf)</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Subscribe</h4>
+              <p>Stay updated with the latest news and announcements</p>
+              <form class="footer-newsletter">
+                <input type="email" placeholder="Your Email" />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Our Schedule Area End -->
 
-    <!-- Our Ticket Pricing Table Area Start -->
-    <section
-      class="our-ticket-pricing-table-area bg-img bg-gradient-overlay section-padding-100-0 jarallax"
-      style="background-image: url(img/bg-img/14.jpg)"
-    >
-      <div class="container">
-        <div class="row">
-          <!-- Heading -->
-          <div class="col-12">
-            <div
-              class="section-heading text-center wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <p>Choose a Ticket</p>
-              <h4>Ticket Pricing</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <!-- Single Ticket Pricing Table -->
-          <div class="col-12 col-lg-4">
-            <div
-              class="single-ticket-pricing-table text-center mb-100 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <h6 class="ticket-plan">1 day pass</h6>
-              <!-- Ticket Icon -->
-              <div class="ticket-icon">
-                <img src="img/core-img/p1.png" alt="" />
-              </div>
-              <h2 class="ticket-price"><span>$</span>59</h2>
-              <a href="#" class="btn confer-btn w-100 mb-30"
-                >Get Tickets <i class="zmdi zmdi-long-arrow-right"></i
-              ></a>
-              <!-- Ticket Pricing Table Details -->
-              <div class="ticket-pricing-table-details">
-                <p><i class="zmdi zmdi-check"></i> One Day Conference Ticket</p>
-                <p><i class="zmdi zmdi-check"></i> Coffee-break</p>
-                <p><i class="zmdi zmdi-check"></i> Lunch and Networking</p>
-                <p><i class="zmdi zmdi-check"></i> Keynote talk</p>
-                <p>
-                  <i class="zmdi zmdi-check"></i> Talk to the Editors Session
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Ticket Pricing Table -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-ticket-pricing-table active text-center mb-100 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <h6 class="ticket-plan">Full pass</h6>
-              <!-- Ticket Icon -->
-              <div class="ticket-icon">
-                <img src="img/core-img/p2.png" alt="" />
-              </div>
-              <h2 class="ticket-price"><span>$</span>99</h2>
-              <a href="#" class="btn confer-btn w-100 mb-30"
-                >Get Tickets <i class="zmdi zmdi-long-arrow-right"></i
-              ></a>
-              <!-- Ticket Pricing Table Details -->
-              <div class="ticket-pricing-table-details">
-                <p><i class="zmdi zmdi-check"></i> One Day Conference Ticket</p>
-                <p><i class="zmdi zmdi-check"></i> Coffee-break</p>
-                <p><i class="zmdi zmdi-check"></i> Lunch and Networking</p>
-                <p><i class="zmdi zmdi-check"></i> Keynote talk</p>
-                <p>
-                  <i class="zmdi zmdi-check"></i> Talk to the Editors Session
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Ticket Pricing Table -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="single-ticket-pricing-table text-center mb-100 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <h6 class="ticket-plan">Group pass</h6>
-              <!-- Ticket Icon -->
-              <div class="ticket-icon">
-                <img src="img/core-img/p3.png" alt="" />
-              </div>
-              <h2 class="ticket-price"><span>$</span>199</h2>
-              <a href="#" class="btn confer-btn w-100 mb-30"
-                >Get Tickets <i class="zmdi zmdi-long-arrow-right"></i
-              ></a>
-              <!-- Ticket Pricing Table Details -->
-              <div class="ticket-pricing-table-details">
-                <p><i class="zmdi zmdi-check"></i> One Day Conference Ticket</p>
-                <p><i class="zmdi zmdi-check"></i> Coffee-break</p>
-                <p><i class="zmdi zmdi-check"></i> Lunch and Networking</p>
-                <p><i class="zmdi zmdi-check"></i> Keynote talk</p>
-                <p>
-                  <i class="zmdi zmdi-check"></i> Talk to the Editors Session
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Our Ticket Pricing Table Area End -->
-
-    <!-- Our Sponsor And Client Area Start -->
-    <section class="our-sponsor-client-area section-padding-100">
-      <div class="container">
-        <div class="row">
-          <!-- Heading -->
-          <div class="col-12">
-            <div
-              class="section-heading-2 text-center wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <p>Partners &amp; Sponsors</p>
-              <h4>OFFICIAL SPONSOR</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12">
-            <!-- Our Sponsor area -->
-            <div class="our-sponsor-area d-flex flex-wrap">
-              <!-- Single Sponsor -->
-              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                <a href="#"><img src="img/core-img/p-1.png" alt="" /></a>
-              </div>
-              <!-- Single Sponsor -->
-              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                <a href="#"><img src="img/core-img/p-2.png" alt="" /></a>
-              </div>
-              <!-- Single Sponsor -->
-              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                <a href="#"><img src="img/core-img/p-3.png" alt="" /></a>
-              </div>
-              <!-- Single Sponsor -->
-              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                <a href="#"><img src="img/core-img/p-4.png" alt="" /></a>
-              </div>
-              <!-- Single Sponsor -->
-              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                <a href="#"><img src="img/core-img/p-5.png" alt="" /></a>
-              </div>
-              <!-- Single Sponsor -->
-              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                <a href="#"><img src="img/core-img/p-6.png" alt="" /></a>
-              </div>
-              <!-- Single Sponsor -->
-              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                <a href="#"><img src="img/core-img/p-7.png" alt="" /></a>
-              </div>
-              <!-- Single Sponsor -->
-              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                <a href="#"><img src="img/core-img/p-8.png" alt="" /></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Our client area -->
-          <div class="col-12">
-            <div
-              class="our-client-area mt-100 wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <!-- client Slider -->
-              <div class="client-area owl-carousel">
-                <!-- Single client Slider -->
-                <div class="single-client-content">
-                  <!-- Single client Text -->
-                  <div class="single-client-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris.
-                    </p>
-                    <!-- Single client Thumb and info -->
-                    <div
-                      class="single-client-thumb-info d-flex align-items-center"
-                    >
-                      <!-- Single client Thumb -->
-                      <div class="single-client-thumb">
-                        <img src="img/bg-img/15.jpg" alt="" />
-                      </div>
-                      <!-- Single client Info -->
-                      <div class="client-info">
-                        <h6>Maria Hernandez</h6>
-                        <p>UX Manager</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Single client Icon -->
-                  <div class="client-icon">
-                    <i class="zmdi zmdi-quote"></i>
-                  </div>
-                </div>
-
-                <!-- Single client Slider -->
-                <div class="single-client-content">
-                  <!-- Single client Text -->
-                  <div class="single-client-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris.
-                    </p>
-                    <!-- Single client Thumb and info -->
-                    <div
-                      class="single-client-thumb-info d-flex align-items-center"
-                    >
-                      <!-- Single client Thumb -->
-                      <div class="single-client-thumb">
-                        <img src="img/bg-img/16.jpg" alt="" />
-                      </div>
-                      <!-- Single client Info -->
-                      <div class="client-info">
-                        <h6>Jacqueline Myers</h6>
-                        <p>UX Manager</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Single client Icon -->
-                  <div class="client-icon">
-                    <i class="zmdi zmdi-quote"></i>
-                  </div>
-                </div>
-
-                <!-- Single client Slider -->
-                <div class="single-client-content">
-                  <!-- Single client Text -->
-                  <div class="single-client-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris.
-                    </p>
-                    <!-- Single client Thumb and info -->
-                    <div
-                      class="single-client-thumb-info d-flex align-items-center"
-                    >
-                      <!-- Single client Thumb -->
-                      <div class="single-client-thumb">
-                        <img src="img/bg-img/15.jpg" alt="" />
-                      </div>
-                      <!-- Single client Info -->
-                      <div class="client-info">
-                        <h6>Maria Hernandez</h6>
-                        <p>UX Manager</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Single client Icon -->
-                  <div class="client-icon">
-                    <i class="zmdi zmdi-quote"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Our Sponsor And Client Area End -->
-
-    <!-- Our Blog Area Start -->
-    <section
-      class="our-blog-area bg-img bg-gradient-overlay section-padding-100-60"
-      style="background-image: url(img/bg-img/17.jpg)"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- Heading -->
-            <div
-              class="section-heading text-center wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <p>Our Blog</p>
-              <h4>Latest news</h4>
-            </div>
-          </div>
-
-          <!-- Single Blog Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
-              <!-- Single blog Thumb -->
-              <div class="single-blog-thumb">
-                <img src="img/bg-img/18.jpg" alt="" />
-              </div>
-              <div class="single-blog-text text-center">
-                <a class="blog-title" href="#">Street Food Convention</a>
-                <!-- Post Meta -->
-                <div class="post-meta">
-                  <a class="post-date" href="#"
-                    ><i class="zmdi zmdi-alarm-check"></i> January 14, 2019</a
-                  >
-                  <a class="post-author" href="#"
-                    ><i class="zmdi zmdi-account"></i> Laura Green</a
-                  >
-                </div>
-                <p>
-                  Street Food Convention will showcase products like Packed
-                  food, beef and lamb, street food.
-                </p>
-              </div>
-              <div class="blog-btn">
-                <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Blog Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
-              <!-- Single blog Thumb -->
-              <div class="single-blog-thumb">
-                <img src="img/bg-img/19.jpg" alt="" />
-              </div>
-              <div class="single-blog-text text-center">
-                <a class="blog-title" href="#">Tedx Moscow Conference</a>
-                <!-- Post Meta -->
-                <div class="post-meta">
-                  <a class="post-date" href="#"
-                    ><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a
-                  >
-                  <a class="post-author" href="#"
-                    ><i class="zmdi zmdi-account"></i>Laura Green</a
-                  >
-                </div>
-                <p>
-                  Street Food Convention will showcase products like Packed
-                  food, beef and lamb, street food.
-                </p>
-              </div>
-              <div class="blog-btn">
-                <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Blog Area -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
-              <!-- Single blog Thumb -->
-              <div class="single-blog-thumb">
-                <img src="img/bg-img/20.jpg" alt="" />
-              </div>
-              <div class="single-blog-text text-center">
-                <a class="blog-title" href="#">Los Angeles Institute</a>
-                <!-- Post Meta -->
-                <div class="post-meta">
-                  <a class="post-date" href="#"
-                    ><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a
-                  >
-                  <a class="post-author" href="#"
-                    ><i class="zmdi zmdi-account"></i>Laura Green</a
-                  >
-                </div>
-                <p>
-                  Street Food Convention will showcase products like Packed
-                  food, beef and lamb, street food.
-                </p>
-              </div>
-              <div class="blog-btn">
-                <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Our Blog Area End -->
-
-    <!-- Contact Area Start -->
-    <section class="contact-our-area section-padding-100-0">
-      <div class="container">
-        <div class="row">
-          <!-- Heading -->
-          <div class="col-12">
-            <div
-              class="section-heading-2 text-center wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <p>Have Question?</p>
-              <h4>Contact us</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-between">
-          <div class="col-12 col-sm-3">
-            <div class="contact-information mb-100">
-              <!-- Single Contact Info -->
-              <div
-                class="single-contact-info wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <p>Address:</p>
-                <h6>184 Main Collins Street</h6>
-              </div>
-              <!-- Single Contact Info -->
-              <div
-                class="single-contact-info wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <p>Phone:</p>
-                <h6>(226) 446 9371</h6>
-              </div>
-              <!-- Single Contact Info -->
-              <div
-                class="single-contact-info wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <p>Email:</p>
-                <h6>
-                  <a
-                    href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
-                    class="__cf_email__"
-                    data-cfemail="31525e5f57544371565c50585d1f525e5c"
-                    >[email&#160;protected]</a
-                  >
-                </h6>
-              </div>
-              <!-- Single Contact Info -->
-              <div
-                class="single-contact-info wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <p>Website:</p>
-                <h6>www.confer.com</h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-8">
-            <!-- Contact Form -->
-            <div
-              class="contact_from_area mb-100 clearfix wow fadeInUp"
-              data-wow-delay="300ms"
-            >
-              <div class="contact_form">
-                <form
-                  action="https://preview.colorlib.com/theme/confer/mail.php"
-                  method="post"
-                  id="main_contact_form"
-                >
-                  <div class="contact_input_area">
-                    <div id="success_fail_info"></div>
-                    <div class="row">
-                      <!-- Form Group -->
-                      <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                          <input
-                            type="text"
-                            class="form-control mb-30"
-                            name="name"
-                            id="name"
-                            placeholder="Your Name"
-                          />
-                        </div>
-                      </div>
-                      <!-- Form Group -->
-                      <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                          <input
-                            type="text"
-                            class="form-control mb-30"
-                            name="name"
-                            id="name2"
-                            placeholder="Last Name"
-                          />
-                        </div>
-                      </div>
-                      <!-- Form Group -->
-                      <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                          <input
-                            type="email"
-                            class="form-control mb-30"
-                            name="email"
-                            id="email"
-                            placeholder="E-mail"
-                          />
-                        </div>
-                      </div>
-                      <!-- Form Group -->
-                      <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                          <input
-                            type="text"
-                            class="form-control mb-30"
-                            name="subject"
-                            id="subject"
-                            placeholder="Your Number"
-                          />
-                        </div>
-                      </div>
-                      <!-- Form Group -->
-                      <div class="col-12">
-                        <div class="form-group">
-                          <textarea
-                            name="message"
-                            class="form-control mb-30"
-                            id="message"
-                            cols="30"
-                            rows="6"
-                            placeholder="Your Message *"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <!-- Button -->
-                      <div class="col-12">
-                        <button type="submit" class="btn confer-btn">
-                          Send Message
-                          <i class="zmdi zmdi-long-arrow-right"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Area End -->
-
-    <!-- Footer Area Start -->
-    <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
-      <!-- Main Footer Area -->
-      <div class="main-footer-area">
+      <div class="copyright">
         <div class="container">
-          <div class="row">
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Footer Logo -->
-                <a href="#" class="footer-logo"
-                  ><img src="img/core-img/ASEA-LOGO.png" alt="" width="150"
-                /></a>
-                <p>
-                  The African Securities Exchanges Association is the Premier
-                  Association of Securities Exchanges in Africa.
-                </p>
-
-                <!-- Social Info -->
-                <div class="social-info">
-                  <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                  <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                  <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                  <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Widget Title -->
-                <h5 class="widget-title">Contact</h5>
-
-                <!-- Contact Area -->
-                <div class="footer-contact-info">
-                  <p>
-                    <i class="zmdi zmdi-map"></i> Kigali City Tower, KCT 1st
-                    Floor
-                  </p>
-                  <p><i class="zmdi zmdi-phone"></i> +250 788 516 021</p>
-                  <p>
-                    <i class="zmdi zmdi-email"></i>
-                    <a
-                      href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
-                      class="__cf_email__"
-                      data-cfemail="61020e0f07041321060c00080d4f020e0c"
-                      style="color: white"
-                      >[email&#160;protected]</a
-                    >
-                  </p>
-                  <p><i class="zmdi zmdi-globe"></i>www.rse.rw</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-              <div
-                class="single-footer-widget mb-60 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <!-- Widget Title -->
-                <h5 class="widget-title">Quick Links</h5>
-
-                <!-- Footer Nav -->
-                <ul class="footer-nav">
-                  <li><a href="#">Registration</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Accommodation</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Single Footer Widget Area -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Copywrite Area -->
-      <div class="container">
-        <div class="copywrite-content">
-          <div class="row">
-            <!-- Copywrite Text -->
-            <div class="col-12 col-md-6">
-              <div class="copywrite-text">
-                <p>
-                  &copy;
-                  <script
-                    data-cfasync="false"
-                    src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-                  ></script>
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  African Securities Exchange Association. All Rights Reserved
-                </p>
-              </div>
-            </div>
-            <!-- Footer Menu -->
-            <div class="col-12 col-md-6">
-              <div class="footer-menu">
-                <ul class="nav">
-                  <li>
-                    <a href="#"
-                      ><i class="zmdi zmdi-circle"></i> Terms of Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="zmdi zmdi-circle"></i> Privacy Policy</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <p>&copy; 2025 ASEA Conference. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
-    <!-- Footer Area End -->
+    <!-- Footer End -->
 
-    <!-- **** All JS Files ***** -->
-    <!-- jQuery 2.2.4 -->
+    <!-- JS Libraries -->
     <script src="js/jquery.min.js"></script>
-    <!-- Popper -->
     <script src="js/popper.min.js"></script>
-    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- All Plugins -->
     <script src="js/confer.bundle.js"></script>
-    <!-- Active -->
-    <script src="js/default-assets/active.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      // Countdown Timer
+      function updateCountdown() {
+        const conferenceDate = new Date('November 26, 2025 09:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = conferenceDate - now;
+
+        document.getElementById('days').innerHTML = Math.floor(
+          distance / (1000 * 60 * 60 * 24)
+        );
+        document.getElementById('hours').innerHTML = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        document.getElementById('minutes').innerHTML = Math.floor(
+          (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        document.getElementById('seconds').innerHTML = Math.floor(
+          (distance % (1000 * 60)) / 1000
+        );
       }
-      gtag('js', new Date());
 
-      gtag('config', 'UA-23581568-13');
+      // Initial call and set interval
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // Schedule Tabs
+      document.querySelectorAll('.schedule-tab button').forEach((button) => {
+        button.addEventListener('click', () => {
+          document
+            .querySelectorAll('.schedule-tab button')
+            .forEach((btn) => btn.classList.remove('active'));
+          button.classList.add('active');
+        });
+      });
+
+      // Sticky Header
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header-area');
+        if (window.scrollY > 100) {
+          header.classList.add('header-shrink');
+        } else {
+          header.classList.remove('header-shrink');
+        }
+      });
     </script>
-
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
-      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
-      data-cf-beacon='{"rayId":"93017a6aee428a46","version":"2025.3.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}'
-      crossorigin="anonymous"
-    ></script>
   </body>
-
-  <!-- Mirrored from preview.colorlib.com/theme/confer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Apr 2025 07:27:54 GMT -->
 </html>
