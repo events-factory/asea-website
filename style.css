@@ -55,11 +55,17 @@ Last Update: March 14, 2019
 
 /* Updated color variables based on ASEA logo branding */
 :root {
-  --primary-color: #1daa8e; /* Green/teal from logo */
+  /* Green/teal from logo */
   --secondary-color: #564b94; /* Purple/indigo from logo */
   --accent-color: #e6bd4f; /* Yellow/gold from logo */
   --dark-text: #323232;
   --light-text: #ffffff;
+  --primary-color: #006837; /* ASEA Green */
+  --secondary-color: #dc4405; /* ASEA Orange */
+  --accent-color: #223b73; /* ASEA Blue */
+  --text-color: #333;
+  --light-color: #f8f9fa;
+  --dark-color: #1a2a40;
 }
 
 /* :: 01.0 Reboot Area CSS */
