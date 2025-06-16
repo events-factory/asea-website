@@ -8,7 +8,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Title -->
     <title>ASEA - Conference Registration</title>
 
@@ -121,6 +124,159 @@
           margin-top: 15px;
           margin-left: 0;
         }
+      }
+      .footer-area {
+        background: var(--dark-color);
+        color: #aaa;
+        padding: 70px 0 0;
+      }
+
+      .footer-widget {
+        margin-bottom: 40px;
+      }
+
+      .footer-widget h4 {
+        color: white;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+        font-size: 1.4rem;
+      }
+
+      .footer-widget h4:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--secondary-color);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links li a {
+        color: #aaa;
+        transition: all 0.3s;
+        text-decoration: none;
+        position: relative;
+        padding-left: 15px;
+        display: block;
+      }
+
+      .footer-links li a:before {
+        content: '\f105';
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--secondary-color);
+      }
+
+      .footer-links li a:hover {
+        color: white;
+        padding-left: 20px;
+      }
+
+      .footer-info p {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .footer-info p i {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        color: var(--secondary-color);
+      }
+
+      .footer-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+
+      .footer-social a:hover {
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+      }
+
+      .footer-newsletter {
+        display: flex;
+        position: relative;
+      }
+
+      .footer-newsletter input {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        width: 100%;
+        color: white;
+      }
+
+      .footer-newsletter input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .footer-newsletter button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .footer-newsletter button:hover {
+        background: var(--accent-color);
+        transform: scale(1.1);
+      }
+
+      .footer-newsletter button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .footer-newsletter button:hover {
+        background: var(--accent-color);
+        transform: scale(1.1);
+      }
+
+      .copyright {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 15px 0;
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
       }
     </style>
   </head>
