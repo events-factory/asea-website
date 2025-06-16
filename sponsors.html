@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="ASEA Conference Sponsors and Partnership Opportunities"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Title -->
+    <title>ASEA - Sponsorship Opportunities</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/ASEA-LOGO.png" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Additional Stylesheets -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      .header-area {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 5px 0;
+      }
+
+      .logo img {
+        max-height: 120px;
+      }
+
+      .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .navbar-collapse {
+        justify-content: flex-end;
+      }
+
+      /* Force horizontal layout for menu on large screens */
+      @media (min-width: 992px) {
+        .navbar-expand-lg .navbar-collapse {
+          display: flex !important;
+        }
+
+        .navbar-expand-lg .navbar-toggler {
+          display: none;
+        }
+
+        .navbar-expand-lg .navbar-nav {
+          flex-direction: row;
+          margin: 0 !important;
+        }
+
+        .nav-item {
+          margin: 0 10px;
+        }
+
+        .nav-link {
+          padding: 25px 10px !important;
+          display: inline-block;
+          font-weight: 600;
+          font-size: 12px;
+          color: var(--primary-color);
+          text-transform: uppercase;
+        }
+
+        .btn-primary {
+          background-color: #dc4405;
+          border-color: #dc4405;
+          margin-left: 15px;
+          padding: 12px 25px;
+          border-radius: 50px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+
+      /* Hamburger menu styling for mobile */
+      @media (max-width: 991.98px) {
+        .navbar-toggler {
+          padding: 10px;
+          background-color: white;
+        }
+
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 104, 55, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+      }
+
+      /* Register button styling */
+      .register-btn {
+        background-color: #dc4405;
+        color: white;
+        padding: 12px 30px;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      .register-btn:hover {
+        background-color: #c43c00;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 991px) {
+        .register-btn {
+          margin-top: 15px;
+          margin-left: 0;
+        }
+      }
+      /* Sponsor-specific styles */
+      .sponsor-package {
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+        background-color: #ffffff;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .sponsor-package:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        border-color: var(--secondary-color);
+      }
+
+      .sponsor-package h3 {
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--secondary-color);
+      }
+
+      .sponsor-benefits {
+        margin-bottom: 30px;
+      }
+
+      .sponsor-benefits ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sponsor-benefits ul li {
+        padding: 10px 0;
+        position: relative;
+        padding-left: 30px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .sponsor-benefits ul li i {
+        color: var(--secondary-color);
+        position: absolute;
+        left: 0;
+        top: 12px;
+      }
+
+      .contact-sponsor {
+        background-color: #f9f9f9;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .sponsor-reason {
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        background-color: #ffffff;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .sponsor-reason:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .sponsor-reason i {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      .sponsor-reason h4 {
+        color: var(--accent-color);
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .sponsor-contact-btn {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        padding: 15px 30px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+      }
+
+      .sponsor-contact-btn:hover {
+        background-color: var(--secondary-color);
+        color: #ffffff;
+      }
+
+      .sponsor-levels {
+        margin-top: 50px;
+      }
+      .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+      .btn-partnership {
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        background: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg">
+              <!-- Logo -->
+              <a class="navbar-brand logo" href="index.html">
+                <img src="img/core-img/ASEA-LOGO.png" alt="ASEA Logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#conferNavbar"
+                aria-controls="conferNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Navbar -->
+              <div class="collapse navbar-collapse" id="conferNavbar">
+                <ul class="navbar-nav ml-auto main-menu">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="schedule.html">PROGRAM</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="speakers.html">SPEAKERS</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="sponsors.html">SPONSORS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="accommodation.html"
+                      >Accommodation</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="travel.html">DESTINATION GUIDE</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">MEDIA</a>
+                  </li> -->
+                </ul>
+              </div>
+
+              <!-- Register Button -->
+              <a href="registration.html" class="register-btn">REGISTER</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Breadcrumb Area Start -->
+    <section
+      class="breadcrumb-area bg-img bg-gradient-overlay jarallax"
+      style="background-image: url(img/bg-img/27.jpg)"
+    >
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="breadcrumb-content">
+              <h2 class="page-title">Sponsorship Opportunities</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Sponsors
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Breadcrumb Area End -->
+
+    <!-- Sponsorship Main Area Start -->
+    <section class="section-padding-100-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="section-header text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <p>Join Us as a Partner</p>
+              <h2>A Partnership for Success</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="about-content-text mb-80 text-center">
+              <p>
+                The ASEA Conference 2025 offers unparalleled opportunities to
+                connect with leaders from securities exchanges, market
+                regulators, brokers, investors, and other stakeholders across
+                the African capital markets landscape. As a sponsor, you'll gain
+                exclusive visibility and access to this influential network.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sponsorship Main Area End -->
+
+    <!-- Why Sponsor Area Start -->
+    <section class="section-padding-100-0" style="background-color: #f8f9fa">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12">
+            <div
+              class="section-header text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <p>Benefits of Partnership</p>
+              <h2>Why Sponsor the ASEA Conference 2025?</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="sponsor-reason text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <i class="fas fa-store"></i>
+              <h4>Product Showcase</h4>
+              <p>
+                Showcase your products or services with a booth in the
+                exhibition area, directly engaging with your target market.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="sponsor-reason text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <i class="fas fa-handshake"></i>
+              <h4>Lead Generation</h4>
+              <p>
+                Connect with your target audience and generate leads in the
+                largest event in the middle east attracting CSD, stock
+                exchanges, investment banks and asset managers.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="sponsor-reason text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <i class="fas fa-bullhorn"></i>
+              <h4>Brand Awareness</h4>
+              <p>
+                Increase brand awareness with a sponsorship package that
+                provides visibility before, during, and after the event.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6">
+            <div
+              class="sponsor-reason text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <i class="fas fa-chart-line"></i>
+              <h4>Profile Enhancement</h4>
+              <p>
+                Raise your profile throughout the regional CSD, Stock Exchanges,
+                Regulators, Investment Banks and Asset Managers.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6">
+            <div
+              class="sponsor-reason text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <i class="fas fa-users"></i>
+              <h4>Networking Opportunities</h4>
+              <p>
+                Build valuable relationships with key decision-makers and
+                industry leaders from across Africa and beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Sponsor Area End -->
+
+    <!-- Sponsor Packages Start -->
+    <section class="sponsor-levels section-padding-100-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="section-header text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <p>Choose Your Level</p>
+              <h2>Sponsorship Packages</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="sponsor-package text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <h3>Platinum</h3>
+              <div class="sponsor-benefits">
+                <ul>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Prime exhibition space
+                    (6x3m)
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> 8 complimentary
+                    registrations
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Speaking opportunity in
+                    main program
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Logo on all conference
+                    materials
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Full-page ad in
+                    conference program
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Sponsor mention in all
+                    media releases
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Dedicated social media
+                    promotion
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Access to attendee
+                    contact information
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="sponsor-package text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <h3>Gold</h3>
+              <div class="sponsor-benefits">
+                <ul>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Exhibition space (3x3m)
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> 5 complimentary
+                    registrations
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Panel participation
+                    opportunity
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Logo on main conference
+                    materials
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Half-page ad in
+                    conference program
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Recognition in selected
+                    media releases
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Group social media
+                    mention
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="sponsor-package text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <h3>Silver</h3>
+              <div class="sponsor-benefits">
+                <ul>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Exhibition space (2x2m)
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> 3 complimentary
+                    registrations
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Logo on conference
+                    website
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Quarter-page ad in
+                    conference program
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Group social media
+                    mention
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Recognition in
+                    conference materials
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-100">
+          <div class="col-12">
+            <div class="text-center wow fadeInUp" data-wow-delay="300ms">
+              <p>
+                Custom packages and targeted sponsorship opportunities are also
+                available.
+              </p>
+              <a href="#contact-sponsor" class="sponsor-contact-btn"
+                >Request Sponsorship Info</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sponsor Packages End -->
+
+    <!-- Contact Sponsor Area Start -->
+    <section
+      id="contact-sponsor"
+      class="section-padding-100-0"
+      style="background-color: #f8f9fa"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="section-header text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <p>Get In Touch</p>
+              <h2>Become a Sponsor</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="contact-sponsor wow fadeInUp" data-wow-delay="300ms">
+              <div class="text-center mb-5">
+                <p>
+                  To learn more about sponsorship opportunities and secure your
+                  place at the ASEA Conference 2025, please contact:
+                </p>
+                <div class="my-4">
+                  <h5 class="mb-2">Alice Iribagiza</h5>
+                  <p class="mb-1">
+                    <i class="fas fa-envelope mr-2"></i>ialice@rse.rw
+                  </p>
+                  <p><i class="fas fa-phone mr-2"></i>+250 788 XXX XXX</p>
+                </div>
+              </div>
+
+              <div class="contact-form">
+                <form action="#" method="post">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Name"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Email"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="company"
+                          placeholder="Company"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="phone"
+                          placeholder="Phone"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <select class="form-control" id="package">
+                          <option selected disabled>
+                            Select Sponsorship Package
+                          </option>
+                          <option value="Platinum">Platinum</option>
+                          <option value="Gold">Gold</option>
+                          <option value="Silver">Silver</option>
+                          <option value="Custom">Custom Package</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          rows="5"
+                          placeholder="Your Message"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button
+                        class="btn btn-partnership mt-30 w-100"
+                        type="submit"
+                      >
+                        Send Request <i class="zmdi zmdi-long-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Sponsor Area End -->
+
+    <!-- Past Sponsors Area Start -->
+    <section class="our-sponsor-client-area section-padding-100">
+      <div class="container">
+        <!-- <div class="row">
+          <div class="col-12">
+            <div
+              class="section-heading text-center wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <p>Partners &amp; Sponsors</p>
+              <h4>Previous Conference Partners</h4>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="row">
+          <!-- <div class="col-12">
+            <div class="our-sponsor-area d-flex flex-wrap">
+              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                <img src="img/core-img/p-1.png" alt="" />
+              </div>
+              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                <img src="img/core-img/p-2.png" alt="" />
+              </div>
+              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                <img src="img/core-img/p-3.png" alt="" />
+              </div>
+              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                <img src="img/core-img/p-4.png" alt="" />
+              </div>
+              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                <img src="img/core-img/p-5.png" alt="" />
+              </div>
+              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                <img src="img/core-img/p-6.png" alt="" />
+              </div>
+              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                <img src="img/core-img/p-7.png" alt="" />
+              </div>
+              <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                <img src="img/core-img/p-8.png" alt="" />
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Past Sponsors Area End -->
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
+      <!-- Main Footer Area -->
+      <div class="main-footer-area">
+        <div class="container">
+          <div class="row">
+            <!-- Single Footer Widget Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single-footer-widget mb-60">
+                <!-- Footer Logo -->
+                <a href="#" class="footer-logo"
+                  ><img
+                    src="img/members/logo_asea_white.png"
+                    alt=""
+                    style="max-width: 120px"
+                /></a>
+                <p>
+                  The African Securities Exchanges Association (ASEA) is the
+                  premier association of securities exchanges in Africa.
+                </p>
+
+                <!-- Social Info -->
+                <div class="social-info">
+                  <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                  <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                  <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Footer Widget Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single-footer-widget mb-60">
+                <!-- Widget Title -->
+                <h5 class="widget-title">Contact</h5>
+
+                <!-- Contact Area -->
+                <div class="footer-contact-info">
+                  <p><i class="zmdi zmdi-map"></i> Kigali, Rwanda</p>
+                  <p><i class="zmdi zmdi-phone"></i> +250 788 XXX XXX</p>
+                  <p>
+                    <i class="zmdi zmdi-email"></i> info@asea-conference.org
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Footer Widget Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single-footer-widget mb-60">
+                <!-- Widget Title -->
+                <h5 class="widget-title">Quick Links</h5>
+
+                <!-- Quick Links -->
+                <ul class="footer-nav">
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="speakers.html">Speakers</a></li>
+                  <li><a href="schedule.html">Schedule</a></li>
+                  <li><a href="accommodation.html">Accommodation</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Single Footer Widget Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single-footer-widget mb-60">
+                <!-- Widget Title -->
+                <h5 class="widget-title">Newsletter</h5>
+
+                <!-- Newsletter Form -->
+                <div class="footer-newsletter-form">
+                  <form action="#" method="post">
+                    <input
+                      type="email"
+                      name="nl-email"
+                      class="form-control mb-15"
+                      id="emailnl"
+                      placeholder="Enter your email"
+                    />
+                    <button type="submit" class="btn confer-btn">
+                      Subscribe <i class="zmdi zmdi-long-arrow-right"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copywrite Area -->
+      <div class="container">
+        <div class="copywrite-content">
+          <div class="row">
+            <!-- Copywrite Text -->
+            <div class="col-12 col-md-12">
+              <div class="copywrite-text">
+                <p>
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  All rights reserved | ASEA Conference 2025
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/confer.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
+  </body>
+</html>
