@@ -575,7 +575,6 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
-
       @media (max-width: 768px) {
         .speakers-section {
           padding: 60px 0;
@@ -591,6 +590,186 @@
 
         .speaker-info {
           padding: 20px;
+        }
+      }
+
+      /* Speaker Modal Styles */
+      .speaker-modal .modal-content {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      }
+
+      .speaker-modal .modal-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        border: none;
+        color: white;
+        padding: 20px 30px;
+      }
+
+      .speaker-modal .modal-title {
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin: 0;
+      }
+
+      .speaker-modal .close {
+        color: white;
+        opacity: 1;
+        font-size: 2rem;
+        font-weight: 300;
+        text-shadow: none;
+      }
+
+      .speaker-modal .close:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .speaker-modal .modal-body {
+        padding: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+        position: relative;
+      }
+
+      .speaker-modal-image {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .speaker-modal-image img {
+        width: 100%;
+        max-width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 4px solid white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .speaker-modal-social {
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .speaker-modal-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .speaker-modal-social a:hover {
+        background: var(--secondary-color);
+        transform: scale(1.1);
+        color: white;
+      }
+
+      .speaker-modal-info {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 15px;
+        margin: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      .speaker-modal-info h3 {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .speaker-modal-info h4 {
+        color: var(--secondary-color);
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .speaker-modal-info h5 {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin: 25px 0 15px 0;
+        padding-top: 20px;
+        border-top: 2px solid var(--secondary-color);
+      }
+
+      .speaker-modal-bio p {
+        color: #333;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      .speaker-modal-bio p:last-of-type {
+        margin-bottom: 20px;
+      }
+
+      /* Ensure modal content is contained properly */
+      .speaker-modal .modal-dialog {
+        max-width: 900px;
+        margin: 30px auto;
+      }
+
+      .speaker-modal .modal-body .row {
+        margin: 0;
+        background: url('img/bg-img/bg-1.jpeg') center/cover;
+        min-height: 400px;
+        position: relative;
+      }
+
+      .speaker-modal .modal-body .row::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+        z-index: 1;
+      }
+
+      .speaker-modal .modal-body .col-md-4,
+      .speaker-modal .modal-body .col-md-8 {
+        position: relative;
+        z-index: 2;
+        padding: 30px 15px;
+      }
+
+      @media (max-width: 768px) {
+        .speaker-modal .modal-dialog {
+          margin: 15px;
+        }
+
+        .speaker-modal-info {
+          margin: 15px;
+          padding: 20px;
+        }
+
+        .speaker-modal-info h3 {
+          font-size: 1.5rem;
+        }
+
+        .speaker-modal .modal-body .col-md-4,
+        .speaker-modal .modal-body .col-md-8 {
+          padding: 20px 15px;
         }
       }
     </style>
@@ -629,9 +808,9 @@
                   <li class="nav-item">
                     <a class="nav-link" href="schedule.html">PROGRAM</a>
                   </li>
-                  <!-- <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link" href="speakers.html">SPEAKERS</a>
-                  </li> -->
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="sponsors.html">SPONSORS</a>
                   </li>
@@ -700,11 +879,8 @@
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="speaker-card" data-category="keynote">
               <div class="speaker-image">
-                <img
-                  src="img/speakers/Frank Mwiti.jpg"
-                  alt="Thapelo Tsheole"
-                />
-
+                <img src="img/speakers/Frank Mwiti.jpg" alt="Thapelo Tsheole" />
+                <div class="speaker-category">Keynote</div>
                 <div class="speaker-overlay">
                   <div class="speaker-social">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -734,7 +910,7 @@
             <div class="speaker-card" data-category="ceo">
               <div class="speaker-image">
                 <img src="img/speakers/Abena Amoah.jpg" alt="Idrissa Diop" />
-
+                <div class="speaker-category">CEO</div>
                 <div class="speaker-overlay">
                   <div class="speaker-social">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -763,8 +939,11 @@
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="speaker-card" data-category="media">
               <div class="speaker-image">
-                <img src="img/speakers/Jude Chiemeka.png" alt="Izabella Kaminska" />
-
+                <img
+                  src="img/speakers/Jude Chiemeka.png"
+                  alt="Izabella Kaminska"
+                />
+                <div class="speaker-category">CEO</div>
                 <div class="speaker-overlay">
                   <div class="speaker-social">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -793,8 +972,11 @@
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="speaker-card" data-category="regulator">
               <div class="speaker-image">
-                <img src="img/speakers/Senhaji Tarik.jpg" alt="Dr. Sarah Alade" />
-
+                <img
+                  src="img/speakers/Senhaji Tarik.jpg"
+                  alt="Dr. Sarah Alade"
+                />
+                <div class="speaker-category">VP</div>
                 <div class="speaker-overlay">
                   <div class="speaker-social">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -824,7 +1006,7 @@
             <div class="speaker-card" data-category="tech">
               <div class="speaker-image">
                 <img src="img/speakers/Bongile Kunene.jpg" alt="James Mwangi" />
-
+                <div class="speaker-category">SENIOR</div>
                 <div class="speaker-overlay">
                   <div class="speaker-social">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -835,7 +1017,7 @@
               </div>
               <div class="speaker-info">
                 <h3>Bongile Kunene</h3>
-                <h4>Chief Technology Officer, NSE</h4>
+                <h4>Senior Legal Officer, Eswatini Stock Exchange</h4>
                 <p></p>
                 <a
                   href="#"
@@ -853,8 +1035,11 @@
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="speaker-card" data-category="investor">
               <div class="speaker-image">
-                <img src="img/speakers/Peter Nalitolele.jpeg" alt="Amina Hassan" />
-
+                <img
+                  src="img/speakers/Peter Nalitolele.jpeg"
+                  alt="Amina Hassan"
+                />
+                <div class="speaker-category">CEO</div>
                 <div class="speaker-overlay">
                   <div class="speaker-social">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -884,7 +1069,7 @@
             <div class="speaker-card" data-category="csd">
               <div class="speaker-image">
                 <img src="img/speakers/Rwabukumba.jpg" alt="Robert Nyamwasa" />
-
+                <div class="speaker-category">CEO</div>
                 <div class="speaker-overlay">
                   <div class="speaker-social">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -908,8 +1093,8 @@
               </div>
             </div>
           </div>
-
           <!-- Speaker 8 -->
+          
         </div>
       </div>
     </section>
@@ -953,7 +1138,7 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="speaker-modal-image">
-                  <img src="img/speakers/Idi.jpg" alt="Idrissa Diop" />
+                  <img src="img/speakers/Frank Mwiti.jpg" alt="Frank Mwiti" />
                 </div>
                 <div class="speaker-modal-social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -964,36 +1149,33 @@
               </div>
               <div class="col-md-8">
                 <div class="speaker-modal-info">
-                  <h3>Idrissa Diop</h3>
-                  <h4>CEO, Abidjan Stock Exchange</h4>
+                  <h3>Frank Mwiti</h3>
+                  <h4>CEO, Nairobi Securities Exchange</h4>
                   <div class="speaker-modal-bio">
                     <p>
-                      Idrissa Diop has been the Chief Executive Officer of the
-                      Abidjan Stock Exchange since 2018. With over 20 years of
-                      experience in capital markets, he has led significant
-                      reforms that have positioned the exchange as a key player
-                      in the West African Economic and Monetary Union (WAEMU)
-                      region.
+                      Frank Mwiti serves as the Chief Executive Officer of the
+                      Nairobi Securities Exchange (NSE), where he has been
+                      instrumental in driving technological innovation and
+                      market development across East Africa.
                     </p>
                     <p>
-                      Prior to his current role, Mr. Diop held senior positions
-                      at various financial institutions across Africa and
-                      Europe. He holds an MBA from Harvard Business School and a
-                      Bachelor's degree in Economics from the University of
-                      Dakar.
+                      With over 15 years of experience in capital markets, Mr.
+                      Mwiti has led initiatives to enhance market liquidity,
+                      improve investor access, and strengthen regulatory
+                      frameworks. He holds an MBA in Finance and has been
+                      recognized for his leadership in emerging market
+                      development.
                     </p>
                     <p>
-                      At the ASEA Conference 2025, Mr. Diop will be speaking
-                      about regional integration of African capital markets and
-                      how exchanges can collaborate to enhance liquidity and
-                      market depth.
+                      At the ASEA Conference 2025, Mr. Mwiti will share insights
+                      on leveraging technology to create more inclusive and
+                      efficient capital markets across Africa.
                     </p>
                     <h5>
-                      Session: "Regional Integration: Building Stronger African
-                      Capital Markets"
+                      Session: "Digital Transformation in African Exchanges"
                     </h5>
                     <p>
-                      Date: November 26, 2025 | Time: 11:00 AM - 12:30 PM |
+                      Date: November 26, 2025 | Time: 10:00 AM - 11:30 AM |
                       Venue: Main Hall
                     </p>
                   </div>
@@ -1004,7 +1186,6 @@
         </div>
       </div>
     </div>
-
     <!-- Speaker Modal 2 -->
     <div
       class="modal fade speaker-modal"
@@ -1030,7 +1211,7 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="speaker-modal-image">
-                  <img src="img/speakers/Iza.jpg" alt="Izabella Kaminska" />
+                  <img src="img/speakers/Abena Amoah.jpg" alt="Abena Amoah" />
                 </div>
                 <div class="speaker-modal-social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -1041,35 +1222,34 @@
               </div>
               <div class="col-md-8">
                 <div class="speaker-modal-info">
-                  <h3>Izabella Kaminska</h3>
-                  <h4>Financial Journalist</h4>
+                  <h3>Abena Amoah</h3>
+                  <h4>Managing Director, Ghana Stock Exchange</h4>
                   <div class="speaker-modal-bio">
                     <p>
-                      Izabella Kaminska is a renowned financial journalist with
-                      expertise in global markets, financial innovation, and
-                      emerging economies. She has written extensively about
-                      capital markets in Africa and their potential for growth.
+                      Abena Amoah serves as the Managing Director of the Ghana
+                      Stock Exchange, bringing extensive experience in capital
+                      market operations and strategic development across West
+                      Africa.
                     </p>
                     <p>
-                      Ms. Kaminska previously worked for the Financial Times
-                      where she was the editor of the Alphaville section,
-                      covering market developments and financial innovation. She
-                      has also contributed to various international publications
-                      and is a regular speaker at global financial conferences.
+                      With a distinguished career in financial services spanning
+                      over 18 years, Ms. Amoah has been pivotal in modernizing
+                      Ghana's capital markets infrastructure and enhancing
+                      investor participation. She holds advanced degrees in
+                      Finance and Economics.
                     </p>
                     <p>
-                      At the ASEA Conference 2025, Ms. Kaminska will moderate a
-                      panel discussion on media representation of African
-                      capital markets and how improved communication strategies
-                      can attract global investors.
+                      At the ASEA Conference 2025, Ms. Amoah will lead
+                      discussions on sustainable finance and how African
+                      exchanges can drive ESG investment initiatives.
                     </p>
                     <h5>
-                      Session: "Changing the Narrative: Media and African
-                      Capital Markets"
+                      Session: "Sustainable Finance: ESG Integration in African
+                      Markets"
                     </h5>
                     <p>
-                      Date: November 27, 2025 | Time: 2:00 PM - 3:30 PM | Venue:
-                      Conference Room B
+                      Date: November 26, 2025 | Time: 2:00 PM - 3:30 PM | Venue:
+                      Conference Room A
                     </p>
                   </div>
                 </div>
@@ -1079,7 +1259,6 @@
         </div>
       </div>
     </div>
-
     <!-- Speaker Modal 3 -->
     <div
       class="modal fade speaker-modal"
@@ -1105,7 +1284,10 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="speaker-modal-image">
-                  <img src="img/speakers/Iza.jpg" alt="Izabella Kaminska" />
+                  <img
+                    src="img/speakers/Jude Chiemeka.png"
+                    alt="Jude Chiemeka"
+                  />
                 </div>
                 <div class="speaker-modal-social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -1116,35 +1298,32 @@
               </div>
               <div class="col-md-8">
                 <div class="speaker-modal-info">
-                  <h3>Izabella Kaminska</h3>
-                  <h4>Financial Journalist</h4>
+                  <h3>Jude Chiemeka</h3>
+                  <h4>CEO, Nigerian Exchange Group</h4>
                   <div class="speaker-modal-bio">
                     <p>
-                      Izabella Kaminska is a renowned financial journalist with
-                      expertise in global markets, financial innovation, and
-                      emerging economies. She has written extensively about
-                      capital markets in Africa and their potential for growth.
+                      Jude Chiemeka serves as the Chief Executive Officer of the
+                      Nigerian Exchange Group (NGX), where he leads one of
+                      Africa's largest and most influential capital markets.
                     </p>
                     <p>
-                      Ms. Kaminska previously worked for the Financial Times
-                      where she was the editor of the Alphaville section,
-                      covering market developments and financial innovation. She
-                      has also contributed to various international publications
-                      and is a regular speaker at global financial conferences.
+                      With over 20 years of experience in investment banking and
+                      capital markets, Mr. Chiemeka has been instrumental in
+                      implementing strategic initiatives that have enhanced
+                      market capitalization and trading volumes on the NGX. He
+                      holds an MBA and is a chartered financial analyst.
                     </p>
                     <p>
-                      At the ASEA Conference 2025, Ms. Kaminska will moderate a
-                      panel discussion on media representation of African
-                      capital markets and how improved communication strategies
-                      can attract global investors.
+                      At the ASEA Conference 2025, Mr. Chiemeka will share
+                      insights on scaling African exchanges and attracting
+                      international listings to drive continental growth.
                     </p>
                     <h5>
-                      Session: "Changing the Narrative: Media and African
-                      Capital Markets"
+                      Session: "Scaling African Exchanges: Lessons from Nigeria"
                     </h5>
                     <p>
-                      Date: November 27, 2025 | Time: 2:00 PM - 3:30 PM | Venue:
-                      Conference Room B
+                      Date: November 27, 2025 | Time: 9:00 AM - 10:30 AM |
+                      Venue: Main Hall
                     </p>
                   </div>
                 </div>
@@ -1180,7 +1359,10 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="speaker-modal-image">
-                  <img src="img/bg-img/1.jpg" alt="Dr. Sarah Alade" />
+                  <img
+                    src="img/speakers/Senhaji Tarik.jpg"
+                    alt="Senhaji Tarik"
+                  />
                 </div>
                 <div class="speaker-modal-social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -1190,33 +1372,33 @@
               </div>
               <div class="col-md-8">
                 <div class="speaker-modal-info">
-                  <h3>Dr. Sarah Alade</h3>
-                  <h4>Director General, SEC Nigeria</h4>
+                  <h3>Senhaji Tarik</h3>
+                  <h4>Vice President, ASEA</h4>
                   <div class="speaker-modal-bio">
                     <p>
-                      Dr. Sarah Alade serves as the Director General of the
-                      Securities and Exchange Commission of Nigeria, bringing
-                      over 25 years of experience in financial regulation and
-                      capital market development.
+                      Senhaji Tarik serves as the Vice President of the African
+                      Securities Exchanges Association (ASEA), bringing
+                      extensive experience in capital market development and
+                      cross-border financial integration.
                     </p>
                     <p>
-                      She holds a PhD in Economics and has previously worked
-                      with the Central Bank of Nigeria and various international
-                      financial institutions. Dr. Alade has been instrumental in
-                      implementing regulatory reforms that have enhanced
-                      investor confidence in Nigerian capital markets.
+                      With a distinguished background in finance and economics,
+                      Mr. Tarik has been instrumental in fostering collaboration
+                      between African exchanges and promoting best practices
+                      across the continent. His expertise spans market
+                      regulation, risk management, and strategic planning.
                     </p>
                     <p>
-                      At the ASEA Conference 2025, Dr. Alade will lead
-                      discussions on regulatory harmonization across African
-                      markets and investor protection frameworks.
+                      At the ASEA Conference 2025, Mr. Tarik will lead
+                      discussions on regulatory harmonization and the future
+                      roadmap for African capital markets integration.
                     </p>
                     <h5>
-                      Session: "Regulatory Excellence: Building Trust in African
-                      Markets"
+                      Session: "Regulatory Harmonization: Building Trust Across
+                      African Markets"
                     </h5>
                     <p>
-                      Date: November 26, 2025 | Time: 3:00 PM - 4:30 PM | Venue:
+                      Date: November 26, 2025 | Time: 3:45 PM - 5:00 PM | Venue:
                       Main Hall
                     </p>
                   </div>
@@ -1253,7 +1435,10 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="speaker-modal-image">
-                  <img src="img/bg-img/2.png" alt="James Mwangi" />
+                  <img
+                    src="img/speakers/Bongile Kunene.jpg"
+                    alt="Bongile Kunene"
+                  />
                 </div>
                 <div class="speaker-modal-social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -1263,24 +1448,22 @@
               </div>
               <div class="col-md-8">
                 <div class="speaker-modal-info">
-                  <h3>James Mwangi</h3>
-                  <h4>Chief Technology Officer, NSE</h4>
+                  <h3>Bongile Kunene</h3>
+                  <h4>Senior Legal, Risk, Compliance Officer and Company Secretary</h4>
                   <div class="speaker-modal-bio">
                     <p>
-                      James Mwangi is the Chief Technology Officer at the
-                      Nairobi Securities Exchange, leading digital
-                      transformation initiatives that have modernized trading
-                      and settlement systems across East Africa.
+                      As an admitted Attorney, with above 9 years working experience in the legal fraternity, Ms. Kunene has diverse skills in Compliance Management, Governance, Risk Management and Anti-Money Laundering. Ms. Kunene has also worked for the Financial Services Regulatory Authority and the Ministry of Labour and Social Security, she is well vast legal experience in the administration of financial services laws and public administration laws. She is a member of the Law Society of Eswatini and the Compliance Institute of Southern Africa. 
                     </p>
                     <p>
                       With a background in computer science and financial
-                      technology, Mr. Mwangi has spearheaded the implementation
+                      technology, Ms. Kunene has spearheaded the implementation
                       of blockchain technology, automated trading systems, and
-                      mobile-based investment platforms.
+                      mobile-based investment platforms that have enhanced
+                      market accessibility.
                     </p>
                     <p>
-                      At the ASEA Conference 2025, he will present on the future
-                      of fintech in African capital markets and emerging
+                      At the ASEA Conference 2025, she will present on the
+                      future of fintech in African capital markets and emerging
                       technologies reshaping the investment landscape.
                     </p>
                     <h5>
@@ -1325,7 +1508,10 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="speaker-modal-image">
-                  <img src="img/bg-img/3.jpg" alt="Amina Hassan" />
+                  <img
+                    src="img/speakers/Peter Nalitolele.jpeg"
+                    alt="Peter Nalitolele"
+                  />
                 </div>
                 <div class="speaker-modal-social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -1335,32 +1521,35 @@
               </div>
               <div class="col-md-8">
                 <div class="speaker-modal-info">
-                  <h3>Amina Hassan</h3>
-                  <h4>Managing Partner, Cairo Capital</h4>
+                  <h3>Peter Nalitolele</h3>
+                  <h4>CEO, Dar es Salaam Stock Exchange</h4>
                   <div class="speaker-modal-bio">
                     <p>
-                      Amina Hassan is the Managing Partner at Cairo Capital, one
-                      of Africa's leading investment firms specializing in
-                      cross-border transactions and capital market development.
+                      Peter Nalitolele serves as the Chief Executive Officer of
+                      the Dar es Salaam Stock Exchange, where he has led
+                      significant market development initiatives in East
+                      Africa's capital markets sector.
                     </p>
                     <p>
-                      With over 15 years of experience in investment banking and
-                      private equity, Ms. Hassan has facilitated over $2 billion
-                      in transactions across African markets. She holds an MBA
-                      from Wharton and is a CFA charterholder.
+                      With extensive experience in investment banking and
+                      capital markets, Mr. Nalitolele has been instrumental in
+                      attracting new listings and enhancing market liquidity in
+                      Tanzania. He holds advanced qualifications in finance and
+                      has contributed to regional market integration efforts.
                     </p>
                     <p>
-                      At the ASEA Conference 2025, she will share insights on
-                      attracting international investment to African markets and
-                      building sustainable investment ecosystems.
+                      At the ASEA Conference 2025, Mr. Nalitolele will share
+                      insights on building sustainable capital markets in
+                      emerging economies and fostering cross-border investment
+                      opportunities.
                     </p>
                     <h5>
-                      Session: "Capital Flows: Attracting Global Investment to
-                      Africa"
+                      Session: "Building Sustainable Markets: The East African
+                      Experience"
                     </h5>
                     <p>
-                      Date: November 26, 2025 | Time: 4:45 PM - 6:00 PM | Venue:
-                      Investment Forum
+                      Date: November 27, 2025 | Time: 11:00 AM - 12:30 PM |
+                      Venue: Regional Forum
                     </p>
                   </div>
                 </div>
@@ -1396,7 +1585,10 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="speaker-modal-image">
-                  <img src="img/bg-img/4.jpg" alt="Robert Nyamwasa" />
+                  <img
+                    src="img/speakers/Rwabukumba.jpg"
+                    alt="Pierre Celestin Rwabukumba"
+                  />
                 </div>
                 <div class="speaker-modal-social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -1406,33 +1598,34 @@
               </div>
               <div class="col-md-8">
                 <div class="speaker-modal-info">
-                  <h3>Robert Nyamwasa</h3>
-                  <h4>CEO, Central Securities Depository</h4>
+                  <h3>Pierre Celestin Rwabukumba</h3>
+                  <h4>CEO, ASEA</h4>
                   <div class="speaker-modal-bio">
                     <p>
-                      Robert Nyamwasa serves as the Chief Executive Officer of
-                      the Central Securities Depository of Rwanda, where he has
-                      led the development of modern post-trade infrastructure
-                      systems.
+                      Pierre Celestin Rwabukumba serves as the Chief Executive
+                      Officer of the African Securities Exchanges Association
+                      (ASEA), where he leads the continental organization's
+                      mission to develop and integrate African capital markets.
                     </p>
                     <p>
-                      His expertise in securities settlement, custody services,
-                      and cross-border trading systems has been instrumental in
-                      connecting African markets with global financial
-                      infrastructure.
+                      With extensive experience in capital markets development
+                      and regional financial integration, Mr. Rwabukumba has
+                      been instrumental in fostering collaboration among African
+                      exchanges and promoting best practices across the
+                      continent.
                     </p>
                     <p>
-                      At the ASEA Conference 2025, Mr. Nyamwasa will discuss the
-                      evolution of post-trade services and the role of CSDs in
-                      facilitating regional market integration.
+                      At the ASEA Conference 2025, Mr. Rwabukumba will present
+                      the strategic vision for African capital markets and
+                      outline initiatives for deeper regional integration.
                     </p>
                     <h5>
-                      Session: "Post-Trade Infrastructure: Building Connected
-                      African Markets"
+                      Session: "ASEA Vision 2030: Integrating African Capital
+                      Markets"
                     </h5>
                     <p>
-                      Date: November 27, 2025 | Time: 11:00 AM - 12:30 PM |
-                      Venue: Operations Center
+                      Date: November 26, 2025 | Time: 5:15 PM - 6:30 PM | Venue:
+                      Main Hall
                     </p>
                   </div>
                 </div>
@@ -1468,7 +1661,7 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="speaker-modal-image">
-                  <img src="img/bg-img/5.jpg" alt="Prof. Fatima Al-Rashid" />
+                  <img src="img/speakers/Idi.jpg" alt="Idrissa Diop" />
                 </div>
                 <div class="speaker-modal-social">
                   <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -1478,33 +1671,35 @@
               </div>
               <div class="col-md-8">
                 <div class="speaker-modal-info">
-                  <h3>Prof. Fatima Al-Rashid</h3>
-                  <h4>Professor of Finance, American University of Cairo</h4>
+                  <h3>Idrissa Diop</h3>
+                  <h4>CEO, Abidjan Stock Exchange</h4>
                   <div class="speaker-modal-bio">
                     <p>
-                      Professor Fatima Al-Rashid is a distinguished academic and
-                      researcher at the American University of Cairo,
-                      specializing in African capital markets development and
-                      financial systems integration.
+                      Idrissa Diop serves as the Chief Executive Officer of the
+                      Abidjan Stock Exchange, where he has led significant
+                      market development initiatives across the West African
+                      Economic and Monetary Union (WAEMU) region.
                     </p>
                     <p>
-                      Her research has been published in leading academic
-                      journals and she has advised multiple African governments
-                      on capital market development strategies. She holds a PhD
-                      in Finance from London School of Economics.
+                      With over 20 years of experience in capital markets and
+                      financial services, Mr. Diop has been instrumental in
+                      implementing reforms that have enhanced regional financial
+                      integration and attracted international investment to West
+                      African markets.
                     </p>
                     <p>
-                      At the ASEA Conference 2025, Prof. Al-Rashid will present
-                      her latest research on sustainable finance frameworks and
-                      ESG integration in African markets.
+                      At the ASEA Conference 2025, Mr. Diop will share insights
+                      on regional integration strategies and how African
+                      exchanges can collaborate to build stronger, more liquid
+                      markets.
                     </p>
                     <h5>
-                      Session: "Sustainable Finance: ESG Integration in African
+                      Session: "Regional Integration: Building Stronger African
                       Capital Markets"
                     </h5>
                     <p>
-                      Date: November 27, 2025 | Time: 3:45 PM - 5:00 PM | Venue:
-                      Research Hall
+                      Date: November 27, 2025 | Time: 2:00 PM - 3:30 PM | Venue:
+                      Regional Forum
                     </p>
                   </div>
                 </div>
