@@ -17,199 +17,227 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
-
     <style>
       :root {
-        --primary-color: #223b73; /* ASEA Blue */
-        --secondary-color: #dc4405; /* ASEA Orange */
-        --accent-color: #23a3dd; /* ASEA Light Blue */
-        --text-color: #333;
-        --light-color: #f8f9fa;
-        --dark-color: #1a2a40;
+        --primary-color: #006837;
+        --secondary-color: #dc4405;
+        --accent-color: #1daa8e;
+        --dark-color: #2c3e50;
       }
 
-      body {
-        font-family: 'Roboto', sans-serif;
-        color: var(--text-color);
-        overflow-x: hidden;
-        background-color: #ffffff;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-      }
-
-      .btn-primary {
-        background-color: var(--secondary-color);
-        border-color: var(--secondary-color);
-        color: white;
-        padding: 12px 25px;
-        border-radius: 50px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-      }
-
-      .btn-primary:hover {
-        background-color: var(--accent-color);
-        border-color: var(--accent-color);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Header */
       .header-area {
         position: fixed;
         width: 100%;
         z-index: 999;
-        background: rgba(255, 255, 255, 0.95);
+        background: #fff;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.5s;
-      }
-
-      .header-shrink {
         padding: 5px 0;
       }
 
       .logo img {
-        max-height: 60px;
-        transition: all 0.3s;
+        max-height: 120px;
       }
 
-      .fa-solid fa-bars-staggered {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(34, 59, 115, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
       }
 
-      .navbar-toggler {
-        border: 1px solid var(--primary-color);
-        padding: 0.25rem 0.5rem;
+      .navbar-collapse {
+        justify-content: flex-end;
       }
 
-      .main-menu {
-        margin-right: 15px;
+      /* Force horizontal layout for menu on large screens */
+      @media (min-width: 992px) {
+        .navbar-expand-lg .navbar-collapse {
+          display: flex !important;
+        }
+
+        .navbar-expand-lg .navbar-toggler {
+          display: none;
+        }
+
+        .navbar-expand-lg .navbar-nav {
+          flex-direction: row;
+          margin: 0 !important;
+        }
+
+        .nav-item {
+          margin: 0 10px;
+        }
+
+        .nav-link {
+          padding: 25px 10px !important;
+          display: inline-block;
+          font-weight: 600;
+          font-size: 12px;
+          color: var(--primary-color);
+          text-transform: uppercase;
+        }
+
+        .btn-primary {
+          background-color: #dc4405;
+          border-color: #dc4405;
+          margin-left: 15px;
+          padding: 12px 25px;
+          border-radius: 50px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
       }
 
-      .main-menu ul li {
-        margin: 0 2px;
+      /* Hamburger menu styling for mobile */
+      @media (max-width: 991.98px) {
+        .navbar-toggler {
+          padding: 10px;
+          background-color: white;
+        }
+
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 104, 55, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
       }
 
-      .main-menu ul li a {
+      /* Register button styling */
+      .register-btn {
+        background-color: #dc4405;
+        color: white;
+        padding: 12px 30px;
         font-weight: 600;
         font-size: 14px;
-        color: var(--primary-color);
         text-transform: uppercase;
-        padding: 30px 15px;
-        transition: all 0.3s;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-left: 20px;
       }
 
-      .main-menu ul li a:hover {
-        color: var(--secondary-color);
+      .register-btn:hover {
+        background-color: #c43c00;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
 
-      .main-menu ul li.active a {
-        color: var(--secondary-color);
+      @media (max-width: 991px) {
+        .register-btn {
+          margin-top: 15px;
+          margin-left: 0;
+        }
+      }
+      /* Sponsor-specific styles */
+      .sponsor-package {
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+        background-color: #ffffff;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .sponsor-package:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        border-color: var(--secondary-color);
+      }
+
+      .sponsor-package h3 {
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--secondary-color);
+      }
+
+      .sponsor-benefits {
+        margin-bottom: 30px;
+      }
+
+      .sponsor-benefits ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .sponsor-benefits ul li {
+        padding: 10px 0;
         position: relative;
+        padding-left: 30px;
+        border-bottom: 1px solid #f0f0f0;
       }
 
-      .main-menu ul li.active a::after {
-        content: '';
+      .sponsor-benefits ul li i {
+        color: var(--secondary-color);
         position: absolute;
-        bottom: 25px;
-        left: 15px;
-        width: calc(100% - 30px);
-        height: 2px;
-        background: var(--secondary-color);
-      }
-
-      /* Page Hero */
-      .page-hero {
-        position: relative;
-        height: 50vh;
-        background: url('img/bg-img/bg-1.jpeg') no-repeat center center/cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-      }
-
-      .page-hero-overlay {
-        position: absolute;
-        top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(34, 59, 115, 0.9) 0%,
-          rgba(220, 68, 5, 0.8) 100%
-        );
-        z-index: 1;
+        top: 12px;
       }
 
-      .page-hero-content {
-        position: relative;
-        z-index: 2;
-        color: white;
+      .contact-sponsor {
+        background-color: #f9f9f9;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
       }
 
-      .page-hero-content h1 {
-        font-size: 4rem;
-        font-weight: 800;
-        margin-bottom: 10px;
-        animation: fadeInDown 1s;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      .sponsor-reason {
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        background-color: #ffffff;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--primary-color);
       }
 
-      .page-hero-content p {
-        font-size: 1.2rem;
-        max-width: 700px;
-        margin: 0 auto;
-        animation: fadeInUp 1s;
+      .sponsor-reason:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
       }
 
-      /* Breadcrumb */
-      .breadcrumb {
-        background: transparent;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-        margin-top: 20px;
+      .sponsor-reason i {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
       }
 
-      .breadcrumb-item {
-        color: rgba(255, 255, 255, 0.7);
+      .sponsor-reason h4 {
+        color: var(--accent-color);
+        margin-bottom: 15px;
+        font-weight: 600;
       }
 
-      .breadcrumb-item a {
-        color: white;
+      .sponsor-contact-btn {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        padding: 15px 30px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-top: 15px;
         text-decoration: none;
       }
 
-      .breadcrumb-item + .breadcrumb-item::before {
-        color: rgba(255, 255, 255, 0.7);
+      .sponsor-contact-btn:hover {
+        background-color: var(--secondary-color);
+        color: #ffffff;
       }
 
-      /* Section */
-      .section {
-        padding: 100px 0;
+      .sponsor-levels {
+        margin-top: 50px;
       }
-
-      .section-header {
-        text-align: center;
-        margin-bottom: 70px;
-      }
-
       .section-header h2 {
         font-size: 2.5rem;
         color: var(--primary-color);
@@ -217,313 +245,17 @@
         position: relative;
         display: inline-block;
       }
-
-      .section-header h2:after {
-        content: '';
-        position: absolute;
-        bottom: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 70px;
-        height: 4px;
-        background-color: var(--secondary-color);
-      }
-
-      .section-header p {
-        color: #777;
-        max-width: 700px;
-        margin: 0 auto;
-      }
-
-      /* Speakers */
-      .speaker-card {
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 30px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
-      }
-
-      .speaker-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      }
-
-      .speaker-image {
-        position: relative;
-        overflow: hidden;
-        padding-top: 100%; /* 1:1 Aspect Ratio */
-      }
-
-      .speaker-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s;
-      }
-
-      .speaker-card:hover .speaker-image img {
-        transform: scale(1.1);
-      }
-
-      .speaker-info {
-        background-color: white;
-        padding: 25px;
-        text-align: center;
-      }
-
-      .speaker-name {
-        font-size: 1.3rem;
-        margin-bottom: 5px;
-        color: var(--primary-color);
-      }
-
-      .speaker-position {
-        color: var(--secondary-color);
-        font-weight: 500;
-        margin-bottom: 15px;
-      }
-
-      .speaker-bio {
-        margin-top: 15px;
-        color: #666;
-        font-size: 0.9rem;
-        line-height: 1.6;
-      }
-
-      .speaker-social {
-        margin-top: 15px;
-      }
-
-      .speaker-social a {
-        display: inline-block;
-        width: 35px;
-        height: 35px;
-        background: #f5f5f5;
-        color: var(--primary-color);
-        line-height: 35px;
-        border-radius: 50%;
-        margin: 0 5px;
-        transition: all 0.3s;
-      }
-
-      .speaker-social a:hover {
-        background: var(--secondary-color);
-        color: white;
-      }
-
-      /* Featured Speaker */
-      .featured-speaker {
-        padding: 60px 0;
-        background: linear-gradient(
-          135deg,
-          var(--primary-color) 0%,
-          var(--dark-color) 100%
-        );
-        color: white;
-        margin-bottom: 100px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .featured-speaker:before {
-        content: '';
-        position: absolute;
-        top: -100px;
-        right: -100px;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.05);
-      }
-
-      .featured-speaker:after {
-        content: '';
-        position: absolute;
-        bottom: -150px;
-        left: -150px;
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.03);
-      }
-
-      .featured-speaker-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      }
-
-      .featured-speaker-image img {
-        width: 100%;
-      }
-
-      .featured-speaker-content h2 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        color: white;
-      }
-
-      .featured-speaker-content h3 {
-        color: var(--secondary-color);
-        margin-bottom: 30px;
-      }
-
-      .featured-speaker-content p {
-        margin-bottom: 30px;
-        line-height: 1.8;
-        font-size: 1.1rem;
-        opacity: 0.9;
-      }
-
-      /* Categories */
-      .speaker-categories {
-        margin-bottom: 50px;
-        text-align: center;
-      }
-
-      .category-button {
-        background: transparent;
+      .btn-partnership {
         border: 2px solid var(--primary-color);
         color: var(--primary-color);
-        padding: 10px 20px;
-        border-radius: 50px;
-        margin: 5px;
-        font-weight: 600;
-        transition: all 0.3s;
-        cursor: pointer;
-      }
-
-      .category-button:hover,
-      .category-button.active {
-        background: var(--primary-color);
-        color: white;
-      }
-
-      /* Speaker Modal */
-      .speaker-modal .modal-content {
-        border-radius: 15px;
-        border: none;
-        overflow: hidden;
-      }
-
-      .speaker-modal .modal-header {
-        border: none;
-        padding: 20px 30px;
-        background: var(--primary-color);
-        color: white;
-      }
-
-      .speaker-modal .modal-title {
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
-
-      .speaker-modal .close {
-        color: white;
-        opacity: 1;
-        text-shadow: none;
-      }
-
-      .speaker-modal .modal-body {
-        padding: 30px;
-      }
-
-      .speaker-modal-image {
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 20px;
-      }
-
-      .speaker-modal-image img {
-        width: 100%;
-      }
-
-      .speaker-modal-info h3 {
-        color: var(--primary-color);
-        margin-bottom: 5px;
-      }
-
-      .speaker-modal-info h4 {
-        color: var(--secondary-color);
-        margin-bottom: 20px;
-        font-size: 1.1rem;
-      }
-
-      .speaker-modal-bio {
-        line-height: 1.8;
-      }
-
-      .speaker-modal-social {
-        margin-top: 20px;
-      }
-
-      .speaker-modal-social a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background: #f5f5f5;
-        color: var(--primary-color);
-        line-height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-        text-align: center;
-        transition: all 0.3s;
-      }
-
-      .speaker-modal-social a:hover {
-        background: var(--secondary-color);
-        color: white;
-      }
-
-      /* CTA Section */
-      .cta-section {
-        background: linear-gradient(
-          135deg,
-          var(--primary-color) 0%,
-          var(--accent-color) 100%
-        );
-        padding: 100px 0;
-        text-align: center;
-        color: white;
-      }
-
-      .cta-section h2 {
-        font-size: 3rem;
-        margin-bottom: 30px;
-        color: white;
-      }
-
-      .cta-section p {
-        margin-bottom: 40px;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.1rem;
-      }
-
-      .btn-light {
-        background-color: #fff;
-        color: var(--primary-color);
-        padding: 12px 25px;
+        padding: 15px 30px;
         border-radius: 50px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: all 0.3s ease;
+        background: transparent;
       }
-
-      .btn-light:hover {
-        background-color: rgba(255, 255, 255, 0.9);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Footer */
       .footer-area {
         background: var(--dark-color);
         color: #aaa;
@@ -652,6 +384,23 @@
         transform: scale(1.1);
       }
 
+      .footer-newsletter button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .footer-newsletter button:hover {
+        background: var(--accent-color);
+        transform: scale(1.1);
+      }
       .copyright {
         background: rgba(0, 0, 0, 0.2);
         padding: 15px 0;
@@ -660,96 +409,189 @@
         color: rgba(255, 255, 255, 0.7);
       }
 
-      /* Responsive Fixes */
-      @media (max-width: 991px) {
-        .navbar-collapse {
-          background: white;
-          padding: 15px;
-          border-radius: 10px;
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-          margin-top: 15px;
-        }
+      /* Speakers Section Styles */
+      .speakers-section {
+        padding: 100px 0;
+        background-color: #f8f9fa;
+      }
 
-        .main-menu ul li a {
-          padding: 10px 15px;
-        }
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
 
-        .main-menu ul li.active a::after {
-          bottom: 5px;
-        }
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
 
-        .page-hero-content h1 {
-          font-size: 2.5rem;
-        }
+      .section-title p {
+        font-size: 1.1rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
-        .featured-speaker-content {
-          margin-top: 40px;
-          text-align: center;
-        }
+      .speaker-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+        position: relative;
+      }
 
-        .featured-speaker-image {
-          margin-bottom: 30px;
-        }
+      .speaker-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .speaker-image {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+      }
+
+      .speaker-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease;
+      }
+
+      .speaker-card:hover .speaker-image img {
+        transform: scale(1.05);
+      }
+
+      .speaker-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(0, 104, 55, 0.8),
+          rgba(220, 68, 5, 0.8)
+        );
+        opacity: 0;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .speaker-card:hover .speaker-overlay {
+        opacity: 1;
+      }
+
+      .speaker-social {
+        display: flex;
+        gap: 15px;
+      }
+
+      .speaker-social a {
+        width: 45px;
+        height: 45px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        font-size: 18px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .speaker-social a:hover {
+        background: var(--secondary-color);
+        color: white;
+        transform: scale(1.1);
+      }
+
+      .speaker-info {
+        padding: 25px;
+        text-align: center;
+      }
+
+      .speaker-info h3 {
+        font-size: 16px;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .speaker-info h4 {
+        font-size: 14px;
+        color: var(--secondary-color);
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .speaker-info p {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .speaker-btn {
+        background: var(--primary-color);
+        color: white;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .speaker-btn:hover {
+        background: var(--secondary-color);
+        color: white;
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+
+      .speaker-category {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--secondary-color);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       @media (max-width: 768px) {
-        .section {
-          padding: 70px 0;
+        .speakers-section {
+          padding: 60px 0;
         }
 
-        .page-hero {
-          height: 40vh;
+        .section-title h2 {
+          font-size: 2rem;
         }
 
-        .speaker-card {
-          max-width: 320px;
-          margin-left: auto;
-          margin-right: auto;
+        .speaker-image {
+          height: 250px;
         }
-      }
 
-      /* Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
+        .speaker-info {
+          padding: 20px;
         }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translate3d(0, 50px, 0);
-        }
-        to {
-          opacity: 1;
-          transform: translate3d(0, 0, 0);
-        }
-      }
-
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translate3d(0, -50px, 0);
-        }
-        to {
-          opacity: 1;
-          transform: translate3d(0, 0, 0);
-        }
-      }
-
-      .fade-in {
-        animation: fadeIn 1s;
-      }
-
-      .fade-in-up {
-        animation: fadeInUp 1s;
-      }
-
-      .fade-in-down {
-        animation: fadeInDown 1s;
       }
     </style>
   </head>
@@ -764,8 +606,6 @@
               <a class="navbar-brand logo" href="index.html">
                 <img src="img/core-img/ASEA-LOGO.png" alt="ASEA Logo" />
               </a>
-
-              <!-- Navbar Toggler -->
               <button
                 class="navbar-toggler"
                 type="button"
@@ -775,40 +615,42 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class="fa-solid fa-bars-staggered"></span>
+                <span class="navbar-toggler-icon"></span>
               </button>
-
               <!-- Navbar -->
               <div class="collapse navbar-collapse" id="conferNavbar">
                 <ul class="navbar-nav ml-auto main-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                  </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="speakers.html">Speakers</a>
+                    <a class="nav-link" href="index.html">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="schedule.html">Schedule</a>
+                    <a class="nav-link" href="about.html">ABOUT</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="accommodation.html">Venue</a>
+                    <a class="nav-link" href="schedule.html">PROGRAM</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="speakers.html">SPEAKERS</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="sponsors.html">SPONSORS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="registration.html">Register</a>
+                    <a class="nav-link" href="accommodation.html"
+                      >Accommodation</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="travel.html">DESTINATION GUIDE</a>
                   </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">MEDIA</a>
+                  </li> -->
                 </ul>
-
-                <!-- Register Button -->
-                <a href="registration.html" class="btn btn-primary ml-lg-3"
-                  >Register Now</a
-                >
               </div>
+
+              <!-- Register Button -->
+              <a href="registration.html" class="register-btn">REGISTER</a>
             </nav>
           </div>
         </div>
@@ -817,293 +659,257 @@
     <!-- Header Area End -->
 
     <!-- Page Hero Start -->
-    <section class="page-hero">
-      <div class="page-hero-overlay"></div>
-      <div class="page-hero-content">
-        <div class="container">
-          <h1>Our Speakers</h1>
-          <p>
-            Meet the experts and thought leaders at the ASEA Conference 2025
-          </p>
-
-          <!-- Breadcrumb -->
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Speakers
-              </li>
-            </ol>
-          </nav>
+    <section
+      class="breadcrumb-area bg-img bg-gradient-overlay jarallax"
+      style="background-image: url(img/bg-img/27.jpg)"
+    >
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="breadcrumb-content">
+              <h2 class="page-title">Speakers</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Speakers
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Page Hero End -->
-
-    <!-- Featured Speaker Start -->
-    <section class="featured-speaker">
-      <div class="container">
-        <!-- <div class="row align-items-center">
-          <div class="col-lg-5">
-            <div class="featured-speaker-image fade-in-up">
-              <img
-                src="img/speakers/CEO-Thapelo123456.jpg"
-                alt="Thapelo Tsheole"
-              />
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div
-              class="featured-speaker-content fade-in-up"
-              style="animation-delay: 0.3s"
-            >
-              <h2>Thapelo Tsheole</h2>
-              <h3>ASEA President & CEO, Botswana Stock Exchange</h3>
-              <p>
-                As the keynote speaker for the ASEA Conference 2025, Thapelo
-                Tsheole brings invaluable insights from his extensive experience
-                in capital markets and leadership positions. With a career
-                spanning over two decades, he has implemented transformative
-                strategies that have positioned the Botswana Stock Exchange as
-                one of Africa's top performing exchanges.
-              </p>
-              <p>
-                Mr. Tsheole's vision for African capital markets focuses on
-                harnessing technological innovation and regional integration to
-                drive sustainable growth and development across the continent.
-              </p>
-              <a href="#" class="btn btn-light">Read Full Profile</a>
-            </div>
-          </div>
-        </div> -->
-      </div>
-    </section>
-    <!-- Featured Speaker End -->
 
     <!-- Speakers Section Start -->
-    <section class="section">
+    <section class="speakers-section">
       <div class="container">
-        <div class="row">
-          <!-- <div class="col-12">
-            <div class="section-header">
-              <h2>Conference Speakers</h2>
-              <p>
-                Leading experts and industry pioneers from across Africa and
-                beyond
-              </p>
-            </div>
-          </div> -->
+        <div class="section-title">
+          <h2>Conference Speakers</h2>
+          <p>
+            Meet the industry leaders, innovators, and experts who will be
+            sharing their insights at the ASEA Conference 2025
+          </p>
         </div>
-
-        <!-- Speaker Categories -->
-        <!-- <div class="speaker-categories">
-          <button class="category-button active" data-category="all">
-            All
-          </button>
-          <button class="category-button" data-category="keynote">
-            Keynotes
-          </button>
-          <button class="category-button" data-category="ceo">CEOs</button>
-          <button class="category-button" data-category="expert">
-            Industry Experts
-          </button>
-          <button class="category-button" data-category="regulator">
-            Regulators
-          </button>
-        </div> -->
 
         <div class="row">
           <!-- Speaker 1 -->
-          <!-- <div class="col-lg-3 col-md-6" data-category="keynote ceo">
-            <div class="speaker-card fade-in-up">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="speaker-card" data-category="keynote">
               <div class="speaker-image">
-                <img src="img/speakers/Idi.jpg" alt="Idrissa Diop" />
+                <img
+                  src="img/speakers/Frank Mwiti.jpg"
+                  alt="Thapelo Tsheole"
+                />
+
+                <div class="speaker-overlay">
+                  <div class="speaker-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                  </div>
+                </div>
               </div>
               <div class="speaker-info">
-                <h4 class="speaker-name">Idrissa Diop</h4>
-                <p class="speaker-position">CEO, Abidjan Stock Exchange</p>
-                <div class="speaker-social">
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <button
-                  class="btn btn-sm btn-primary mt-3"
+                <h3>Frank Mwiti</h3>
+                <h4>CEO, Nairobi Securities Exchange</h4>
+                <p></p>
+                <a
+                  href="#"
+                  class="speaker-btn"
                   data-toggle="modal"
                   data-target="#speakerModal1"
                 >
                   View Profile
-                </button>
+                </a>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- Speaker 2 -->
-          <!-- <div class="col-lg-3 col-md-6" data-category="expert">
-            <div class="speaker-card fade-in-up" style="animation-delay: 0.2s">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="speaker-card" data-category="ceo">
               <div class="speaker-image">
-                <img src="img/speakers/Iza.jpg" alt="Izabella Kaminska" />
+                <img src="img/speakers/Abena Amoah.jpg" alt="Idrissa Diop" />
+
+                <div class="speaker-overlay">
+                  <div class="speaker-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                  </div>
+                </div>
               </div>
               <div class="speaker-info">
-                <h4 class="speaker-name">Izabella Kaminska</h4>
-                <p class="speaker-position">Financial Journalist</p>
-                <div class="speaker-social">
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <button
-                  class="btn btn-sm btn-primary mt-3"
+                <h3>Abena Amoah</h3>
+                <h4>Managing Director, Ghana Stock Exchange</h4>
+                <p></p>
+                <a
+                  href="#"
+                  class="speaker-btn"
                   data-toggle="modal"
                   data-target="#speakerModal2"
                 >
                   View Profile
-                </button>
+                </a>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- Speaker 3 -->
-          <!-- <div class="col-lg-3 col-md-6" data-category="regulator">
-            <div class="speaker-card fade-in-up" style="animation-delay: 0.4s">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="speaker-card" data-category="media">
               <div class="speaker-image">
-                <img src="img/bg-img/44.jpg" alt="Emmanuel Nyirinkindi" />
+                <img src="img/speakers/Jude Chiemeka.png" alt="Izabella Kaminska" />
+
+                <div class="speaker-overlay">
+                  <div class="speaker-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                  </div>
+                </div>
               </div>
               <div class="speaker-info">
-                <h4 class="speaker-name">Emmanuel Nyirinkindi</h4>
-                <p class="speaker-position">Director, IFC</p>
-                <div class="speaker-social">
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <button
-                  class="btn btn-sm btn-primary mt-3"
+                <h3>Jude Chiemeka</h3>
+                <h4>CEO, Nigerian Exchange Group</h4>
+                <p></p>
+                <a
+                  href="#"
+                  class="speaker-btn"
                   data-toggle="modal"
                   data-target="#speakerModal3"
                 >
                   View Profile
-                </button>
+                </a>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- Speaker 4 -->
-          <!-- <div class="col-lg-3 col-md-6" data-category="ceo">
-            <div class="speaker-card fade-in-up" style="animation-delay: 0.6s">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="speaker-card" data-category="regulator">
               <div class="speaker-image">
-                <img src="img/bg-img/45.jpg" alt="Celestin Rwabukumba" />
+                <img src="img/speakers/Senhaji Tarik.jpg" alt="Dr. Sarah Alade" />
+
+                <div class="speaker-overlay">
+                  <div class="speaker-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                  </div>
+                </div>
               </div>
               <div class="speaker-info">
-                <h4 class="speaker-name">Celestin Rwabukumba</h4>
-                <p class="speaker-position">CEO, Rwanda Stock Exchange</p>
-                <div class="speaker-social">
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <button
-                  class="btn btn-sm btn-primary mt-3"
+                <h3>Senhaji Tarik</h3>
+                <h4>Vice President, ASEA</h4>
+                <p></p>
+                <a
+                  href="#"
+                  class="speaker-btn"
                   data-toggle="modal"
                   data-target="#speakerModal4"
                 >
                   View Profile
-                </button>
+                </a>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- Speaker 5 -->
-          <!-- <div class="col-lg-3 col-md-6" data-category="expert">
-            <div class="speaker-card fade-in-up" style="animation-delay: 0.8s">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="speaker-card" data-category="tech">
               <div class="speaker-image">
-                <img src="img/bg-img/46.jpg" alt="Sarah Kariuki" />
+                <img src="img/speakers/Bongile Kunene.jpg" alt="James Mwangi" />
+
+                <div class="speaker-overlay">
+                  <div class="speaker-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                  </div>
+                </div>
               </div>
               <div class="speaker-info">
-                <h4 class="speaker-name">Sarah Kariuki</h4>
-                <p class="speaker-position">Financial Analyst</p>
-                <div class="speaker-social">
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <button
-                  class="btn btn-sm btn-primary mt-3"
+                <h3>Bongile Kunene</h3>
+                <h4>Chief Technology Officer, NSE</h4>
+                <p></p>
+                <a
+                  href="#"
+                  class="speaker-btn"
                   data-toggle="modal"
                   data-target="#speakerModal5"
                 >
                   View Profile
-                </button>
+                </a>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- Speaker 6 -->
-          <!-- <div class="col-lg-3 col-md-6" data-category="regulator">
-            <div class="speaker-card fade-in-up" style="animation-delay: 1s">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="speaker-card" data-category="investor">
               <div class="speaker-image">
-                <img src="img/bg-img/47.jpg" alt="Mohamed El Amine" />
+                <img src="img/speakers/Peter Nalitolele.jpeg" alt="Amina Hassan" />
+
+                <div class="speaker-overlay">
+                  <div class="speaker-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                  </div>
+                </div>
               </div>
               <div class="speaker-info">
-                <h4 class="speaker-name">Mohamed El Amine</h4>
-                <p class="speaker-position">Regulatory Expert</p>
-                <div class="speaker-social">
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <button
-                  class="btn btn-sm btn-primary mt-3"
+                <h3>Peter Nalitolele</h3>
+                <h4>CEO, Dar es Salaam Stock Exchange</h4>
+                <p></p>
+                <a
+                  href="#"
+                  class="speaker-btn"
                   data-toggle="modal"
                   data-target="#speakerModal6"
                 >
                   View Profile
-                </button>
+                </a>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- Speaker 7 -->
-          <!-- <div class="col-lg-3 col-md-6" data-category="ceo">
-            <div class="speaker-card fade-in-up" style="animation-delay: 1.2s">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="speaker-card" data-category="csd">
               <div class="speaker-image">
-                <img src="img/bg-img/48.jpg" alt="David Trezeguet" />
+                <img src="img/speakers/Rwabukumba.jpg" alt="Robert Nyamwasa" />
+
+                <div class="speaker-overlay">
+                  <div class="speaker-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                  </div>
+                </div>
               </div>
               <div class="speaker-info">
-                <h4 class="speaker-name">David Mugenyi</h4>
-                <p class="speaker-position">CEO, Uganda Securities Exchange</p>
-                <div class="speaker-social">
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <button
-                  class="btn btn-sm btn-primary mt-3"
+                <h3>Pierre Celestin Rwabukumba</h3>
+                <h4>CEO, ASEA</h4>
+                <p></p>
+                <a
+                  href="#"
+                  class="speaker-btn"
                   data-toggle="modal"
                   data-target="#speakerModal7"
                 >
                   View Profile
-                </button>
+                </a>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- Speaker 8 -->
-          <!-- <div class="col-lg-3 col-md-6" data-category="keynote">
-            <div class="speaker-card fade-in-up" style="animation-delay: 1.4s">
-              <div class="speaker-image">
-                <img src="img/bg-img/49.jpg" alt="Clara Mwangi" />
-              </div>
-              <div class="speaker-info">
-                <h4 class="speaker-name">Clara Mwangi</h4>
-                <p class="speaker-position">Digital Transformation Expert</p>
-                <div class="speaker-social">
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <button
-                  class="btn btn-sm btn-primary mt-3"
-                  data-toggle="modal"
-                  data-target="#speakerModal8"
-                >
-                  View Profile
-                </button>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
@@ -1264,6 +1070,441 @@
                     <p>
                       Date: November 27, 2025 | Time: 2:00 PM - 3:30 PM | Venue:
                       Conference Room B
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker Modal 3 -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModal3"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img src="img/speakers/Iza.jpg" alt="Izabella Kaminska" />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>Izabella Kaminska</h3>
+                  <h4>Financial Journalist</h4>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      Izabella Kaminska is a renowned financial journalist with
+                      expertise in global markets, financial innovation, and
+                      emerging economies. She has written extensively about
+                      capital markets in Africa and their potential for growth.
+                    </p>
+                    <p>
+                      Ms. Kaminska previously worked for the Financial Times
+                      where she was the editor of the Alphaville section,
+                      covering market developments and financial innovation. She
+                      has also contributed to various international publications
+                      and is a regular speaker at global financial conferences.
+                    </p>
+                    <p>
+                      At the ASEA Conference 2025, Ms. Kaminska will moderate a
+                      panel discussion on media representation of African
+                      capital markets and how improved communication strategies
+                      can attract global investors.
+                    </p>
+                    <h5>
+                      Session: "Changing the Narrative: Media and African
+                      Capital Markets"
+                    </h5>
+                    <p>
+                      Date: November 27, 2025 | Time: 2:00 PM - 3:30 PM | Venue:
+                      Conference Room B
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker Modal 4 -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModal4"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img src="img/bg-img/1.jpg" alt="Dr. Sarah Alade" />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>Dr. Sarah Alade</h3>
+                  <h4>Director General, SEC Nigeria</h4>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      Dr. Sarah Alade serves as the Director General of the
+                      Securities and Exchange Commission of Nigeria, bringing
+                      over 25 years of experience in financial regulation and
+                      capital market development.
+                    </p>
+                    <p>
+                      She holds a PhD in Economics and has previously worked
+                      with the Central Bank of Nigeria and various international
+                      financial institutions. Dr. Alade has been instrumental in
+                      implementing regulatory reforms that have enhanced
+                      investor confidence in Nigerian capital markets.
+                    </p>
+                    <p>
+                      At the ASEA Conference 2025, Dr. Alade will lead
+                      discussions on regulatory harmonization across African
+                      markets and investor protection frameworks.
+                    </p>
+                    <h5>
+                      Session: "Regulatory Excellence: Building Trust in African
+                      Markets"
+                    </h5>
+                    <p>
+                      Date: November 26, 2025 | Time: 3:00 PM - 4:30 PM | Venue:
+                      Main Hall
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker Modal 5 -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModal5"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img src="img/bg-img/2.png" alt="James Mwangi" />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>James Mwangi</h3>
+                  <h4>Chief Technology Officer, NSE</h4>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      James Mwangi is the Chief Technology Officer at the
+                      Nairobi Securities Exchange, leading digital
+                      transformation initiatives that have modernized trading
+                      and settlement systems across East Africa.
+                    </p>
+                    <p>
+                      With a background in computer science and financial
+                      technology, Mr. Mwangi has spearheaded the implementation
+                      of blockchain technology, automated trading systems, and
+                      mobile-based investment platforms.
+                    </p>
+                    <p>
+                      At the ASEA Conference 2025, he will present on the future
+                      of fintech in African capital markets and emerging
+                      technologies reshaping the investment landscape.
+                    </p>
+                    <h5>
+                      Session: "Digital Revolution: Technology Transforming
+                      African Exchanges"
+                    </h5>
+                    <p>
+                      Date: November 27, 2025 | Time: 9:00 AM - 10:30 AM |
+                      Venue: Tech Hub
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker Modal 6 -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModal6"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img src="img/bg-img/3.jpg" alt="Amina Hassan" />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>Amina Hassan</h3>
+                  <h4>Managing Partner, Cairo Capital</h4>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      Amina Hassan is the Managing Partner at Cairo Capital, one
+                      of Africa's leading investment firms specializing in
+                      cross-border transactions and capital market development.
+                    </p>
+                    <p>
+                      With over 15 years of experience in investment banking and
+                      private equity, Ms. Hassan has facilitated over $2 billion
+                      in transactions across African markets. She holds an MBA
+                      from Wharton and is a CFA charterholder.
+                    </p>
+                    <p>
+                      At the ASEA Conference 2025, she will share insights on
+                      attracting international investment to African markets and
+                      building sustainable investment ecosystems.
+                    </p>
+                    <h5>
+                      Session: "Capital Flows: Attracting Global Investment to
+                      Africa"
+                    </h5>
+                    <p>
+                      Date: November 26, 2025 | Time: 4:45 PM - 6:00 PM | Venue:
+                      Investment Forum
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker Modal 7 -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModal7"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img src="img/bg-img/4.jpg" alt="Robert Nyamwasa" />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>Robert Nyamwasa</h3>
+                  <h4>CEO, Central Securities Depository</h4>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      Robert Nyamwasa serves as the Chief Executive Officer of
+                      the Central Securities Depository of Rwanda, where he has
+                      led the development of modern post-trade infrastructure
+                      systems.
+                    </p>
+                    <p>
+                      His expertise in securities settlement, custody services,
+                      and cross-border trading systems has been instrumental in
+                      connecting African markets with global financial
+                      infrastructure.
+                    </p>
+                    <p>
+                      At the ASEA Conference 2025, Mr. Nyamwasa will discuss the
+                      evolution of post-trade services and the role of CSDs in
+                      facilitating regional market integration.
+                    </p>
+                    <h5>
+                      Session: "Post-Trade Infrastructure: Building Connected
+                      African Markets"
+                    </h5>
+                    <p>
+                      Date: November 27, 2025 | Time: 11:00 AM - 12:30 PM |
+                      Venue: Operations Center
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker Modal 8 -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModal8"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img src="img/bg-img/5.jpg" alt="Prof. Fatima Al-Rashid" />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>Prof. Fatima Al-Rashid</h3>
+                  <h4>Professor of Finance, American University of Cairo</h4>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      Professor Fatima Al-Rashid is a distinguished academic and
+                      researcher at the American University of Cairo,
+                      specializing in African capital markets development and
+                      financial systems integration.
+                    </p>
+                    <p>
+                      Her research has been published in leading academic
+                      journals and she has advised multiple African governments
+                      on capital market development strategies. She holds a PhD
+                      in Finance from London School of Economics.
+                    </p>
+                    <p>
+                      At the ASEA Conference 2025, Prof. Al-Rashid will present
+                      her latest research on sustainable finance frameworks and
+                      ESG integration in African markets.
+                    </p>
+                    <h5>
+                      Session: "Sustainable Finance: ESG Integration in African
+                      Capital Markets"
+                    </h5>
+                    <p>
+                      Date: November 27, 2025 | Time: 3:45 PM - 5:00 PM | Venue:
+                      Research Hall
                     </p>
                   </div>
                 </div>
