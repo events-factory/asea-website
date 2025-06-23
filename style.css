@@ -3762,7 +3762,7 @@ input:required {
   z-index: 1;
 }
 .map-area iframe {
-  height: 580px;
+  
   width: 100%;
   border: none;
 }
