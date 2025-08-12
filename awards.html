@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pan-Africa ESG Awards 2025 - ASEA Conference</title>
+    <meta
+      name="description"
+      content="Inaugural Pan-Africa ESG Awards hosted by ASEA in collaboration with Risk Insights at the 28th ASEA Annual Conference, Kigali Rwanda, 26–28 Nov 2025."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/ASEA-LOGO.png" />
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/default-assets/classy-nav.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      :root {
+        --primary-color: #006837; /* ASEA Green */
+        --secondary-color: #dc4405; /* ASEA Orange */
+        --accent-color: #223b73; /* ASEA Blue */
+        --text-color: #333;
+        --light-color: #f8f9fa;
+        --dark-color: #1a2a40;
+      }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text-color);
+        overflow-x: hidden;
+        background-color: #ffffff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header */
+      .header-area {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 5px 0;
+      }
+      .logo img {
+        max-height: 120px;
+      }
+      .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .navbar-collapse {
+        justify-content: flex-end;
+      }
+      @media (min-width: 992px) {
+        .navbar-expand-lg .navbar-collapse {
+          display: flex !important;
+        }
+        .navbar-expand-lg .navbar-toggler {
+          display: none;
+        }
+        .navbar-expand-lg .navbar-nav {
+          flex-direction: row;
+          margin: 0 !important;
+        }
+        .nav-item {
+          margin: 0 10px;
+        }
+        .nav-link {
+          padding: 25px 10px !important;
+          font-weight: 600;
+          font-size: 12px;
+          color: var(--primary-color);
+          text-transform: uppercase;
+        }
+      }
+      @media (max-width: 991.98px) {
+        .navbar-toggler {
+          padding: 10px;
+          background-color: white;
+        }
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 104, 55, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+      }
+      .register-btn {
+        background-color: #dc4405;
+        color: white;
+        padding: 12px 30px;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-left: 20px;
+      }
+      .register-btn:hover {
+        background-color: #c43c00;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      @media (max-width: 991px) {
+        .register-btn {
+          margin-top: 15px;
+          margin-left: 0;
+        }
+      }
+
+      /* Hero */
+      .page-hero {
+        position: relative;
+        height: 50vh;
+        background: url('img/bg-img/bg-3.jpeg') no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+      .page-hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 104, 55, 0.88) 0%,
+          rgba(34, 59, 115, 0.85) 100%
+        );
+        z-index: 1;
+      }
+      .page-hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+      }
+      .page-hero-content h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        margin-top: 25px;
+        animation: fadeInDown 1s;
+        color: #ffffff; /* Force bright white for visibility */
+        text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+      }
+      /* ESG Awards badge (intro section) */
+      .esg-awards-badge {
+        width: 180px;
+        max-width: 60%;
+        height: auto;
+        margin: 10px auto 5px;
+        display: block;
+        filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+        border-radius: 8px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .esg-awards-badge:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+      }
+      @media (max-width: 576px) {
+        .esg-awards-badge {
+          width: 150px;
+        }
+      }
+      .page-hero-content p {
+        font-size: 1.15rem;
+        max-width: 760px;
+        margin: 0 auto;
+        animation: fadeInUp 1s;
+        color: #ffffff; /* Increase contrast */
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+      }
+      .breadcrumb {
+        background: transparent;
+        justify-content: center;
+        margin: 10px 0 0;
+        padding: 0;
+      }
+      .breadcrumb-item,
+      .breadcrumb-item a {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.85rem;
+      }
+      .breadcrumb-item a {
+        text-decoration: none;
+      }
+
+      /* Sections */
+      .section {
+        padding: 100px 0;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .section-header h2 {
+        font-size: 2.4rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+        font-weight: 800;
+      }
+      .section-header h2:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -12px;
+        width: 80px;
+        height: 4px;
+        background: var(--secondary-color);
+        border-radius: 2px;
+      }
+      .section-header p {
+        color: #666;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .lead-paragraph {
+        font-size: 1.15rem;
+        line-height: 1.75;
+        color: #444;
+      }
+
+      .highlight-box {
+        background: #f5f9f7;
+        border-left: 6px solid var(--secondary-color);
+        padding: 30px 35px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+      }
+      .highlight-box:before {
+        content: '\f005';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 2.2rem;
+        color: rgba(0, 104, 55, 0.08);
+      }
+      .highlight-box h3 {
+        font-size: 1.4rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+      .highlight-box p {
+        margin-bottom: 0;
+      }
+
+      .quote {
+        background: linear-gradient(135deg, #ffffff 0%, #f2f8f4 100%);
+        border: 1px solid #e4efe9;
+        padding: 35px 40px;
+        border-radius: 16px;
+        position: relative;
+        margin-bottom: 35px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      .quote:before {
+        content: '\f10d';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        font-size: 42px;
+        left: 18px;
+        top: 15px;
+        color: var(--secondary-color);
+        opacity: 0.25;
+      }
+      .quote blockquote {
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        font-weight: 500;
+        color: #222;
+        position: relative;
+      }
+      .quote footer {
+        margin-top: 18px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--accent-color);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .subheading {
+        font-size: 1.85rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .subheading:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 60px;
+        height: 4px;
+        background: var(--secondary-color);
+        border-radius: 2px;
+      }
+
+      .esg-pillars {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 15px;
+      }
+      .esg-pillars .pillar {
+        flex: 1 1 250px;
+        background: white;
+        border: 1px solid #e6ece9;
+        border-radius: 14px;
+        padding: 25px 22px 22px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.35s ease;
+      }
+      .esg-pillars .pillar:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background: var(--secondary-color);
+        transition: width 0.4s;
+      }
+      .esg-pillars .pillar:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+      .esg-pillars .pillar:hover:before {
+        width: 100%;
+      }
+      .esg-pillars .pillar h4 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--accent-color);
+        margin-bottom: 10px;
+      }
+      .esg-pillars .pillar p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        color: #555;
+        margin: 0;
+      }
+
+      .process-steps {
+        counter-reset: step;
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .process-steps li {
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #e3ebe6;
+        padding: 22px 24px 20px 70px;
+        border-radius: 14px;
+        margin-bottom: 18px;
+        font-size: 0.95rem;
+        line-height: 1.55;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+      .process-steps li:before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: white;
+        font-weight: 700;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 104, 55, 0.25);
+      }
+      .process-steps li strong {
+        color: var(--primary-color);
+      }
+
+      .cta-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--accent-color) 100%
+        );
+        padding: 90px 0;
+        text-align: center;
+        color: white;
+      }
+      .cta-section h2 {
+        font-size: 2.6rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        color: #ffffff; /* Ensure white heading */
+        text-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+      }
+      .cta-section p {
+        max-width: 740px;
+        margin: 0 auto 35px;
+        font-size: 1.05rem;
+        color: #ffffff; /* Ensure paragraph text is bright */
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+      }
+      .btn-outline-light {
+        border: 2px solid #fff;
+        color: #fff;
+        background: transparent;
+        padding: 12px 32px;
+        border-radius: 45px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+      }
+      .btn-outline-light:hover {
+        background: #fff;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+      }
+
+      /* Footer (reuse styles) */
+      .footer-area {
+        background: var(--dark-color);
+        color: #aaa;
+        padding: 70px 0 0;
+      }
+      .footer-widget {
+        margin-bottom: 40px;
+      }
+      .footer-widget h4 {
+        color: white;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+        font-size: 1.4rem;
+      }
+      .footer-widget h4:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--secondary-color);
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+      .footer-links li a {
+        color: #aaa;
+        transition: all 0.3s;
+        text-decoration: none;
+        position: relative;
+        padding-left: 15px;
+        display: block;
+      }
+      .footer-links li a:before {
+        content: '\f105';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--secondary-color);
+      }
+      .footer-links li a:hover {
+        color: white;
+        padding-left: 20px;
+      }
+      .footer-info p {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 25px;
+      }
+      .footer-info p i {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        color: var(--secondary-color);
+      }
+      .footer-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+      .footer-social a:hover {
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+      }
+      .footer-newsletter {
+        display: flex;
+        position: relative;
+      }
+      .footer-newsletter input {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        width: 100%;
+        color: white;
+      }
+      .footer-newsletter input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .footer-newsletter button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: white;
+        transition: all 0.3s;
+      }
+      .footer-newsletter button:hover {
+        background: var(--accent-color);
+        transform: scale(1.1);
+      }
+      .copyright {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 15px 0;
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Responsive */
+      @media (max-width: 991px) {
+        .navbar-collapse {
+          background: white;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          margin-top: 15px;
+        }
+        .page-hero {
+          height: 45vh;
+        }
+      }
+      @media (max-width: 768px) {
+        .section {
+          padding: 70px 0;
+        }
+        .page-hero {
+          height: 40vh;
+        }
+        .page-hero-content h1 {
+          font-size: 2.3rem;
+        }
+        .esg-pillars {
+          gap: 18px;
+        }
+        .quote {
+          padding: 28px 28px 30px 55px;
+        }
+        .quote:before {
+          left: 14px;
+          top: 12px;
+          font-size: 36px;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 40px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translate3d(0, -40px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .fade-in-up {
+        animation: fadeInUp 0.9s both;
+      }
+      .fade-in-down {
+        animation: fadeInDown 0.9s both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Area Start -->
+    <header class="header-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand logo" href="index.html">
+                <img src="img/core-img/ASEA-LOGO.png" alt="ASEA Logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#conferNavbar"
+                aria-controls="conferNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="conferNavbar">
+                <ul class="navbar-nav ml-auto main-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="schedule.html">PROGRAM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="speakers.html">SPEAKERS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sponsors.html">SPONSORS</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="awards.html">ESG AWARDS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="accommodation.html"
+                      >Accommodation</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="travel.html">DESTINATION GUIDE</a>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="https://the28thaseaa2afd.ev.smartevent.rw/RegisterIframe/en"
+                target="_blank"
+                class="register-btn"
+                >REGISTER</a
+              >
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Page Hero Start -->
+    <section class="page-hero">
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <div class="container">
+          <h1 class="mt-5">Pan-Africa ESG Awards 2025</h1>
+          <p>
+            Recognising excellence, leadership and innovation in Environmental,
+            Social & Governance (ESG) across African capital markets.
+          </p>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                ESG Awards
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- Page Hero End -->
+
+    <!-- Intro Section -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>Inaugural Pan-Africa ESG Awards</h2>
+              <img
+                src="img/core-img/esg-awards.jpeg"
+                alt="ESG Awards Logo"
+                class="esg-awards-badge"
+              />
+              <p>
+                Hosted during the 28th ASEA Annual Conference | Kigali, Rwanda |
+                26–28 November 2025
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-start">
+          <div class="col-lg-7 mb-5 mb-lg-0">
+            <p class="lead-paragraph fade-in-up">
+              AFRICAN SECURITIES EXCHANGES ASSOCIATION (ASEA) IN COLLABORATION
+              WITH RISK INSIGHTS TO HOST THE INAUGURAL PAN-AFRICA ESG AWARDS.
+              The African Securities Exchanges Association (ASEA) is proud to
+              announce its collaboration with Risk Insights, a leading provider
+              of cutting-edge ESG Data and Ratings solutions for Africa, to host
+              the inaugural Pan-Africa ESG Awards at the Annual Conference of
+              ASEA to be held in Kigali, Rwanda from 26th – 28th November, 2025.
+            </p>
+            <p class="fade-in-up" style="animation-delay: 0.1s">
+              This prestigious event marks a significant milestone in
+              recognising and advancing ESG and sustainability leadership across
+              the continent and the globe. The awards evening and gala dinner
+              will convene industry leaders, sustainability executives,
+              regulators, and market participants from across Africa and beyond
+              to celebrate outstanding achievements in environmental, social,
+              and governance (ESG) practices.
+            </p>
+            <p class="fade-in-up" style="animation-delay: 0.15s">
+              A distinguished panel of adjudicators comprising ESG and capital
+              markets experts from Africa and internationally will carefully
+              assess the award categories using data-driven insights to ensure
+              transparency and objectivity. Independent oversight will be
+              provided by ASEA’s audit partners, further reinforcing the
+              credibility and integrity of the selection process. Several award
+              categories will be presented to honour excellence in non-financial
+              disclosure, innovation in sustainability, and commitment to
+              responsible business conduct.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="highlight-box fade-in-up" style="animation-delay: 0.2s">
+              <h3>Key Event Highlights</h3>
+              <ul style="padding-left: 18px; margin: 0">
+                <li>
+                  <strong>Occasion:</strong> Gala awards evening & networking
+                  dinner
+                </li>
+                <li><strong>Venue:</strong> Kigali, Rwanda</li>
+                <li><strong>Dates:</strong> 26–28 November 2025</li>
+                <li>
+                  <strong>Focus:</strong> ESG leadership & sustainable market
+                  development
+                </li>
+                <li>
+                  <strong>Participants:</strong> Exchanges, issuers, regulators,
+                  investors, ESG leaders
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section class="section" style="background: #f9f9f9">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <h2>Leadership Voices</h2>
+              <p>Statements from ASEA and Risk Insights</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="quote fade-in-up">
+              <blockquote>
+                “We are proud to partner with Risk Insights for the inaugural
+                Pan-Africa ESG Awards. This initiative reflects ASEA’s ongoing
+                commitment to advancing ESG integration, fostering responsible
+                investment, and positioning African capital markets as engines
+                of sustainable economic growth.”
+              </blockquote>
+              <footer>PIERRE CELESTIN RWABUKUMBA – PRESIDENT, ASEA</footer>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="quote fade-in-up" style="animation-delay: 0.15s">
+              <blockquote>
+                “We are honoured to collaborate with the African Securities
+                Exchanges Association on this historic initiative to spotlight
+                Africa’s ESG leadership. This partnership reinforces our mission
+                to deliver impactful, data-driven ESG solutions that empower
+                African markets and businesses to lead with transparency,
+                sustainability, and innovation.”
+              </blockquote>
+              <footer>ANUSHKA BOGDANOV – CHAIRLADY, RISK INSIGHTS</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Risk Insights & ESG Focus -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h3 class="subheading">Data-Driven Integrity</h3>
+            <p>
+              Through its pioneering ESG GPS™ tool and strategic partnerships,
+              Risk Insights remains at the forefront of integrating AI and big
+              data into ESG and risk assessment, empowering organizations across
+              Africa to navigate the evolving sustainability landscape.
+            </p>
+            <div class="esg-pillars">
+              <div class="pillar">
+                <h4>Environmental</h4>
+                <p>
+                  Recognition of climate stewardship, resource efficiency &
+                  adaptive resilience.
+                </p>
+              </div>
+              <div class="pillar">
+                <h4>Social</h4>
+                <p>
+                  Advancing inclusion, workforce wellbeing, stakeholder
+                  engagement & equity.
+                </p>
+              </div>
+              <div class="pillar">
+                <h4>Governance</h4>
+                <p>
+                  Promoting ethics, transparency, board diversity & accountable
+                  leadership.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="subheading">Transparent Selection Process</h3>
+            <p>
+              The adjudication process is designed to reinforce confidence,
+              credibility and comparability across markets—supporting long-term
+              sustainable value creation.
+            </p>
+            <ol class="process-steps">
+              <li>
+                <strong>Independent Evaluation:</strong> Multi-disciplinary
+                panel featuring African & international ESG and capital markets
+                experts.
+              </li>
+              <li>
+                <strong>Data-Led Analysis:</strong> Leveraging structured ESG
+                metrics & ratings to ensure objectivity in shortlisting and
+                final selection.
+              </li>
+              <li>
+                <strong>Audit Oversight:</strong> Independent assurance by
+                ASEA’s audit partners to uphold integrity and procedural rigor.
+              </li>
+              <li>
+                <strong>Balanced Recognition:</strong> Focus on disclosure
+                quality, innovation, sustainability integration & responsible
+                conduct.
+              </li>
+              <li>
+                <strong>Continental Impact:</strong> Catalysing improved ESG
+                standards and investor confidence across African markets.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Be Part of the ESG Milestone</h2>
+        <p>
+          Join the leaders shaping Africa’s sustainable capital market future.
+          Reserve your seat at the 28th ASEA Annual Conference and attend the
+          inaugural Pan-Africa ESG Awards Gala in Kigali.
+        </p>
+        <a
+          href="https://the28thaseaa2afd.ev.smartevent.rw/RegisterIframe/en"
+          target="_blank"
+          class="btn btn-outline-light"
+          >Register Now</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget footer-info">
+              <img
+                src="img/members/logo_asea_white.png"
+                alt="ASEA Logo"
+                class="mb-4"
+                style="max-height: 60px"
+              />
+              <p>
+                The African Securities Exchanges Association (ASEA) is the
+                premier association of securities exchanges in Africa.
+              </p>
+              <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li>
+                  <a
+                    href="https://the28thaseaa2afd.ev.smartevent.rw/RegisterIframe/en"
+                    target="_blank"
+                    >Registration</a
+                  >
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Contact Info</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</p>
+              <p><i class="fas fa-phone-alt"></i> +250 788 123 456</p>
+              <p><i class="fas fa-envelope"></i> info@asea-conference.org</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Subscribe</h4>
+              <p>Stay updated with the latest news and announcements</p>
+              <form class="footer-newsletter">
+                <input type="email" placeholder="Your Email" />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <p>&copy; 2025 ASEA Conference. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JS Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/confer.bundle.js"></script>
+    <script>
+      // Sticky Header shrink
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header-area');
+        if (window.scrollY > 100) {
+          header.classList.add('header-shrink');
+        } else {
+          header.classList.remove('header-shrink');
+        }
+      });
+    </script>
+  </body>
+</html>
