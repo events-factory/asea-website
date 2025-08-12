@@ -202,6 +202,131 @@
         z-index: 1;
       }
 
+      /* ESG Event Banner */
+      .esg-banner-section {
+        position: relative;
+        background: linear-gradient(
+            135deg,
+            rgba(0, 104, 55, 0.92) 0%,
+            rgba(34, 59, 115, 0.92) 100%
+          ),
+          url('img/bg-img/bg-4.jpeg') center/cover no-repeat;
+        padding: 80px 0 70px;
+        overflow: hidden;
+        color: #fff;
+      }
+      .esg-banner-section:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 25% 30%,
+          rgba(255, 255, 255, 0.15),
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+      .esg-banner-content {
+        position: relative;
+        z-index: 2;
+      }
+      .esg-badge-title {
+        font-size: 2.3rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+      @media (min-width: 992px) {
+        .esg-badge-title {
+          font-size: 2.9rem;
+        }
+      }
+      .esg-subline {
+        font-size: 1.05rem;
+        max-width: 760px;
+        margin: 0 auto 30px;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .esg-cta-btn {
+        background: #dc4405;
+        color: #fff;
+        padding: 14px 34px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline-block;
+        transition: all 0.35s;
+        text-decoration: none;
+      }
+      .esg-cta-btn:hover {
+        background: #ffffff;
+        color: var(--primary-color);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        text-decoration: none;
+      }
+      .esg-countdown {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 35px 0 15px;
+      }
+      .esg-count-box {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(4px);
+        padding: 16px 18px;
+        min-width: 110px;
+        margin: 8px;
+        border-radius: 14px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .esg-count-number {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        margin-bottom: 4px;
+      }
+      .esg-count-label {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .esg-video-wrap {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+        margin-top: 25px;
+      }
+      .esg-video-wrap iframe {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        border: 0;
+      }
+      .esg-disclaimer {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 18px;
+      }
+      @media (max-width: 767px) {
+        .esg-count-box {
+          min-width: 90px;
+          padding: 14px 12px;
+        }
+        .esg-count-number {
+          font-size: 1.6rem;
+        }
+      }
+
       .hero-content {
         position: relative;
         z-index: 2;
@@ -1174,6 +1299,7 @@
         </a>
       </div>
     </section>
+
     <div
       class="hosts-section py-3"
       style="
@@ -1341,6 +1467,66 @@
       </div>
     </section>
     <!-- About Section End -->
+
+    <!-- ESG Event Banner Start (moved below About section) -->
+    <section class="esg-banner-section">
+      <div class="container">
+        <div class="esg-banner-content text-center">
+          <h2 class="esg-badge-title fade-in-down">
+            Accelerating ESG Readiness & Sustainable Capital Markets in Africa
+          </h2>
+          <p class="esg-subline fade-in-up">
+            Be part of a landmark initiative spotlighting excellence in
+            Environmental, Social & Governance performance across African
+            markets. Join industry leaders, regulators, issuers and investors as
+            we recognise innovation and sustainable market development at the
+            Pan-Africa ESG Awards Gala.
+          </p>
+          <div class="esg-countdown" aria-label="Countdown to ESG Awards Gala">
+            <div class="esg-count-box">
+              <div id="esg-days" class="esg-count-number">--</div>
+              <div class="esg-count-label">Days</div>
+            </div>
+            <div class="esg-count-box">
+              <div id="esg-hours" class="esg-count-number">--</div>
+              <div class="esg-count-label">Hours</div>
+            </div>
+            <div class="esg-count-box">
+              <div id="esg-minutes" class="esg-count-number">--</div>
+              <div class="esg-count-label">Minutes</div>
+            </div>
+            <div class="esg-count-box">
+              <div id="esg-seconds" class="esg-count-number">--</div>
+              <div class="esg-count-label">Seconds</div>
+            </div>
+          </div>
+          <a
+            href="awards.html"
+            class="esg-cta-btn"
+            aria-label="Learn more about the Pan-Africa ESG Awards"
+            >Explore ESG Awards</a
+          >
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="esg-video-wrap fade-in-up">
+                <!-- Optional teaser video: replace VIDEO_ID with final YouTube ID -->
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+                  title="ESG Awards Teaser"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="esg-disclaimer">
+                Gala date assumed (Nov 27, 2025 19:00 CAT) – adjust in script
+                when final.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ESG Event Banner End -->
 
     <!-- Schedule Section Start -->
     <!-- <section class="section">
@@ -1789,6 +1975,33 @@
       // Initial call and set interval
       updateCountdown();
       setInterval(updateCountdown, 1000);
+
+      // ESG Awards / ESG Event Countdown (Assumed Gala: Nov 27 2025 19:00 CAT)
+      function updateEsgCountdown() {
+        const esgDate = new Date('November 27, 2025 19:00:00').getTime();
+        const now = new Date().getTime();
+        const dist = esgDate - now;
+        const d = Math.max(0, Math.floor(dist / (1000 * 60 * 60 * 24)));
+        const h = Math.max(
+          0,
+          Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        );
+        const m = Math.max(
+          0,
+          Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60))
+        );
+        const s = Math.max(0, Math.floor((dist % (1000 * 60)) / 1000));
+        const setText = (id, val) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = val.toString().padStart(2, '0');
+        };
+        setText('esg-days', d);
+        setText('esg-hours', h);
+        setText('esg-minutes', m);
+        setText('esg-seconds', s);
+      }
+      updateEsgCountdown();
+      setInterval(updateEsgCountdown, 1000);
 
       // Schedule Tabs
       document.querySelectorAll('.schedule-tab button').forEach((button) => {
