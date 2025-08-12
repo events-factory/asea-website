@@ -684,6 +684,99 @@
       .fade-in-down {
         animation: fadeInDown 1s;
       }
+
+      /* AELP – ASSDA Stakeholder Forum Section */
+      .forum-section {
+        padding: 100px 0;
+        background: #ffffff;
+      }
+      .forum-section .forum-banner {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        margin-bottom: 40px;
+        background: #fff;
+      }
+      .forum-section .forum-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .forum-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin: 25px 0 15px;
+      }
+      .forum-meta-item {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        color: var(--primary-color);
+        font-size: 0.95rem;
+      }
+      .forum-meta-item i {
+        color: var(--secondary-color);
+        font-size: 1.3rem;
+        margin-right: 10px;
+      }
+      .forum-theme {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        line-height: 1.35;
+        margin-bottom: 25px;
+      }
+      .forum-objectives {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px;
+      }
+      .forum-objectives li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 14px;
+        line-height: 1.55;
+      }
+      .forum-objectives li:before {
+        content: '\f058';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: var(--secondary-color);
+      }
+      .forum-cta-btn {
+        background: var(--secondary-color);
+        color: #fff;
+        padding: 14px 34px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.35s;
+      }
+      .forum-cta-btn:hover {
+        background: var(--accent-color);
+        color: #fff;
+        text-decoration: none;
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      }
+      @media (max-width: 767px) {
+        .forum-theme {
+          font-size: 1.15rem;
+        }
+        .forum-meta {
+          gap: 15px;
+        }
+        .forum-section {
+          padding: 70px 0;
+        }
+      }
     </style>
   </head>
   <body>
@@ -886,7 +979,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 margin-btm">
             <div class="value-card fade-in-up">
               <div class="value-icon">
                 <i class="fas fa-handshake"></i>
@@ -900,7 +993,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 margin-btm">
             <div class="value-card fade-in-up" style="animation-delay: 0.2s">
               <div class="value-icon">
                 <i class="fas fa-chart-line"></i>
@@ -914,7 +1007,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 margin-btm">
             <div class="value-card fade-in-up" style="animation-delay: 0.4s">
               <div class="value-icon">
                 <i class="fas fa-shield-alt"></i>
@@ -927,7 +1020,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 margin-btm">
             <div class="value-card fade-in-up" style="animation-delay: 0.6s">
               <div class="value-icon">
                 <i class="fas fa-users"></i>
@@ -941,7 +1034,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 margin-btm">
             <div class="value-card fade-in-up" style="animation-delay: 0.8s">
               <div class="value-icon">
                 <i class="fas fa-lightbulb"></i>
@@ -955,7 +1048,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 margin-btm">
             <div class="value-card fade-in-up" style="animation-delay: 1s">
               <div class="value-icon">
                 <i class="fas fa-globe"></i>
@@ -1059,6 +1152,142 @@
       </div>
     </section>
     <!-- History Section End -->
+
+    <!-- AELP – ASSDA Stakeholder Forum Section Start (moved below history) -->
+    <section class="forum-section" id="aelp-assda">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="forum-banner fade-in-up"
+              aria-label="AELP – ASSDA Stakeholder Forum Banner"
+            >
+              <img
+                src="img/core-img/AELP-ASSDA E-Flier (Asea)-02.jpg"
+                alt="AELP – ASSDA Stakeholder Forum Banner showing theme Convergence in Motion"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-start">
+          <div class="col-lg-7">
+            <h2
+              class="mb-3"
+              style="color: var(--primary-color); font-weight: 800"
+            >
+              AELP – ASSDA Stakeholder Forum
+            </h2>
+            <p class="forum-theme fade-in-up" style="animation-delay: 0.1s">
+              Convergence in Motion:
+              <span style="color: var(--secondary-color)"
+                >Broker Networks as Catalysts</span
+              >
+              of Africa’s Capital Market Integration
+            </p>
+            <p class="fade-in-up" style="animation-delay: 0.2s">
+              The joint Stakeholder Forum convened by the African Exchanges
+              Linkage Project (AELP) and the African Stockbrokers and Securities
+              Dealers Association (ASSDA) will gather exchanges, brokers,
+              technology partners, regulators and market infrastructure
+              providers to unpack the next phase of cross-border connectivity
+              and liquidity enablement across African capital markets.
+            </p>
+            <ul
+              class="forum-objectives fade-in-up"
+              style="animation-delay: 0.3s"
+            >
+              <li>
+                Showcase progress of Phase 2 AELP infrastructure and
+                order-routing linkage.
+              </li>
+              <li>
+                Deep-dive on operational readiness, compliance, and post-trade
+                harmonisation.
+              </li>
+              <li>
+                Strengthen broker network collaboration to unlock cross-border
+                investment flows.
+              </li>
+              <li>
+                Highlight technology, data and ESG integration opportunities
+                supporting integration.
+              </li>
+              <li>
+                Foster dialogue on policy, tax &amp; regulatory enablers for a
+                unified African marketplace.
+              </li>
+            </ul>
+            <a
+              href="https://the28thaseaa2afd.ev.smartevent.rw/RegisterIframe/en"
+              target="_blank"
+              class="forum-cta-btn fade-in-up"
+              style="animation-delay: 0.45s"
+              >Register for the Forum</a
+            >
+          </div>
+          <div class="col-lg-5 mt-5 mt-lg-0">
+            <div class="fade-in-up" style="animation-delay: 0.25s">
+              <div class="forum-meta">
+                <div class="forum-meta-item">
+                  <i class="fa-solid fa-calendar-days"></i>26<sup>th</sup>
+                  November 2025
+                </div>
+                <div class="forum-meta-item">
+                  <i class="fa-solid fa-location-dot"></i>Kigali, Rwanda
+                </div>
+                <div class="forum-meta-item">
+                  <i class="fa-solid fa-building-columns"></i>Conference Week
+                  Day 1
+                </div>
+              </div>
+              <div
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(0, 104, 55, 0.07),
+                    rgba(34, 59, 115, 0.05)
+                  );
+                  border: 1px solid rgba(0, 104, 55, 0.15);
+                  padding: 22px 24px;
+                  border-radius: 14px;
+                "
+              >
+                <h5
+                  style="
+                    font-weight: 700;
+                    color: var(--primary-color);
+                    margin-bottom: 14px;
+                  "
+                >
+                  Who Should Attend?
+                </h5>
+                <p style="margin-bottom: 10px">
+                  Broker-dealers, exchange operations &amp; technology teams,
+                  clearing &amp; settlement entities, market data vendors,
+                  custodians, regulators and institutional investors exploring
+                  cross-border execution.
+                </p>
+                <h5
+                  style="
+                    font-weight: 700;
+                    color: var(--primary-color);
+                    margin: 22px 0 14px;
+                  "
+                >
+                  Expected Outcomes
+                </h5>
+                <p style="margin-bottom: 0">
+                  Actionable alignment on technical roll-out, standards, and
+                  collaborative frameworks accelerating Africa’s integrated
+                  capital market vision.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- AELP – ASSDA Stakeholder Forum Section End -->
 
     <!-- CTA Section Start -->
     <section class="cta-section">
