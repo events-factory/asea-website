@@ -1073,6 +1073,52 @@ input:required {
   background-color: white;
 }
 
+/* --- Force single-line navbar layout & prevent REGISTER button wrap --- */
+@media (min-width: 992px) {
+  .header-area .navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap !important;
+  }
+  .header-area .navbar .navbar-brand {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+  .header-area .navbar .navbar-brand img {
+    display: block;
+    max-height: 95px;
+    height: auto;
+    width: auto;
+  }
+  .header-area .navbar .navbar-collapse {
+    flex: 1 1 auto;
+  }
+  .header-area .navbar .navbar-nav.main-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    align-items: center;
+  }
+  .header-area .navbar .navbar-nav.main-menu .nav-item {
+    white-space: nowrap;
+  }
+  .header-area .navbar .navbar-nav.main-menu .nav-link {
+    padding: 24px 14px !important;
+    font-size: 12px;
+  }
+  .header-area .register-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    margin-left: 22px;
+  }
+}
+@media (max-width: 991.98px) {
+  .header-area .register-btn {
+    margin-left: 0;
+  }
+}
+
 /* :: 8.0 Hero Area CSS */
 .welcome-area {
   position: relative;
@@ -3762,7 +3808,6 @@ input:required {
   z-index: 1;
 }
 .map-area iframe {
-  
   width: 100%;
   border: none;
 }
