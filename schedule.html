@@ -280,6 +280,367 @@
         text-align: center;
         color: rgba(255, 255, 255, 0.7);
       }
+
+      /* Schedule Styling */
+      .day-schedule-header {
+        margin-bottom: 40px;
+      }
+
+      .day-title {
+        color: #dc4405;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .day-subtitle {
+        color: #006837;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .dress-code {
+        color: #666;
+        font-size: 1.1rem;
+        font-style: italic;
+      }
+
+      .schedule-timeline {
+        position: relative;
+        padding-left: 0;
+      }
+
+      .schedule-item {
+        display: flex;
+        margin-bottom: 30px;
+        padding: 25px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border-left: 5px solid #dc4405;
+      }
+
+      .schedule-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .schedule-item.break-item {
+        border-left-color: #f39c12;
+        background: #fef9e7;
+      }
+
+      .schedule-item.special-event {
+        border-left-color: #006837;
+        background: #f8fff9;
+      }
+
+      .schedule-time {
+        min-width: 150px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #dc4405;
+        padding-right: 20px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .schedule-content {
+        flex: 1;
+      }
+
+      .schedule-content h5 {
+        color: #006837;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+
+      .schedule-content p {
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+      .schedule-content em {
+        color: #999;
+        font-size: 0.9rem;
+      }
+
+      .our-schedule-area {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 100px 0;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .schedule-item {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .schedule-time {
+          min-width: auto;
+          margin-bottom: 10px;
+          padding-right: 0;
+          font-size: 1rem;
+        }
+
+        .day-title {
+          font-size: 2rem;
+        }
+
+        .day-subtitle {
+          font-size: 1.2rem;
+        }
+
+        .schedule-content h5 {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .day-title {
+          font-size: 1.8rem;
+        }
+
+        .day-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .schedule-item {
+          margin-bottom: 20px;
+          padding: 15px;
+        }
+      }
+
+      /* Download Program Button Styling */
+      .program-download-section {
+        margin: 30px 0;
+        padding: 25px;
+        background: #f8f9fa;
+        border: 2px solid #006837;
+        border-radius: 12px;
+        position: relative;
+      }
+
+      .download-program-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #006837;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 104, 55, 0.2);
+      }
+
+      .download-program-btn:hover {
+        background: #004d28;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 104, 55, 0.3);
+      }
+
+      .download-program-btn i {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .download-program-btn:hover i {
+        transform: translateY(-1px);
+      }
+
+      .download-description {
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 12px;
+        margin-bottom: 0;
+        font-style: italic;
+      }
+
+      /* Enhanced Schedule Item Design */
+      .schedule-item {
+        display: flex;
+        margin-bottom: 20px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border-left: 4px solid #006837;
+      }
+
+      .schedule-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .schedule-item.break-item {
+        border-left-color: #ffa500;
+        background: #fefdf8;
+      }
+
+      .schedule-item.special-event {
+        border-left-color: #006837;
+        background: #f8fff9;
+      }
+
+      /* Enhanced Day Headers */
+      .day-schedule-header {
+        margin-bottom: 30px;
+        padding: 20px 0;
+        border-bottom: 2px solid #f0f0f0;
+      }
+
+      .day-title {
+        color: #006837;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .day-subtitle {
+        color: #333;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      .dress-code {
+        color: #666;
+        font-size: 0.95rem;
+        font-style: italic;
+        background: #f8f9fa;
+        padding: 6px 12px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 5px;
+        border: 1px solid #e9ecef;
+      }
+
+      /* Enhanced Time and Content Styling */
+      .schedule-time {
+        min-width: 120px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: #006837;
+        padding-right: 20px;
+        display: flex;
+        align-items: flex-start;
+        background: #f8f9fa;
+        border-radius: 4px;
+        padding: 10px;
+        margin-right: 15px;
+        text-align: center;
+        justify-content: center;
+        border: 1px solid #e9ecef;
+      }
+
+      .schedule-content h5 {
+        color: #333;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        line-height: 1.3;
+      }
+
+      .schedule-content p {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+      }
+
+      /* Enhanced Background */
+      .our-schedule-area {
+        background: #f8f9fa;
+        padding: 80px 0;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .schedule-time {
+          min-width: auto;
+          margin-bottom: 10px;
+          margin-right: 0;
+          padding: 8px;
+          font-size: 0.85rem;
+        }
+
+        .download-program-btn {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+
+        .program-download-section {
+          padding: 20px;
+          margin: 25px 0;
+        }
+
+        .day-title {
+          font-size: 1.7rem;
+        }
+
+        .day-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .schedule-item {
+          padding: 18px;
+        }
+
+        .schedule-content h5 {
+          font-size: 1rem;
+        }
+
+        .schedule-content p {
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .schedule-item {
+          flex-direction: column;
+          padding: 15px;
+        }
+
+        .download-program-btn {
+          padding: 10px 18px;
+          font-size: 0.85rem;
+        }
+
+        .program-download-section {
+          padding: 18px;
+        }
+
+        .day-title {
+          font-size: 1.5rem;
+        }
+
+        .day-subtitle {
+          font-size: 1rem;
+        }
+
+        .schedule-content h5 {
+          font-size: 0.95rem;
+        }
+
+        .schedule-content p {
+          font-size: 0.8rem;
+        }
+      }
     </style>
   </head>
 
@@ -420,6 +781,23 @@
             >
               <p>Our Timetable</p>
               <h4>Our Program</h4>
+
+              <!-- Download Program Button -->
+              <div class="program-download-section mt-4">
+                <a
+                  href="docs/ASEA 2025 -RWANDA DRAFT PROGRAM AUG 2025.pdf"
+                  target="_blank"
+                  class="download-program-btn wow fadeInUp"
+                  data-wow-delay="400ms"
+                >
+                  <i class="fas fa-download"></i>
+                  Download Full Program (PDF)
+                </a>
+                <p class="download-description">
+                  Get the complete conference schedule and detailed program
+                  information
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -428,24 +806,397 @@
           <div class="col-12">
             <!-- Removed the schedule tab navigation -->
 
-            <!-- Program Coming Soon Content -->
+            <!-- Program Schedule Content -->
             <div class="single-tab-content">
-              <div class="row">
+              <!-- Day 1 -->
+              <div class="row mb-5">
                 <div class="col-12">
-                  <!-- Program Coming Soon Message -->
-                  <div
-                    class="single-schedule-area text-center wow fadeInUp"
-                    data-wow-delay="300ms"
-                  >
-                    <h3 style="color: white !important">Program Coming Soon</h3>
-                    <p style="color: white !important">
-                      The detailed schedule for the ASEA conference is being
-                      finalized and will be available soon.
+                  <div class="day-schedule-header text-center mb-4">
+                    <h2 class="day-title">26th November 2025</h2>
+                    <h4 class="day-subtitle">
+                      Day 1 - REGISTRATION AND EXECUTIVE COMMITTEE MEETINGS
+                    </h4>
+                    <p class="dress-code">
+                      <strong>Dress Code: Smart Casual</strong>
                     </p>
-                    <p style="color: white !important">
-                      Check back later for updates on sessions, speakers, and
-                      event timing.
+                  </div>
+
+                  <div class="schedule-timeline">
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="100ms"
+                    >
+                      <div class="schedule-time">09h00 – 16h00</div>
+                      <div class="schedule-content">
+                        <h5>Registration</h5>
+                        <p><em>(Required)</em></p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="200ms"
+                    >
+                      <div class="schedule-time">10h30 – 13h30</div>
+                      <div class="schedule-content">
+                        <h5>Golf and Tennis</h5>
+                        <p>
+                          <em
+                            >(Only for those interested - Registration
+                            Required)</em
+                          >
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="300ms"
+                    >
+                      <div class="schedule-time">10h30 – 13h30</div>
+                      <div class="schedule-content">
+                        <h5>AELP Forum</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="400ms"
+                    >
+                      <div class="schedule-time">15h00 – 16h00</div>
+                      <div class="schedule-content">
+                        <h5>ASEA Executive Committee Meeting</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="500ms"
+                    >
+                      <div class="schedule-time">18h00 – 20h00</div>
+                      <div class="schedule-content">
+                        <h5>Welcome Cocktail</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Day 2 -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <div class="day-schedule-header text-center mb-4">
+                    <h2 class="day-title">27th November 2025</h2>
+                    <h4 class="day-subtitle">Day 2</h4>
+                    <p class="dress-code">
+                      <strong>Dress: Business Attire</strong>
                     </p>
+                  </div>
+
+                  <div class="schedule-timeline">
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="100ms"
+                    >
+                      <div class="schedule-time">08h00 – 09h00</div>
+                      <div class="schedule-content">
+                        <h5>Registration – cont.</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="200ms"
+                    >
+                      <div class="schedule-time">09h00 – 10h15</div>
+                      <div class="schedule-content">
+                        <h5>Opening Ceremony</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item break-item wow fadeInUp"
+                      data-wow-delay="300ms"
+                    >
+                      <div class="schedule-time">10h15 – 10h30</div>
+                      <div class="schedule-content">
+                        <h5>TEA/COFFEE BREAK</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="400ms"
+                    >
+                      <div class="schedule-time">10h30 – 11h30</div>
+                      <div class="schedule-content">
+                        <h5>Panel Session 1</h5>
+                        <p>
+                          Building a Resilient African Capital Market: Adapting
+                          to Geopolitical Risks and current economic wars.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="500ms"
+                    >
+                      <div class="schedule-time">11h30 – 12h30</div>
+                      <div class="schedule-content">
+                        <h5>Panel Session 2</h5>
+                        <p>
+                          SME Financing: Capital Market Strategies for
+                          Sustainable Growth and Innovation
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item break-item wow fadeInUp"
+                      data-wow-delay="600ms"
+                    >
+                      <div class="schedule-time">12h30</div>
+                      <div class="schedule-content">
+                        <h5>LUNCH BREAK</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="700ms"
+                    >
+                      <div class="schedule-time">13h30 – 14h30</div>
+                      <div class="schedule-content">
+                        <h5>Panel Session 3</h5>
+                        <p>
+                          Digital Transformation in Capital Markets:
+                          Opportunities, Risks, and the path forward.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="800ms"
+                    >
+                      <div class="schedule-time">14h30 – 15h30</div>
+                      <div class="schedule-content">
+                        <h5>Panel Session 4</h5>
+                        <p>
+                          The untapped capital: Looking Eastward; Islamic and
+                          Sustainable finance, an opportunity for African
+                          businesses and governments to grab.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item break-item wow fadeInUp"
+                      data-wow-delay="900ms"
+                    >
+                      <div class="schedule-time">15h30 – 16h00</div>
+                      <div class="schedule-content">
+                        <h5>REFRESHMENT BREAK</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="1000ms"
+                    >
+                      <div class="schedule-time">16h00 – 17h00</div>
+                      <div class="schedule-content">
+                        <h5>Panel Session 5: Fireside Chat</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item special-event wow fadeInUp"
+                      data-wow-delay="1100ms"
+                    >
+                      <div class="schedule-time">18h30 – 20h30</div>
+                      <div class="schedule-content">
+                        <h5>GALA DINNER & PAN-AFRICAN ESG AWARDS</h5>
+                        <p><strong>DRESS: BLACK TIE</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Day 3 -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <div class="day-schedule-header text-center mb-4">
+                    <h2 class="day-title">28th November 2025</h2>
+                    <h4 class="day-subtitle">Day 3</h4>
+                  </div>
+
+                  <div class="schedule-timeline">
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="100ms"
+                    >
+                      <div class="schedule-time">09h00 – 09h20</div>
+                      <div class="schedule-content">
+                        <h5>Welcome note from the sponsor(s)</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="200ms"
+                    >
+                      <div class="schedule-time">09h20 – 09h55</div>
+                      <div class="schedule-content">
+                        <h5>
+                          Lightning talk: Building an Equity Culture for the
+                          continent
+                        </h5>
+                        <p>Case study: Jamaican Success Story</p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="300ms"
+                    >
+                      <div class="schedule-time">09h55 – 10h35</div>
+                      <div class="schedule-content">
+                        <h5>Panel Session 6</h5>
+                        <p>
+                          The power of mindset change: Can African Capital
+                          markets create real wealth for Africans and foster
+                          real financial inclusion and ownership by its own
+                          citizens? A real conversation with policy makers,
+                          asset owners, entrepreneurs and professionals.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="400ms"
+                    >
+                      <div class="schedule-time">10h35 – 11h15</div>
+                      <div class="schedule-content">
+                        <h5>The role of regulation</h5>
+                        <p>
+                          Balancing stability, Innovation, and market access in
+                          a changing world.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="500ms"
+                    >
+                      <div class="schedule-time">11h15 – 11h55</div>
+                      <div class="schedule-content">
+                        <h5>Panel Session 7</h5>
+                        <p>
+                          Global cooperation for stronger markets: Aligning
+                          policies and fostering Cross – Border Investment.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item break-item wow fadeInUp"
+                      data-wow-delay="600ms"
+                    >
+                      <div class="schedule-time">11h55 – 12h15</div>
+                      <div class="schedule-content">
+                        <h5>REFRESHMENT BREAK</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="700ms"
+                    >
+                      <div class="schedule-time">12h15 – 13h00</div>
+                      <div class="schedule-content">
+                        <h5>Panel Discussion 8</h5>
+                        <p>
+                          The potential for commodities and derivatives markets
+                          for economic growth and food security for Africa.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item break-item wow fadeInUp"
+                      data-wow-delay="800ms"
+                    >
+                      <div class="schedule-time">13h00 – 14h40</div>
+                      <div class="schedule-content">
+                        <h5>LUNCH BREAK</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="900ms"
+                    >
+                      <div class="schedule-time">14h40 – 14h50</div>
+                      <div class="schedule-content">
+                        <h5>Closing Session</h5>
+                        <p>
+                          Wrap up: Business as usual or homework for
+                          implementation?
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item wow fadeInUp"
+                      data-wow-delay="1000ms"
+                    >
+                      <div class="schedule-time">14h50 – 15h00</div>
+                      <div class="schedule-content">
+                        <h5>Closing Remarks</h5>
+                      </div>
+                    </div>
+
+                    <div
+                      class="schedule-item special-event wow fadeInUp"
+                      data-wow-delay="1100ms"
+                    >
+                      <div class="schedule-time">18h00 – 22h00</div>
+                      <div class="schedule-content">
+                        <h5>FAREWELL DINNER</h5>
+                        <p><strong>Dress: OLDIES</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Day 4 -->
+              <div class="row mb-5">
+                <div class="col-12">
+                  <div class="day-schedule-header text-center mb-4">
+                    <h2 class="day-title">29th November 2025</h2>
+                    <h4 class="day-subtitle">Day 4</h4>
+                  </div>
+
+                  <div class="schedule-timeline">
+                    <div
+                      class="schedule-item special-event wow fadeInUp"
+                      data-wow-delay="100ms"
+                    >
+                      <div class="schedule-time">13h00 – 16h30</div>
+                      <div class="schedule-content">
+                        <h5>FREE TIME – KIGALI CITY TOUR</h5>
+                        <p>
+                          KIGALI GENOCIDE MEMORIAL & LIBERATION MUSEUM VISIT
+                        </p>
+                        <p><em>(Registration required)</em></p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
