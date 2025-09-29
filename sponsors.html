@@ -32,6 +32,47 @@
     />
 
     <style>
+      /* Sponsor Logos Row Custom Styles */
+      .sponsor-logos {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+        padding: 32px 24px;
+        margin: 0 auto 32px auto;
+        max-width: 900px;
+        min-height: 120px;
+        transition: box-shadow 0.2s;
+      }
+      .sponsor-logos:hover {
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.12);
+      }
+      .sponsor-logo {
+        max-height: 70px;
+        max-width: 180px;
+        object-fit: contain;
+        margin: 0 28px 0 28px;
+        filter: grayscale(0.15) contrast(1.1);
+        transition: filter 0.2s, transform 0.2s;
+        background: transparent;
+        padding: 4px 0;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .sponsor-logo:hover {
+        filter: grayscale(0) contrast(1.2)
+          drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+        transform: scale(1.04);
+      }
+      @media (max-width: 600px) {
+        .sponsor-logos {
+          padding: 18px 4px;
+        }
+        .sponsor-logo {
+          max-height: 44px;
+          max-width: 110px;
+          margin: 0 10px 10px 10px;
+        }
+      }
       .header-area {
         position: fixed;
         width: 100%;
@@ -561,6 +602,41 @@
             </div>
           </div>
         </div>
+        <!-- Sponsor Logos Row Start -->
+        <div class="row justify-content-center align-items-center mb-5">
+          <div class="col-12">
+            <div
+              class="sponsor-logos d-flex flex-wrap justify-content-center align-items-center"
+            >
+              <img
+                src="img/sponsors/BRD.png"
+                alt="BRD"
+                class="sponsor-logo m-3"
+                style="max-height: 80px; max-width: 180px; object-fit: contain"
+              />
+              <img
+                src="img/sponsors/Bank of Kigali.png"
+                alt="Bank of Kigali"
+                class="sponsor-logo m-3"
+                style="max-height: 80px; max-width: 180px; object-fit: contain"
+              />
+              <img
+                src="img/sponsors/CMA.png"
+                alt="CMA"
+                class="sponsor-logo m-3"
+                style="max-height: 80px; max-width: 180px; object-fit: contain"
+              />
+              <img
+                src="img/sponsors/Ecobank.png"
+                alt="Ecobank"
+                class="sponsor-logo m-3"
+                style="max-height: 80px; max-width: 180px; object-fit: contain"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Sponsor Logos Row End -->
+        <!-- End of about-content-text wrapper -->
       </div>
     </section>
     <!-- Sponsorship Main Area End -->
