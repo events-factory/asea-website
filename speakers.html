@@ -465,54 +465,30 @@
       }
 
       .speaker-card:hover .speaker-image img {
-        transform: scale(1.05);
+        transform: scale(1.08);
       }
 
-      .speaker-overlay {
+      .speaker-image::after {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         background: linear-gradient(
-          45deg,
-          rgba(0, 104, 55, 0.8),
-          rgba(220, 68, 5, 0.8)
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.1) 100%
         );
-        opacity: 0;
         transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
 
-      .speaker-card:hover .speaker-overlay {
-        opacity: 1;
-      }
-
-      .speaker-social {
-        display: flex;
-        gap: 15px;
-      }
-
-      .speaker-social a {
-        width: 45px;
-        height: 45px;
-        background: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary-color);
-        font-size: 18px;
-        transition: all 0.3s ease;
-        text-decoration: none;
-      }
-
-      .speaker-social a:hover {
-        background: var(--secondary-color);
-        color: white;
-        transform: scale(1.1);
+      .speaker-card:hover .speaker-image::after {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 104, 55, 0.1) 0%,
+          rgba(0, 104, 55, 0.3) 100%
+        );
       }
 
       .speaker-info {
@@ -2008,6 +1984,32 @@
                     class="speaker-btn"
                     data-toggle="modal"
                     data-target="#speakerModalSellouaChakri"
+                  >
+                    View Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Speaker - Regis Rugemanshuro -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="speaker-card" data-category="ceo">
+                <div class="speaker-image">
+                  <img src="img/speakers/CEO-Regis.jpg" alt="Regis Rugemanshuro" />
+                  <div class="speaker-overlay">
+                    <div class="speaker-social">
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="speaker-info">
+                  <h3>Regis Rugemanshuro</h3>
+                  <h4>Chief Executive Officer, RSSB</h4>
+                  <p></p>
+                  <a
+                    href="#"
+                    class="speaker-btn"
+                    data-toggle="modal"
+                    data-target="#speakerModalRegisRugemanshuro"
                   >
                     View Profile
                   </a>
@@ -4785,6 +4787,64 @@
                     </p>
                     <p>
                       His other passions are in sports and outdoor activities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker Modal - Regis Rugemanshuro -->
+    <div
+      class="modal fade speaker-modal"
+      id="speakerModalRegisRugemanshuro"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Speaker Profile</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="speaker-modal-image">
+                  <img
+                    src="img/speakers/CEO-Regis.jpg"
+                    alt="Regis Rugemanshuro"
+                  />
+                </div>
+                <div class="speaker-modal-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="speaker-modal-info">
+                  <h3>Regis Rugemanshuro</h3>
+                  <h4>Chief Executive Officer, RSSB</h4>
+                  <h5>BIOGRAPHY</h5>
+                  <div class="speaker-modal-bio">
+                    <p>
+                      Mr. Regis Rugemanshuro serves as the current Chief Executive Officer at RSSB since 2020. Under his leadership RSSB has seen major successful transformational changes in its strategy, legal status, digitization, human capital & organization restructuring, and policy revisions, leading to record social security coverage to date, and investment performance, more than doubling the Return on Investment in that period, with the aim to make RSSB a Member First, Data Driven, High Performing Organization.
+                    </p>
+                    <p>
+                      Prior to his appointment, he served as a C-Level Bank Executive, CDO, at the largest commercial Bank in Rwanda, Bank of Kigali, where he oversaw its digital transformation journey. He is also the founding CEO of BK TecHouse. During his stint as CEO, Regis had been named the Finalist for the East Africa Innovator of the Year award as part of the 2018 All Africa Business Leaders Award. Under his leadership, BK TechHouse was also voted as the 2017 Best Technology Company in Rwanda.
+                    </p>
+                    <p>
+                      Before returning to Rwanda, he held senior strategic roles with Hewlett Packard and Accenture in the U.S., advising clients like Microsoft and T-Mobile. He holds a Bachelor's degree in Information Technology and an MBA from Misericordia University. He is certified in project (PMP) and Scaled Agile Program Management. He is also a YPO member, and serves as a director on private and public boards.
                     </p>
                   </div>
                 </div>
