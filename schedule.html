@@ -569,6 +569,137 @@
         padding: 80px 0;
       }
 
+      /* Speakers Section Styling */
+      .speakers-section {
+        margin-top: 20px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-radius: 8px;
+        border-left: 3px solid #006837;
+      }
+
+      .speakers-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+        color: #006837;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      .speakers-header i {
+        font-size: 1rem;
+      }
+
+      .moderator-info {
+        background: #fff;
+        padding: 12px 15px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        border-left: 3px solid #dc4405;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .moderator-info strong {
+        color: #dc4405;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .moderator-info .name {
+        color: #333;
+        font-weight: 600;
+        margin: 5px 0 3px 0;
+        font-size: 1rem;
+      }
+
+      .moderator-info .title {
+        color: #666;
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+
+      .panelists-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 12px;
+      }
+
+      .panelist-card {
+        background: #fff;
+        padding: 15px;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border-top: 2px solid #006837;
+      }
+
+      .panelist-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+
+      .panelist-name {
+        color: #006837;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+        line-height: 1.3;
+      }
+
+      .panelist-title {
+        color: #666;
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+
+      /* Lightning Talk Speaker Styling */
+      .speaker-highlight {
+        background: linear-gradient(135deg, #006837 0%, #004d28 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 15px;
+        box-shadow: 0 4px 15px rgba(0, 104, 55, 0.2);
+      }
+
+      .speaker-highlight .speaker-name {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: white;
+      }
+
+      .speaker-highlight .speaker-title {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      /* Sponsor Presentation Styling */
+      .sponsor-presenter {
+        background: #fff;
+        padding: 15px;
+        border-radius: 6px;
+        margin-top: 15px;
+        border: 2px solid #dc4405;
+        box-shadow: 0 2px 8px rgba(220, 68, 5, 0.1);
+      }
+
+      .sponsor-presenter .presenter-names {
+        color: #dc4405;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+      }
+
+      .sponsor-presenter .presenter-org {
+        color: #666;
+        font-size: 0.85rem;
+      }
+
       /* Mobile Responsiveness */
       @media (max-width: 768px) {
         .schedule-time {
@@ -608,6 +739,14 @@
         .schedule-content p {
           font-size: 0.85rem;
         }
+
+        .panelists-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .speakers-section {
+          padding: 15px;
+        }
       }
 
       @media (max-width: 576px) {
@@ -639,6 +778,14 @@
 
         .schedule-content p {
           font-size: 0.8rem;
+        }
+
+        .panelist-card {
+          padding: 12px;
+        }
+
+        .speakers-section {
+          padding: 12px;
         }
       }
     </style>
@@ -953,6 +1100,62 @@
                           Adapting to Geopolitical Risks and current economic
                           wars.
                         </p>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-users"></i>
+                            <span>Session Speakers</span>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Moderator</strong>
+                            <div class="name">Selloua Shakri</div>
+                            <div class="title">
+                              Founder and Managing Director, SCL Advisory
+                              Limited
+                            </div>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Pierre Celestin Rwabukumba
+                              </div>
+                              <div class="panelist-title">
+                                CEO, RSE & Chairman of ASEA
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Dr. Monique Nsanzabaganwa
+                              </div>
+                              <div class="panelist-title">
+                                Former Vice-Chairperson, African Union
+                                Commission
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Abena Amoah</div>
+                              <div class="panelist-title">
+                                CEO, Ghana Stock Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Joseph Rono</div>
+                              <div class="panelist-title">
+                                Senior Group Executive Director, CPF Group
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Regis Rugemanshuro
+                              </div>
+                              <div class="panelist-title">
+                                CEO, Rwanda Social Security Board
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -967,6 +1170,53 @@
                           Capital Market Strategies for Sustainable Growth and
                           Innovation
                         </p>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-users"></i>
+                            <span>Session Speakers</span>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Moderator</strong>
+                            <div class="name">Ondiro Oganga</div>
+                            <div class="title">Journalist, Bloomberg</div>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">Thapelo Tsheole</div>
+                              <div class="panelist-title">CEO, CMA Rwanda</div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Dr. Eddoh Amenounve Kossi
+                              </div>
+                              <div class="panelist-title">CEO, BRVM</div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Jean Claude Uwizeyemungu
+                              </div>
+                              <div class="panelist-title">
+                                MD, Mahwi Grain Millers Ltd.
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Michael Johnson</div>
+                              <div class="panelist-title">
+                                Deputy Group Business Development Manager,
+                                Jamaica Stock Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Jean Bosco Iyacu</div>
+                              <div class="panelist-title">
+                                CEO, Access to Finance Rwanda
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -991,6 +1241,68 @@
                           Markets
                         </h5>
                         <p>Opportunities, Risks, and the path forward.</p>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-users"></i>
+                            <span>Session Speakers</span>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Moderator</strong>
+                            <div class="name">Ntoudi Muyelo</div>
+                            <div class="title">
+                              Founder of Lefa Foundation and Chairman of Africa
+                              Trust Corporation
+                            </div>
+                          </div>
+
+                          <div class="sponsor-presenter">
+                            <strong style="color: #dc4405; font-size: 0.8rem"
+                              >SPONSOR PRESENTATION</strong
+                            >
+                            <div class="presenter-names">
+                              Stephano Falciani & Ilya Prokopenko
+                            </div>
+                            <div class="presenter-org">ARQA Technologies</div>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">Patience Mutesi</div>
+                              <div class="panelist-title">M.D., BPR Bank</div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Naseer A. Akhtar</div>
+                              <div class="panelist-title">
+                                President & CEO, Infotec Group Ltd.
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Mathieu de Heering
+                              </div>
+                              <div class="panelist-title">
+                                Global Head of Business Development, Capital
+                                Markets, Montran
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Tiaan Bazui</div>
+                              <div class="panelist-title">
+                                Chief Executive Officer, Namibia Securities
+                                Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Stephano Falciani</div>
+                              <div class="panelist-title">
+                                ARQA Technologies, International Development,
+                                EMEA
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1006,6 +1318,67 @@
                           opportunity for African businesses and governments to
                           grab.
                         </p>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-users"></i>
+                            <span>Session Speakers</span>
+                          </div>
+
+                          <div class="sponsor-presenter">
+                            <strong style="color: #dc4405; font-size: 0.8rem"
+                              >SPONSOR PRESENTATION</strong
+                            >
+                            <div class="presenter-names">Dr. Sheik Mohamed</div>
+                            <div class="presenter-org">
+                              CEO, Islamic Finance Consultant, TZ
+                            </div>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Moderator</strong>
+                            <div class="name">Iribagiza Alice</div>
+                            <div class="title">
+                              Head, Market Development and Sustainability,
+                              Rwanda Stock Exchange
+                            </div>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">Paul Bwiso</div>
+                              <div class="panelist-title">
+                                CEO, Uganda Securities Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Jude Chiemeka</div>
+                              <div class="panelist-title">
+                                CEO, The Nigerian Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Chanda Chime Katongo
+                              </div>
+                              <div class="panelist-title">
+                                Executive Head of Client Solutions, ZANAKO Bank
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Dr. Islam Abdel Azim Azzam
+                              </div>
+                              <div class="panelist-title">
+                                Executive Chairman, The Egyptian Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Louis Banga Ntolo</div>
+                              <div class="panelist-title">CEO, BVMAC</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1026,6 +1399,27 @@
                       <div class="schedule-time">16h00 – 17h00</div>
                       <div class="schedule-content">
                         <h5>Panel Session 5: Fireside Chat</h5>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-comments"></i>
+                            <span>Speakers</span>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">Nandini Sukumar</div>
+                              <div class="panelist-title">Guest Speaker</div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Ms. Jesman Chonzi</div>
+                              <div class="panelist-title">
+                                Regional Industry Manager, Financial
+                                Institutions Group, Eastern Africa IFC
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1060,6 +1454,28 @@
                       <div class="schedule-content">
                         <h5>Opening Remarks: Guest of Honour</h5>
                         <p>Welcome note from the sponsor(s)</p>
+
+                        <div class="speakers-section">
+                          <div class="sponsor-presenter">
+                            <strong style="color: #dc4405; font-size: 0.8rem"
+                              >WELCOME NOTE FROM SPONSOR</strong
+                            >
+                            <div class="presenter-org">
+                              STATE MINISTER IN CHARGE OF RESOURCE MOBILIZATION
+                              AND PUBLIC INVESTMENT
+                            </div>
+                          </div>
+
+                          <div
+                            class="sponsor-presenter"
+                            style="margin-top: 10px"
+                          >
+                            <strong style="color: #dc4405; font-size: 0.8rem"
+                              >SPONSOR PRESENTATION</strong
+                            >
+                            <div class="presenter-org">KIFC</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1074,6 +1490,16 @@
                           continent
                         </h5>
                         <p>Case study: Jamaican Success Story</p>
+
+                        <div class="speaker-highlight">
+                          <div class="speaker-name">
+                            Hon. Marlene Street Forrest, OJ, CD, PhD. (Hon.),
+                            JP.
+                          </div>
+                          <div class="speaker-title">
+                            Former Managing Director, Jamaica Stock Exchange
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1091,6 +1517,57 @@
                           with policy makers, asset owners, entrepreneurs and
                           professionals.
                         </p>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-users"></i>
+                            <span>Session Speakers</span>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Moderator</strong>
+                            <div class="name">Bob J. Karina</div>
+                            <div class="title">
+                              Founder & Chairman of Faida Investment Bank & MD
+                              Faida Securities Rwanda
+                            </div>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">Cecil Foster</div>
+                              <div class="panelist-title">
+                                Chief Executive Officer, FosRich Company Ltd.
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Peter Nalitolela</div>
+                              <div class="panelist-title">
+                                CEO, Dar Es Salaam Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Pitchette Sayinzoga
+                              </div>
+                              <div class="panelist-title">
+                                CEO, Banque Rwandaise de Development
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Hunnington Namara</div>
+                              <div class="panelist-title">
+                                MD, Equity Bank Rwanda Plc.
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Ekow Afwedzie</div>
+                              <div class="panelist-title">
+                                Former CEO, Ghana Stock Exchange
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1105,6 +1582,56 @@
                           Balancing stability, Innovation, and market access in
                           a changing world.
                         </p>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-users"></i>
+                            <span>Session Speakers</span>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Moderator</strong>
+                            <div class="name">Thapelo Moribame</div>
+                            <div class="title">
+                              Head of Market Development, Botswana Stock
+                              Exchange
+                            </div>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">Sunil Benimadhu</div>
+                              <div class="panelist-title">
+                                CEO, Stock Exchange of Mauritius
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Kimenyi Valence</div>
+                              <div class="panelist-title">
+                                Director Financial Sector Development and
+                                Inclusion, National Bank of Rwanda
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Justin Bgoni</div>
+                              <div class="panelist-title">
+                                CEO, Zimbabwe Stock Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Robert Mathu</div>
+                              <div class="panelist-title">
+                                CEO, Burundi Securities Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Grace Kibuthu Ogola
+                              </div>
+                              <div class="panelist-title">IFC Group</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1122,6 +1649,57 @@
                           Aligning policies and fostering Cross – Border
                           Investment.
                         </p>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-users"></i>
+                            <span>Session Speakers</span>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Moderator</strong>
+                            <div class="name">Diana Okine</div>
+                            <div class="title">
+                              Head Strategy & International Relations, Ghana
+                              Stock Exchange
+                            </div>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Collen Tapfumaneyi
+                              </div>
+                              <div class="panelist-title">
+                                CEO, Escrow Group
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Hortense Mudenge</div>
+                              <div class="panelist-title">
+                                CEO, Rwanda Finance Limited
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Lina Tonui</div>
+                              <div class="panelist-title">
+                                Project Manager, ASEA - EALP
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Laura Bierer</div>
+                              <div class="panelist-title">
+                                Chief Technical Advisor, LuxDev
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Ivy Hesse</div>
+                              <div class="panelist-title">
+                                Ag. CEO, BK Capital
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1146,6 +1724,68 @@
                           The potential for commodities and derivatives markets
                           for economic growth and food security for Africa.
                         </p>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-users"></i>
+                            <span>Session Speakers</span>
+                          </div>
+
+                          <div class="sponsor-presenter">
+                            <strong style="color: #dc4405; font-size: 0.8rem"
+                              >PRESENTATION</strong
+                            >
+                            <div class="presenter-names">Joe Kainja</div>
+                            <div class="presenter-org">
+                              CEO, Jophi Group & MD, Legacy Africa Multi
+                              Strategies
+                            </div>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Moderator</strong>
+                            <div class="name">David Wainaina</div>
+                            <div class="title">
+                              Head of Trading, Data & Analysis
+                            </div>
+                          </div>
+
+                          <div class="panelists-grid">
+                            <div class="panelist-card">
+                              <div class="panelist-name">Rami El Dokany</div>
+                              <div class="panelist-title">
+                                Secretary General, Arab Federation of Capital
+                                Markets (AFCM)
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Michael Mgwaba</div>
+                              <div class="panelist-title">
+                                CEO, NewGold Issuer Limited
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Aupa Monyatsi</div>
+                              <div class="panelist-title">
+                                CEO, Botswana Stock Exchange
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">Loise Wangui</div>
+                              <div class="panelist-title">
+                                Managing Partner and ESG Lead, Protos Capital
+                              </div>
+                            </div>
+                            <div class="panelist-card">
+                              <div class="panelist-name">
+                                Clement Kayitakire
+                              </div>
+                              <div class="panelist-title">
+                                Ag. CEO, East Africa Exchange
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -1177,6 +1817,18 @@
                       <div class="schedule-time">14h50 – 15h00</div>
                       <div class="schedule-content">
                         <h5>Closing Remarks</h5>
+
+                        <div class="speakers-section">
+                          <div class="speakers-header">
+                            <i class="fas fa-user"></i>
+                            <span>Speaker</span>
+                          </div>
+
+                          <div class="moderator-info">
+                            <strong>Closing Remarks by</strong>
+                            <div class="name">President - ASEA</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
