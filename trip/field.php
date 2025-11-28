@@ -18,7 +18,7 @@ if(isset($_POST['submit']))
 
     if(($totalTrip+1) < $totalAllowed) {
       if($profession == "Rwanda") {
-        if(($totalTripLoc/$totalAllowed)*100 < 100) {
+        if(($totalTripLoc/$totalAllowed)*100 < 1000) {
           $sql = $insertTrip->insert($trip, $name, $email, $phone_number, $hotel, $profession);
           echo "<script>alert('Slot Booked');</script>";
           // echo "<script>showCustomAlert('Slot Booked');</script>";
@@ -305,7 +305,7 @@ function showCustomAlert(message) {
             <p>
             The Kigali Genocide Memorial is a significant site in Rwanda that commemorates the victims of the 1994 genocide against the Tutsi. Located in the capital city of Kigali, the memorial serves as a place of remembrance, education, and reflection. It houses the remains of over 250,000 victims and features exhibitions that document the events leading up to the genocide, the atrocities committed, and the stories of survival and resilience. The memorial also includes a research center and offers educational programs to promote peace and reconciliation. It stands as a powerful reminder of the consequences of hatred and the importance of unity and human rights.
             </p>
-            <button class="text-uppercase primary-btn" onclick="pickchoice('Kigali Genocide Memorial', 100)" href="#home">Book a Slot Now</button>
+            <button class="text-uppercase primary-btn" onclick="pickchoice('Kigali Genocide Memorial', 1000)" href="#home">Book a Slot Now</button>
           </div>
           <div class="col-lg-6 model-right">
             <img class="img-fluid field-img" src="img/Kigali Genocide Memorial.jpg" alt="">
@@ -320,7 +320,7 @@ function showCustomAlert(message) {
             <p>
             The Campaign Against Genocide Museum is dedicated to educating the public about the atrocities of the 1994 genocide against the Tutsi in Rwanda. The museum showcases exhibits that highlight the efforts of individuals and organizations who worked tirelessly to prevent the genocide and save lives. Through interactive displays, personal testimonies, and historical artifacts, the museum aims to raise awareness about the importance of human rights, tolerance, and the prevention of future genocides. It serves as a powerful reminder of the consequences of hatred and the need for global solidarity in the face of such atrocities.
             </p>
-            <button class="text-uppercase primary-btn" onclick="pickchoice('Campaign Against Genocide Museum', 100)" href="#home">Book a Slot Now</button>
+            <button class="text-uppercase primary-btn" onclick="pickchoice('Campaign Against Genocide Museum', 1000)" href="#home">Book a Slot Now</button>
           </div> 
           <div class="col-lg-6 model-right">
             <img class="img-fluid field-img" src="img/Campaign Against Genocide Museum.jpg" alt="">
