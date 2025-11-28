@@ -233,7 +233,7 @@ function showCustomAlert(message) {
           </div>
         </div>     -->
 
-        <div class="row align-items-center single-model item">
+        <!-- <div class="row align-items-center single-model item">
           <div class="col-lg-6 model-left">
             <div class="title justify-content-between d-flex">
               <h4 class="mt-20">Nyabarongo II Multipurpose Dam</h4>
@@ -249,9 +249,9 @@ function showCustomAlert(message) {
           <div class="col-lg-6 model-right">
             <img class="img-fluid field-img" src="img/nyabarongo.jpg" alt="">
           </div>
-        </div>
+        </div> -->
 
-        <div class="row align-items-center single-model item">
+        <!-- <div class="row align-items-center single-model item">
           <div class="col-lg-6 model-left">
             <div class="title justify-content-between d-flex">
               <h4 class="mt-20">Norrsken House Kigali</h4>
@@ -265,8 +265,8 @@ function showCustomAlert(message) {
           <div class="col-lg-6 model-right">
             <img class="img-fluid field-img" src="img/NORRSKEN.png" alt="">
           </div>
-        </div>
-        <div class="row align-items-center single-model item">
+        </div> -->
+        <!-- <div class="row align-items-center single-model item">
           <div class="col-lg-6 model-left">
             <div class="title justify-content-between d-flex">
               <h4 class="mt-20">Amahoro Stadium</h4>
@@ -280,20 +280,50 @@ function showCustomAlert(message) {
           <div class="col-lg-6 model-right">
             <img class="img-fluid field-img" src="img/amahoro.jpg" alt="">
           </div>
+        </div> -->
+        <!-- <div class="row align-items-center single-model item">
+          <div class="col-lg-6 model-left">
+            <div class="title justify-content-between d-flex">
+              <h4 class="mt-20">Kigali Genocide Memorial</h4>
+              <h2>100<span>Slots</span></h2>
+            </div>
+            <p>
+            Gaseke is in Rwanda, about 30km North of Kigali, see the embedded map below to see where that is. Gaseke's Kigali Genocide Memorial is a suspension bridge, spanning 51m over the Mwange River. Previously all the population had to cross the bridge was a narrow metal beam which frequently got washed away during the flood season, making the river impassable. When the river cannot be safely crossed the communities are cut off from healthcare, education and markets, severely impacting their quality of life.
+            </p>
+            <button class="text-uppercase primary-btn" onclick="pickchoice('Kigali Genocide Memorial', 100)" href="#home">Book a Slot Now</button>
+          </div>
+          <div class="col-lg-6 model-right">
+            <img class="img-fluid field-img" src="img/gaseke.jpg" alt="">
+          </div>
+        </div> -->
+        <div class="row align-items-center single-model item">
+          <div class="col-lg-6 model-left">
+            <div class="title justify-content-between d-flex">
+              <h4 class="mt-20">Kigali Genocide Memorial</h4>
+              <h2>100<span>Slots</span></h2>
+            </div>
+            <p>
+            The Kigali Genocide Memorial is a significant site in Rwanda that commemorates the victims of the 1994 genocide against the Tutsi. Located in the capital city of Kigali, the memorial serves as a place of remembrance, education, and reflection. It houses the remains of over 250,000 victims and features exhibitions that document the events leading up to the genocide, the atrocities committed, and the stories of survival and resilience. The memorial also includes a research center and offers educational programs to promote peace and reconciliation. It stands as a powerful reminder of the consequences of hatred and the importance of unity and human rights.
+            </p>
+            <button class="text-uppercase primary-btn" onclick="pickchoice('Kigali Genocide Memorial', 100)" href="#home">Book a Slot Now</button>
+          </div>
+          <div class="col-lg-6 model-right">
+            <img class="img-fluid field-img" src="img/Kigali Genocide Memorial.jpg" alt="">
+          </div>
         </div>
         <div class="row align-items-center single-model item">
           <div class="col-lg-6 model-left">
             <div class="title justify-content-between d-flex">
-              <h4 class="mt-20">Bridge to Prosperity</h4>
+              <h4 class="mt-20">Campaign Against Genocide Museum</h4>
               <h2>100<span>Slots</span></h2>
             </div>
             <p>
-            Gaseke is in Rwanda, about 30km North of Kigali, see the embedded map below to see where that is. Gaseke's Bridge to Prosperity is a suspension bridge, spanning 51m over the Mwange River. Previously all the population had to cross the bridge was a narrow metal beam which frequently got washed away during the flood season, making the river impassable. When the river cannot be safely crossed the communities are cut off from healthcare, education and markets, severely impacting their quality of life.
+            The Campaign Against Genocide Museum is dedicated to educating the public about the atrocities of the 1994 genocide against the Tutsi in Rwanda. The museum showcases exhibits that highlight the efforts of individuals and organizations who worked tirelessly to prevent the genocide and save lives. Through interactive displays, personal testimonies, and historical artifacts, the museum aims to raise awareness about the importance of human rights, tolerance, and the prevention of future genocides. It serves as a powerful reminder of the consequences of hatred and the need for global solidarity in the face of such atrocities.
             </p>
-            <button class="text-uppercase primary-btn" onclick="pickchoice('Bridge to Prosperity', 100)" href="#home">Book a Slot Now</button>
-          </div>
+            <button class="text-uppercase primary-btn" onclick="pickchoice('Campaign Against Genocide Museum', 100)" href="#home">Book a Slot Now</button>
+          </div> 
           <div class="col-lg-6 model-right">
-            <img class="img-fluid field-img" src="img/gaseke.jpg" alt="">
+            <img class="img-fluid field-img" src="img/Campaign Against Genocide Museum.jpg" alt="">
           </div>
         </div>
       </div>
@@ -312,10 +342,11 @@ function showCustomAlert(message) {
                   <select class="form-control" name="trip" required id="select-element-trip">
                     <option value="" disabled selected hidden>Field Visit Location</option>                   
                     <!-- <option value="Bugesera International Airport (Limited Slots)">Bugesera International Airport (Limited Slots)</option> -->
-                    <option value="Nyabarongo II Multipurpose Dam">Nyabarongo II Multipurpose Dam</option>                  
+                    <!-- <option value="Nyabarongo II Multipurpose Dam">Nyabarongo II Multipurpose Dam</option>                  
                     <option value="Norrsken House Kigali">Norrsken House Kigali</option>      
-                    <option value="Amahoro Stadium">Amahoro Stadium</option>  
-                    <option value="Bridge to Prosperity">Bridge to Prosperity</option>         
+                    <option value="Amahoro Stadium">Amahoro Stadium</option>   -->
+                    <option value="Kigali Genocide Memorial">Kigali Genocide Memorial</option>   
+                    <option value="Campaign Against Genocide Museum">Campaign Against Genocide Museum</option>      
                   </select>
                 </div>
               </div>
